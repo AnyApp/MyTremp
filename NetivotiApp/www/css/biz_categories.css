@@ -1,0 +1,55 @@
+
+.biz_cat_wrap
+{
+    background: #ffffff;
+    border-bottom: 1px solid #C7C7C7;
+    display: inline-block;
+    width: 100%;
+    position: relative;
+    height: 60px;
+    background-repeat: no-repeat !important;
+    background-position: 99% !important;
+    background-size: 55px;
+    margin: 0;
+    padding: 0;
+}
+.biz_cat_wrap:active{
+    background-color: #008ed1;
+}
+
+.biz_subcat_wrap
+{
+    background: #ffffff;
+    border-bottom: 1px solid #C7C7C7;
+    display: block;
+    width: 100%;
+    position: relative;
+    height: 50px;
+    background-color: white;
+    margin: 0;
+    padding: 0;
+    background-image: url("../img/left-arrow2.png");
+    background-repeat: no-repeat;
+    background-position: 1% 50%;
+    background-size: 10px;
+}
+.biz_subcat_wrap:active{
+    background-color: #008ed1;
+}
+
+
+.biz_cat_content_container
+{
+    margin: 23px 68px;
+}
+.biz_subcat_content_container
+{
+    position: absolute;
+    top: 35%;
+    right: 1%;
+}
+.biz_hidden_container
+{
+    display: none;
+    height: 235px;
+}
