@@ -39,7 +39,8 @@ var gps = {
         if (this.phoneNumber == undefined || this.phoneNumber == null || this.phoneNumber =='')
         {
             navigator.notification.alert('יש להזין מספר פלאפון אישי ולשמור אותו.',
-                function(){}, 'טרמפ לא התחיל בהצלחה', 'הבנתי')
+                function(){}, 'הטרמפ לא התחיל', 'הבנתי');
+            return;
         }
 
         gps.log("started");

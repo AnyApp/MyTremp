@@ -288,7 +288,7 @@ var app = {
         var phoneNumber = document.getElementById('id_mynumber_input').value;
         window.localStorage.setItem("phoneNumber", phoneNumber);
         navigator.notification.alert('מספר הטלפון נשמר בהצלחה',
-            function(){}, 'מספר הטלפון נשמר בהצלחה', 'אישור')
+            function(){}, 'הודעה', 'אישור')
 
     },
     getPhoneNumber: function()
