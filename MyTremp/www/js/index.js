@@ -224,7 +224,7 @@ var app = {
     // function, we must explicity call 'app.receivedEvent(...);'
     onDeviceReady: function() {
         //initPushwoosh();
-        gps.start();
+        //gps.start();
         app.receivedEvent('deviceready');
     },
     // Update DOM on a Received Event
