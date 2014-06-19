@@ -41,10 +41,10 @@ var gps = {
 	},
 	onSuccess : function(position) {
 		// reset error counter
-		gpsErrorCount = 0;
+        gps.gpsErrorCount = 0;
 
 		app.position = position;
-		app.submitToServer();
+		//app.submitToServer();
 
 		var elem = document.getElementById('app_container');
 		//this.successElement(elem);

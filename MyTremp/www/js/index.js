@@ -202,12 +202,14 @@ function onBackKeyDown() {
 }
 
 var app = {
+    position: null,
     container: document.getElementById("app_container"),
     // Application Constructor
     initialize: function() {
         this.bindEvents();
         FastClick.attach(document.body);
         cPages.moveToPage(this.container,"main","right");
+        gps.start();
     },
     // Bind Event Listeners
     //
@@ -235,5 +237,15 @@ var app = {
         receivedElement.setAttribute('style', 'display:block;');
 
         console.log('Received Event: ' + id);
+    },
+
+    getReadableTime : function(time) {
+        var hours = time.getHours();
+        var ampm = hours >= 12 ? 'pm' : 'am';
+        hours = hours % 12;
+        hours = hours ? hours : 12;
+
+        return (hours + ':' + app.padZero(time.getMinutes()) + ':'
+            + app.padZero(time.getSeconds()) + ' ' + ampm);
     }
 };
