@@ -16,7 +16,9 @@ var gps = {
 
 	init : function() {
 		//gps.initToggleListener();
-		gps.start();
+        gps.log("initialize");
+        gps.start();
+
 	},
 	initToggleListener : function() {
 		$('#locationToggle').bind("change", function(event, ui) {
@@ -28,15 +30,21 @@ var gps = {
 		});
 	},
 	start : function() {
+        gps.log("started");
 		var gpsOptions = {
-			enableHighAccuracy : false,
+			enableHighAccuracy : true,
 			timeout : 1000 * 60 * 4,
 			maximumAge : 1 * 4000
 		};
 		gps.GPSWatchId = navigator.geolocation.watchPosition(gps.onSuccess,
 				gps.onError, gpsOptions);
 	},
+    pickOnce: function()
+    {
+        navigator.geolocation.getCurrentPosition(gps.onSuccess,gps.onError);
+    },
 	stop : function() {
+        gps.log("stopped");
 		navigator.geolocation.clearWatch(gps.GPSWatchId);
 	},
 	onSuccess : function(position) {
@@ -46,22 +54,27 @@ var gps = {
 		app.position = position;
 		//app.submitToServer();
 
-		var elem = document.getElementById('app_container');
 		//this.successElement(elem);
-
-        elem.innerHTML = ('Latitude: ' + position.coords.latitude.toFixed(7)
+        gps.log ('Latitude: '          + position.coords.latitude          + '\n' +
+            'Longitude: '         + position.coords.longitude         + '\n' +
+            'Altitude: '          + position.coords.altitude          + '\n' +
+            'Accuracy: '          + position.coords.accuracy          + '\n' +
+            'Altitude Accuracy: ' + position.coords.altitudeAccuracy  + '\n' +
+            'Heading: '           + position.coords.heading           + '\n' +
+            'Speed: '             + position.coords.speed             + '\n' +
+            'Timestamp: '         + position.timestamp                + '\n');
+        /*gps.log ('Latitude: ' + position.coords.latitude.toFixed(7)
 				+ '<br/>' + 'Longitude: '
 				+ position.coords.longitude.toFixed(7) + '<br/>'
-				+ 'Last Update: ' + app.getReadableTime(position.timestamp));
+				+ 'Last Update: ' + app.getReadableTime(position.timestamp));*/
 	},
 	onError : function(error) {
 		gps.gpsErrorCount++;
 
 		if (true || gps.gpsErrorCount > 3) {
-            var elem = document.getElementById('app_container');
 			//$(elem).removeClass("success");
 			//$(elem).addClass("fail");
-			elem.innerHTML = ('There is an error, restarting GPS. '
+			gps.log ('There is an error, restarting GPS. '
 					+ app.getReadableTime(new Date()) + "<br/> message:" + error.message);
 			console.log('error with GPS: error.code: ' + error.code
 					+ ' Message: ' + error.message);
@@ -70,5 +83,14 @@ var gps = {
 			gps.stop();
 			gps.start();
 		}
-	}
+	},
+    log: function(msg)
+    {
+        var elem = document.getElementById('app_container');
+        if (elem.innerHTML.length>1000){
+            elem.innerHTML ="";
+        }
+        elem.innerHTML = elem.innerHTML+msg+'<br/>';
+        console.log(msg);
+    }
 };
