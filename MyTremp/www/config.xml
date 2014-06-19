@@ -58,9 +58,9 @@
         <param name="ios-package" value="CDVNotification" />
     </feature>
     <!-- Plugins -->
-    <plugin name="Geolocation" value="org.apache.cordova.GeoBroker" />
-    <plugin name="NetworkStatus" value="org.apache.cordova.NetworkManager" />
-    <plugin name="Notification" value="org.apache.cordova.Notification" />
+    <gap:plugin name="Geolocation" value="org.apache.cordova.GeoBroker" />
+    <gap:plugin name="NetworkStatus" value="org.apache.cordova.NetworkManager" />
+    <gap:plugin name="Notification" value="org.apache.cordova.Notification" />
 
     <!-- Core plugins -->
     <gap:plugin name="com.pushwoosh.plugins.pushwoosh" version="3.0.2" />
