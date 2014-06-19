@@ -38,8 +38,9 @@ var gps = {
         gps.log("started");
 		var gpsOptions = {
 			enableHighAccuracy : true,
-			timeout : 1000 * 60 * 10,
-			maximumAge : 1 * 4000
+			timeout : 1000 * 60,
+			maximumAge : 1000 * 15,
+            frequency: 1000 * 15
 		};
 		gps.GPSWatchId = navigator.geolocation.watchPosition(gps.onSuccess,
 				gps.onError, gpsOptions);

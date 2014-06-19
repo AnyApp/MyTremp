@@ -207,7 +207,6 @@ var app = {
     // Application Constructor
     initialize: function() {
         this.bindEvents();
-        FastClick.attach(document.body);
         this.initPages();
         //document.body.addEventlistener('touchstart',function(){},false);
         //cPages.moveToPage(this.container,"main","right");
@@ -233,6 +232,7 @@ var app = {
     onDeviceReady: function() {
         //initPushwoosh();
         //gps.start();
+        FastClick.attach(document.body);
         app.receivedEvent('deviceready');
     },
     // Update DOM on a Received Event
