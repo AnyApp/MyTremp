@@ -238,7 +238,27 @@ var app = {
 
         console.log('Received Event: ' + id);
     },
+    checkConnection : function() {
+        var networkState = navigator.connection.type;
 
+        var states = {};
+        states[Connection.UNKNOWN] = 'Unknown';
+        states[Connection.ETHERNET] = 'Ethernet';
+        states[Connection.WIFI] = 'WiFi';
+        states[Connection.CELL_2G] = 'Cell 2G';
+        states[Connection.CELL_3G] = 'Cell 3G';
+        states[Connection.CELL_4G] = 'Cell 4G';
+        states[Connection.CELL] = 'Cell';
+        states[Connection.NONE] = 'No';
+
+        elem = $('#connectionInfo');
+        if (networkState == Connection.NONE) {
+            this.failElement(elem);
+        } else {
+            this.succeedElement(elem);
+        }
+        elem.innerHTML = 'Internet: ' + states[networkState];
+    },
     getReadableTime : function(time) {
         var hours = time.getHours();
         var ampm = hours >= 12 ? 'pm' : 'am';
@@ -247,5 +267,8 @@ var app = {
 
         return (hours + ':' + app.padZero(time.getMinutes()) + ':'
             + app.padZero(time.getSeconds()) + ' ' + ampm);
+    },
+    padZero : function(num) {
+        return (num < 10 ? '0' + num : num);
     }
 };
