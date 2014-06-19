@@ -13,7 +13,7 @@
 var gps = {
 	GPSWatchId : null,
 	gpsErrorCount : 0,
-
+    phoneNumber: null,
 	init : function() {
 		//gps.initToggleListener();
         gps.log("initialize");
@@ -35,6 +35,13 @@ var gps = {
         }
     },
 	start : function() {
+        this.phoneNumber=app.getPhoneNumber();
+        if (this.phoneNumber == undefined || this.phoneNumber == null || this.phoneNumber =='')
+        {
+            navigator.notification.alert('יש להזין מספר פלאפון אישי ולשמור אותו.',
+                function(){}, 'טרמפ לא התחיל בהצלחה', 'הבנתי')
+        }
+
         gps.log("started");
 		var gpsOptions = {
 			enableHighAccuracy : true,

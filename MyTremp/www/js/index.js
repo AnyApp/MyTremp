@@ -208,6 +208,7 @@ var app = {
     initialize: function() {
         this.bindEvents();
         this.initPages();
+
         //document.body.addEventlistener('touchstart',function(){},false);
         //cPages.moveToPage(this.container,"main","right");
     },
@@ -234,6 +235,9 @@ var app = {
         //gps.start();
         FastClick.attach(document.body);
         app.receivedEvent('deviceready');
+        document.getElementById('id_mynumber_input').value = this.getPhoneNumber();
+        document.getElementById('id_mynumber_input').setProperty('value',this.getPhoneNumber());
+
     },
     // Update DOM on a Received Event
     receivedEvent: function(id) {
@@ -278,5 +282,17 @@ var app = {
     },
     padZero : function(num) {
         return (num < 10 ? '0' + num : num);
+    },
+    saveNumber: function()
+    {
+        var phoneNumber = document.getElementById('id_mynumber_input').value;
+        window.localStorage.setItem("phoneNumber", phoneNumber);
+        navigator.notification.alert('מספר הטלפון נשמר בהצלחה',
+            function(){}, 'מספר הטלפון נשמר בהצלחה', 'אישור')
+
+    },
+    getPhoneNumber: function()
+    {
+        return window.localStorage.getItem("phoneNumber");
     }
 };
