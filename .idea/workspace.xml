@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="136e5f2a-33d8-45d4-a7db-3e64b2176aa7" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MyTremp/www/js/telephonenumber.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MyTremp/www/js/gps.js" afterPath="$PROJECT_DIR$/MyTremp/www/js/gps.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MyTremp/www/index.html" afterPath="$PROJECT_DIR$/MyTremp/www/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MyTremp/www/js/index.js" afterPath="$PROJECT_DIR$/MyTremp/www/js/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MyTremp/www/css/style.css" afterPath="$PROJECT_DIR$/MyTremp/www/css/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MyTremp/www/config.xml" afterPath="$PROJECT_DIR$/MyTremp/www/config.xml" />
     </list>
     <ignored path="MyTremp.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -88,10 +83,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="index.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/MyTremp/www/js/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="288" column="64" selection-start="9844" selection-end="9844" vertical-scroll-proportion="2.5217392" vertical-offset="5060" max-vertical-offset="6688">
+            <state line="288" column="64" selection-start="9844" selection-end="9844" vertical-scroll-proportion="-3.8596492" vertical-offset="6116" max-vertical-offset="6688">
               <folding>
                 <element signature="n#!!doc" expanded="true" />
                 <element signature="n#!!block;n#registerPushwooshIOS#0" expanded="true" />
@@ -132,6 +127,15 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="config.xml" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/MyTremp/www/config.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="67" column="68" selection-start="3994" selection-end="3994" vertical-scroll-proportion="0.33570158" vertical-offset="1285" max-vertical-offset="2904">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
     </leaf>
   </component>
   <component name="FindManager">
@@ -155,7 +159,6 @@
         <option value="$PROJECT_DIR$/MyTremp/plugins/ios.json" />
         <option value="$PROJECT_DIR$/MyTremp/www/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/MyTremp/www/res/xml/config.xml" />
-        <option value="$PROJECT_DIR$/MyTremp/www/config.xml" />
         <option value="$PROJECT_DIR$/MyTremp/www/css/styles.css" />
         <option value="$PROJECT_DIR$/MyTremp/www/css/page_manager_style.css" />
         <option value="$PROJECT_DIR$/MyTremp/www/css/titles.css" />
@@ -166,6 +169,7 @@
         <option value="$PROJECT_DIR$/MyTremp/www/index.html" />
         <option value="$PROJECT_DIR$/MyTremp/www/js/gps.js" />
         <option value="$PROJECT_DIR$/MyTremp/www/js/index.js" />
+        <option value="$PROJECT_DIR$/MyTremp/www/config.xml" />
       </list>
     </option>
   </component>
@@ -414,13 +418,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/MyTremp/www/config.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="68" column="0" selection-start="3927" selection-end="3927" vertical-scroll-proportion="0.25754884" vertical-offset="1351" max-vertical-offset="2904">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/MyTremp/www/utils/views_factory.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="41" column="0" selection-start="4465" selection-end="5117" vertical-scroll-proportion="0.0" vertical-offset="361" max-vertical-offset="1078">
@@ -550,7 +547,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/MyTremp/www/js/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="288" column="64" selection-start="9844" selection-end="9844" vertical-scroll-proportion="2.5217392" vertical-offset="5060" max-vertical-offset="6688">
+        <state line="288" column="64" selection-start="9844" selection-end="9844" vertical-scroll-proportion="-3.8596492" vertical-offset="6116" max-vertical-offset="6688">
           <folding>
             <element signature="n#!!doc" expanded="true" />
             <element signature="n#!!block;n#registerPushwooshIOS#0" expanded="true" />
@@ -587,6 +584,13 @@
             <element signature="e#9615#9667#0" expanded="true" />
             <element signature="e#10014#10080#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MyTremp/www/config.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="67" column="68" selection-start="3994" selection-end="3994" vertical-scroll-proportion="0.33570158" vertical-offset="1285" max-vertical-offset="2904">
+          <folding />
         </state>
       </provider>
     </entry>
