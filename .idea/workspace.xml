@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="136e5f2a-33d8-45d4-a7db-3e64b2176aa7" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MyTremp/www/config.xml" afterPath="$PROJECT_DIR$/MyTremp/www/config.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MyTremp/www/js/index.js" afterPath="$PROJECT_DIR$/MyTremp/www/js/index.js" />
     </list>
     <ignored path="MyTremp.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -28,9 +28,8 @@
       <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/MyTremp/www/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="45" column="76" selection-start="2839" selection-end="2839" vertical-scroll-proportion="-7.935484" vertical-offset="744" max-vertical-offset="2420">
+            <state line="24" column="36" selection-start="1578" selection-end="1578" vertical-scroll-proportion="-10.645162" vertical-offset="198" max-vertical-offset="2420">
               <folding>
-                <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
             </state>
@@ -83,10 +82,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="index.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/MyTremp/www/js/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="288" column="64" selection-start="9844" selection-end="9844" vertical-scroll-proportion="-3.8596492" vertical-offset="6116" max-vertical-offset="6688">
+            <state line="232" column="6" selection-start="7765" selection-end="7765" vertical-scroll-proportion="0.65217394" vertical-offset="4774" max-vertical-offset="6688">
               <folding>
                 <element signature="n#!!doc" expanded="true" />
                 <element signature="n#!!block;n#registerPushwooshIOS#0" expanded="true" />
@@ -113,24 +112,25 @@
                 <element signature="n#!!block;n#getCurrentPosition#0;n#!!block;n#onPushwooshAndroidInitialized#0" expanded="true" />
                 <element signature="n#!!block;n#initPushwoosh#0" expanded="true" />
                 <element signature="n#!!block;n#onBackKeyDown#0" expanded="true" />
-                <element signature="e#6731#6927#0" expanded="true" />
-                <element signature="e#6955#7183#0" expanded="true" />
-                <element signature="e#7374#7529#0" expanded="true" />
-                <element signature="e#7745#8067#0" expanded="true" />
-                <element signature="e#8139#8527#0" expanded="true" />
-                <element signature="e#8562#9264#0" expanded="true" />
-                <element signature="e#9303#9585#0" expanded="true" />
-                <element signature="e#9615#9667#0" expanded="true" />
-                <element signature="e#10014#10080#0" expanded="true" />
+                <element signature="e#6731#7108#0" expanded="true" />
+                <element signature="e#7136#7364#0" expanded="true" />
+                <element signature="e#7580#7764#0" expanded="true" />
+                <element signature="e#7955#8109#0" expanded="true" />
+                <element signature="e#8181#8569#0" expanded="true" />
+                <element signature="e#8604#9306#0" expanded="true" />
+                <element signature="e#9345#9627#0" expanded="true" />
+                <element signature="e#9657#9709#0" expanded="true" />
+                <element signature="e#9742#10019#0" expanded="true" />
+                <element signature="e#10056#10122#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="config.xml" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="config.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/MyTremp/www/config.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="67" column="68" selection-start="3994" selection-end="3994" vertical-scroll-proportion="0.33570158" vertical-offset="1285" max-vertical-offset="2904">
+            <state line="67" column="68" selection-start="3994" selection-end="3994" vertical-scroll-proportion="0.0" vertical-offset="1285" max-vertical-offset="2904">
               <folding />
             </state>
           </provider>
@@ -168,8 +168,8 @@
         <option value="$PROJECT_DIR$/MyTremp/www/css/style.css" />
         <option value="$PROJECT_DIR$/MyTremp/www/index.html" />
         <option value="$PROJECT_DIR$/MyTremp/www/js/gps.js" />
-        <option value="$PROJECT_DIR$/MyTremp/www/js/index.js" />
         <option value="$PROJECT_DIR$/MyTremp/www/config.xml" />
+        <option value="$PROJECT_DIR$/MyTremp/www/js/index.js" />
       </list>
     </option>
   </component>
@@ -493,15 +493,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/MyTremp/www/js/pager.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="9" selection-start="271" selection-end="271" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="660">
-          <folding>
-            <element signature="n#!!block;n#addPage#0;n#addPage#0;n#!!block;n#pager#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/MyTremp/www/js/telephonenumber.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="26" column="1" selection-start="818" selection-end="818" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="704">
@@ -520,12 +511,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/MyTremp/www/index.html">
+    <entry file="file://$PROJECT_DIR$/MyTremp/www/config.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="45" column="76" selection-start="2839" selection-end="2839" vertical-scroll-proportion="-7.935484" vertical-offset="744" max-vertical-offset="2420">
+        <state line="67" column="68" selection-start="3994" selection-end="3994" vertical-scroll-proportion="0.0" vertical-offset="1285" max-vertical-offset="2904">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MyTremp/www/js/pager.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="9" selection-start="271" selection-end="271" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="660">
           <folding>
-            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#!!block;n#addPage#0;n#addPage#0;n#!!block;n#pager#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -545,9 +542,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/MyTremp/www/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="36" selection-start="1578" selection-end="1578" vertical-scroll-proportion="-10.645162" vertical-offset="198" max-vertical-offset="2420">
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/MyTremp/www/js/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="288" column="64" selection-start="9844" selection-end="9844" vertical-scroll-proportion="-3.8596492" vertical-offset="6116" max-vertical-offset="6688">
+        <state line="232" column="6" selection-start="7765" selection-end="7765" vertical-scroll-proportion="0.65217394" vertical-offset="4774" max-vertical-offset="6688">
           <folding>
             <element signature="n#!!doc" expanded="true" />
             <element signature="n#!!block;n#registerPushwooshIOS#0" expanded="true" />
@@ -574,23 +580,17 @@
             <element signature="n#!!block;n#getCurrentPosition#0;n#!!block;n#onPushwooshAndroidInitialized#0" expanded="true" />
             <element signature="n#!!block;n#initPushwoosh#0" expanded="true" />
             <element signature="n#!!block;n#onBackKeyDown#0" expanded="true" />
-            <element signature="e#6731#6927#0" expanded="true" />
-            <element signature="e#6955#7183#0" expanded="true" />
-            <element signature="e#7374#7529#0" expanded="true" />
-            <element signature="e#7745#8067#0" expanded="true" />
-            <element signature="e#8139#8527#0" expanded="true" />
-            <element signature="e#8562#9264#0" expanded="true" />
-            <element signature="e#9303#9585#0" expanded="true" />
-            <element signature="e#9615#9667#0" expanded="true" />
-            <element signature="e#10014#10080#0" expanded="true" />
+            <element signature="e#6731#7108#0" expanded="true" />
+            <element signature="e#7136#7364#0" expanded="true" />
+            <element signature="e#7580#7764#0" expanded="true" />
+            <element signature="e#7955#8109#0" expanded="true" />
+            <element signature="e#8181#8569#0" expanded="true" />
+            <element signature="e#8604#9306#0" expanded="true" />
+            <element signature="e#9345#9627#0" expanded="true" />
+            <element signature="e#9657#9709#0" expanded="true" />
+            <element signature="e#9742#10019#0" expanded="true" />
+            <element signature="e#10056#10122#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MyTremp/www/config.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="67" column="68" selection-start="3994" selection-end="3994" vertical-scroll-proportion="0.33570158" vertical-offset="1285" max-vertical-offset="2904">
-          <folding />
         </state>
       </provider>
     </entry>

@@ -208,6 +208,8 @@ var app = {
     initialize: function() {
         this.bindEvents();
         this.initPages();
+        document.getElementById('id_mynumber_input').value = this.getPhoneNumber();
+        document.getElementById('id_mynumber_input').setProperty('value',this.getPhoneNumber());
 
         //document.body.addEventlistener('touchstart',function(){},false);
         //cPages.moveToPage(this.container,"main","right");
@@ -218,14 +220,6 @@ var app = {
         pager.addPage('info','menu_info','content_info');
         pager.moveToPage('tremp');
     },
-    // Bind Event Listeners
-    //
-    // Bind any events that are required on startup. Common events are:
-    // 'load', 'deviceready', 'offline', and 'online'.
-    bindEvents: function() {
-        document.addEventListener('deviceready', this.onDeviceReady, false);
-        document.addEventListener("backbutton", onBackKeyDown, false);
-    },
     // deviceready Event Handler
     //
     // The scope of 'this' is the event. In order to call the 'receivedEvent'
@@ -235,9 +229,15 @@ var app = {
         //gps.start();
         FastClick.attach(document.body);
         app.receivedEvent('deviceready');
-        document.getElementById('id_mynumber_input').value = this.getPhoneNumber();
-        document.getElementById('id_mynumber_input').setProperty('value',this.getPhoneNumber());
-
+        window.console.log('device ready');
+    },
+    // Bind Event Listeners
+    //
+    // Bind any events that are required on startup. Common events are:
+    // 'load', 'deviceready', 'offline', and 'online'.
+    bindEvents: function() {
+        document.addEventListener('deviceready', app.onDeviceReady, false);
+        document.addEventListener("backbutton", onBackKeyDown, false);
     },
     // Update DOM on a Received Event
     receivedEvent: function(id) {
