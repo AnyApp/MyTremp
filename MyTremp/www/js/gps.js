@@ -57,7 +57,7 @@ var gps = {
 	onError : function(error) {
 		gps.gpsErrorCount++;
 
-		if (gps.gpsErrorCount > 3) {
+		if (true || gps.gpsErrorCount > 3) {
             var elem = document.getElementById('app_container');
 			//$(elem).removeClass("success");
 			//$(elem).addClass("fail");
