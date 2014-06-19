@@ -41,8 +41,6 @@
     <!-- GPS App -->
     <preference name="permissions" value="none" />
     <preference name="stay-in-webview" value="false" />
-    <preference name="show-splash-screen-spinner" value="true" />
-    <preference name="auto-hide-splash-screen" value="true" />
 
     <!-- Plugins -->
 
