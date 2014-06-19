@@ -6,7 +6,9 @@
         <!--<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />-->
         <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0" >
         <!-- CSS Includes -->
+        <link rel="stylesheet" type="text/css" href="fonts/stylesheet.css"  charset="utf-8" />
         <link rel="stylesheet" type="text/css" href="css/index.css" />
+        <link rel="stylesheet" type="text/css" href="css/style.css" />
         <link rel="stylesheet" type="text/css" href="css/titles.css" />
         <link rel="stylesheet" type="text/css" href="css/buttons.css" />
         <link rel="stylesheet" type="text/css" href="css/page_manager_style.css" />
@@ -27,8 +29,34 @@
         </div>
     </div>
     <div id="app_container">
+        <div class="page_header">
+            <div class="nav_bar_background">
+                <div class="top_title" id="">עליתי על טרמפ</div>
+            </div>
+            <div class="tabbed_menu_container">
+                <div class="tabbed_menu_element" id="menu_tremp" onclick="pager.moveToPage('tremp')">הטרמפ שלי</div>
+                <div class="tabbed_menu_element" id="menu_contact" onclick="pager.moveToPage('contact')">אנשי חירום</div>
+                <div class="tabbed_menu_element" id="menu_info" onclick="pager.moveToPage('info')">אודות</div>
+            </div>
+        </div>
+        <div class="page_content" id="content_tremp">
+            <div class="button_start_ride">עליתי על טרמפ</div>
+            <div class="button_emergency">שלח הודעת חירום</div>
+        </div>
+        <div class="page_content page_hidden"  id="content_contact">
 
-    </div>
+        </div>
+        <div class="page_content page_hidden"  id="content_info">
+            אפליקציית 'עליתי על טרמפ' נוצרה ע"י חברת Codletech במטרה למנוע חטיפות אזרחים בישראל או לסייע לכוחות הביטחון במקרה של חטיפה.
+            <br/>
+            בהפעלה הראשונה האפליקציה תשמור בשרתים שלנו פרטים טכניים בסיסיים של הסמארטפון (מספר סידורי של כרטיס SIM ומספרו הסידורי של המכשיר) כדי שנוכל לזהות אתכם.
+            <br/>
+            בעת התחלת טרמפ, האפליקציה תשמור בכל דקה את המיקום שלכם. אנו מתחייבים לא להעביר את נתוני המיקום שלכם לאף גורם למעט מקרי חירום בהם מידע זה יהיה חיוני לגורמי הביטחון ויועבר אליהם.
+            <br/>
+            בשימוש באפליקציה זו, אתם מסכימים לתנאי השימוש.
+        </div>
+        <div class="page_bottom">מבית Codletech</div>
+        </div>
     </body>
     <!-- JS Includes -->
     <script type="text/javascript" charset="utf-8" src="phonegap.js"></script>
@@ -38,6 +66,7 @@
     <script  type="text/javascript" src="js/Swiper/idangerous.swiper.js"></script>
     <script  type="text/javascript" src="js/fastclick.js"></script>
     <script  type="text/javascript" src="js/doT.js"></script>
+    <script  type="text/javascript" src="js/pager.js"></script>
     <script  type="text/javascript" src="utils/pages_manager.js"></script>
     <script  type="text/javascript" src="utils/views_factory.js"></script>
     <script  type="text/javascript" src="utils/side_menu.js"></script>

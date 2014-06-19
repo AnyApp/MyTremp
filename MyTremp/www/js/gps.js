@@ -20,20 +20,11 @@ var gps = {
         gps.start();
 
 	},
-	initToggleListener : function() {
-		$('#locationToggle').bind("change", function(event, ui) {
-			if (this.value == "true") {
-				gps.start();
-			} else {
-				gps.stop();
-			}
-		});
-	},
 	start : function() {
         gps.log("started");
 		var gpsOptions = {
 			enableHighAccuracy : true,
-			timeout : 1000 * 60 * 4,
+			timeout : 1000 * 60 * 10,
 			maximumAge : 1 * 4000
 		};
 		gps.GPSWatchId = navigator.geolocation.watchPosition(gps.onSuccess,

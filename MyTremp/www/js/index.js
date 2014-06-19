@@ -208,7 +208,14 @@ var app = {
     initialize: function() {
         this.bindEvents();
         FastClick.attach(document.body);
-        cPages.moveToPage(this.container,"main","right");
+        this.initPages();
+        //cPages.moveToPage(this.container,"main","right");
+    },
+    initPages: function() {
+        pager.addPage('tremp','menu_tremp','content_tremp');
+        pager.addPage('contact','menu_contact','content_contact');
+        pager.addPage('info','menu_info','content_info');
+        pager.moveToPage('tremp');
     },
     // Bind Event Listeners
     //

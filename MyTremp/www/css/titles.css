@@ -1,15 +1,11 @@
 .top_title {
     text-align: center;
     font-weight: bold;
-    font-size: 20px;
+    font-size: 22px;
     color: #ffffff;
     height: 45px;
     line-height: 45px;
     overflow: hidden;
-    background-image: url("../img/icon.png");
-    background-size: 110px;
-    background-repeat: no-repeat;
-    background-position: 47% 50%;
 }
 
 #main_title
@@ -23,14 +19,11 @@
     margin: 0;
     padding: 0px 0px;
     position: relative;
-    background: #343434; /* Old browsers */
-    background: -moz-linear-gradient(top, #343434 0%, #292929 44%, #1a1a1a 100%); /* FF3.6+ */
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#343434), color-stop(44%,#292929), color-stop(100%,#1a1a1a)); /* Chrome,Safari4+ */
-    background: -webkit-linear-gradient(top, #343434 0%,#292929 44%,#1a1a1a 100%); /* Chrome10+,Safari5.1+ */
-    background: -o-linear-gradient(top, #343434 0%,#292929 44%,#1a1a1a 100%); /* Opera 11.10+ */
-    background: -ms-linear-gradient(top, #343434 0%,#292929 44%,#1a1a1a 100%); /* IE10+ */
-    background: linear-gradient(to bottom, #343434 0%,#292929 44%,#1a1a1a 100%); /* W3C */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#343434', endColorstr='#1a1a1a',GradientType=0 ); /* IE6-9 */
+    background: #2F694D;
+    background-image: url('../img/car.png'),url('../img/car.png');
+    background-repeat: no-repeat;
+    background-position: 0% 50%,100% 50%;
+    background-size: 60px;
 }
 
 .title_bar_back

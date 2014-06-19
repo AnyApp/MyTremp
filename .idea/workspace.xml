@@ -1,0 +1,617 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="136e5f2a-33d8-45d4-a7db-3e64b2176aa7" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MyTremp/www/js/pager.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MyTremp/www/css/style.css" />
+      <change type="DELETED" beforePath="D:\Dvir Cohen\Programming\phonegap\MyTremp\MyTremp\www\img\Add-Earth-128.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\Dvir Cohen\Programming\phonegap\MyTremp\MyTremp\www\img\add-sim-site.jpg" afterPath="" />
+      <change type="DELETED" beforePath="D:\Dvir Cohen\Programming\phonegap\MyTremp\MyTremp\www\img\bphone.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\Dvir Cohen\Programming\phonegap\MyTremp\MyTremp\www\img\category.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\Dvir Cohen\Programming\phonegap\MyTremp\MyTremp\www\img\facebook-icon.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\Dvir Cohen\Programming\phonegap\MyTremp\MyTremp\www\img\icon.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\Dvir Cohen\Programming\phonegap\MyTremp\MyTremp\www\img\left-arrow2.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\Dvir Cohen\Programming\phonegap\MyTremp\MyTremp\www\img\logo.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\Dvir Cohen\Programming\phonegap\MyTremp\MyTremp\www\img\main_top_border.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\Dvir Cohen\Programming\phonegap\MyTremp\MyTremp\www\img\pas.jpg" afterPath="" />
+      <change type="DELETED" beforePath="D:\Dvir Cohen\Programming\phonegap\MyTremp\MyTremp\www\img\side_menu_background.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\Dvir Cohen\Programming\phonegap\MyTremp\MyTremp\www\img\video.png" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MyTremp/www/res/icon/android/icon-96-xhdpi.png" afterPath="$PROJECT_DIR$/MyTremp/www/res/icon/android/icon-96-xhdpi.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MyTremp/www/js/gps.js" afterPath="$PROJECT_DIR$/MyTremp/www/js/gps.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MyTremp/www/css/index.css" afterPath="$PROJECT_DIR$/MyTremp/www/css/index.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MyTremp/www/index.html" afterPath="$PROJECT_DIR$/MyTremp/www/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MyTremp/www/js/index.js" afterPath="$PROJECT_DIR$/MyTremp/www/js/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MyTremp/www/css/page_manager_style.css" afterPath="$PROJECT_DIR$/MyTremp/www/css/page_manager_style.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MyTremp/www/css/styles.css" afterPath="$PROJECT_DIR$/MyTremp/www/css/styles.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MyTremp/www/css/titles.css" afterPath="$PROJECT_DIR$/MyTremp/www/css/titles.css" />
+    </list>
+    <ignored path="MyTremp.iws" />
+    <ignored path=".idea/workspace.xml" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="DaemonCodeAnalyzer">
+    <disable_hints />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FavoritesManager">
+    <favorites_list name="MyTremp" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/MyTremp/www/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="58" column="14" selection-start="3458" selection-end="3458" vertical-scroll-proportion="-14.903226" vertical-offset="814" max-vertical-offset="2376">
+              <folding>
+                <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pager.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/MyTremp/www/js/pager.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="9" selection-start="4" selection-end="9" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="660">
+              <folding>
+                <element signature="n#!!block;n#addPage#0;n#addPage#0;n#!!block;n#pager#0;n#!!top" expanded="true" />
+                <element signature="n#!!block;n#moveToPage#0;n#moveToPage#0;n#!!block;n#pager#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="page_manager_style.css" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/MyTremp/www/css/page_manager_style.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="48" column="0" selection-start="888" selection-end="888" vertical-scroll-proportion="0.0" vertical-offset="220" max-vertical-offset="1562">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="style.css" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/MyTremp/www/css/style.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="40" column="14" selection-start="771" selection-end="771" vertical-scroll-proportion="0.66023165" vertical-offset="538" max-vertical-offset="2970">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="titles.css" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/MyTremp/www/css/titles.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="3" column="17" selection-start="77" selection-end="77" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2618">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="gps.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/MyTremp/www/js/gps.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="21" column="6" selection-start="501" selection-end="501" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1826">
+              <folding>
+                <element signature="e#413#500#0" expanded="true" />
+                <element signature="e#522#764#0" expanded="true" />
+                <element signature="e#795#879#0" expanded="true" />
+                <element signature="e#900#984#0" expanded="true" />
+                <element signature="e#1018#2022#0" expanded="true" />
+                <element signature="e#2051#2492#0" expanded="true" />
+                <element signature="e#2521#2751#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/MyTremp/www/js/index.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="217" column="34" selection-start="7142" selection-end="7142" vertical-scroll-proportion="-5.1034484" vertical-offset="4478" max-vertical-offset="6314">
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+                <element signature="n#!!block;n#registerPushwooshIOS#0" expanded="true" />
+                <element signature="e#995#1294#0" expanded="true" />
+                <element signature="e#1443#1614#0" expanded="true" />
+                <element signature="e#1642#1817#0" expanded="true" />
+                <element signature="n#!!block;n#onPushwooshiOSInitialized#0" expanded="true" />
+                <element signature="e#2084#2165#0" expanded="true" />
+                <element signature="e#2191#2268#0" expanded="true" />
+                <element signature="e#2489#2557#0" expanded="true" />
+                <element signature="n#!!block;n#registerPushwooshAndroid#0" expanded="true" />
+                <element signature="e#2755#3177#0" expanded="true" />
+                <element signature="e#3355#3486#0" expanded="true" />
+                <element signature="e#3514#3653#0" expanded="true" />
+                <element signature="n#!!block;n#onPushwooshAndroidInitialized#0" expanded="true" />
+                <element signature="e#3891#3970#0" expanded="true" />
+                <element signature="e#3995#4070#0" expanded="true" />
+                <element signature="e#4804#4859#0" expanded="true" />
+                <element signature="e#4887#4941#0" expanded="true" />
+                <element signature="n#!!block;n#geolocationSuccess#0;n#!!block;n#onPushwooshAndroidInitialized#0" expanded="true" />
+                <element signature="e#5109#5170#0" expanded="true" />
+                <element signature="e#5198#5258#0" expanded="true" />
+                <element signature="n#!!block;n#geolocationError#0;n#!!block;n#onPushwooshAndroidInitialized#0" expanded="true" />
+                <element signature="n#!!block;n#getCurrentPosition#0;n#!!block;n#onPushwooshAndroidInitialized#0" expanded="true" />
+                <element signature="n#!!block;n#initPushwoosh#0" expanded="true" />
+                <element signature="n#!!block;n#onBackKeyDown#0" expanded="true" />
+                <element signature="e#6731#6892#0" expanded="true" />
+                <element signature="e#7339#7494#0" expanded="true" />
+                <element signature="e#7710#7809#0" expanded="true" />
+                <element signature="e#7881#8269#0" expanded="true" />
+                <element signature="e#8304#9006#0" expanded="true" />
+                <element signature="e#9045#9327#0" expanded="true" />
+                <element signature="e#9357#9409#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindManager">
+    <FindUsagesManager>
+      <setting name="OPEN_NEW_TAB" value="false" />
+    </FindUsagesManager>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitLogSettings">
+    <option name="myDateState">
+      <MyDateState />
+    </option>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="changedFiles">
+      <list>
+        <option value="$PROJECT_DIR$/MyTremp/.cordova/config.json" />
+        <option value="$PROJECT_DIR$/MyTremp/plugins/android.json" />
+        <option value="$PROJECT_DIR$/MyTremp/plugins/ios.json" />
+        <option value="$PROJECT_DIR$/MyTremp/www/AndroidManifest.xml" />
+        <option value="$PROJECT_DIR$/MyTremp/www/res/xml/config.xml" />
+        <option value="$PROJECT_DIR$/MyTremp/www/config.xml" />
+        <option value="$PROJECT_DIR$/MyTremp/www/js/gps.js" />
+        <option value="$PROJECT_DIR$/MyTremp/www/css/styles.css" />
+        <option value="$PROJECT_DIR$/MyTremp/www/css/index.css" />
+        <option value="$PROJECT_DIR$/MyTremp/www/css/page_manager_style.css" />
+        <option value="$PROJECT_DIR$/MyTremp/www/css/titles.css" />
+        <option value="$PROJECT_DIR$/MyTremp/www/js/pager.js" />
+        <option value="$PROJECT_DIR$/MyTremp/www/js/index.js" />
+        <option value="$PROJECT_DIR$/MyTremp/www/index.html" />
+        <option value="$PROJECT_DIR$/MyTremp/www/css/style.css" />
+      </list>
+    </option>
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1382" />
+    <option name="height" value="744" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
+    <OptionsSetting value="true" id="Add" />
+    <OptionsSetting value="true" id="Remove" />
+    <OptionsSetting value="true" id="Checkout" />
+    <OptionsSetting value="true" id="Update" />
+    <OptionsSetting value="true" id="Status" />
+    <OptionsSetting value="true" id="Edit" />
+    <ConfirmationsSetting value="0" id="Add" />
+    <ConfirmationsSetting value="0" id="Remove" />
+  </component>
+  <component name="ProjectReloadState">
+    <option name="STATE" value="0" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1" splitterProportion="0.5">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MyTremp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MyTremp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MyTremp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MyTremp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MyTremp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MyTremp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MyTremp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MyTremp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MyTremp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="www" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MyTremp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MyTremp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MyTremp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="www" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MyTremp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MyTremp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MyTremp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="www" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MyTremp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MyTremp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MyTremp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="www" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="css" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="options.splitter.main.proportions" value="0.3" />
+    <property name="WebServerToolWindowFactoryState" value="true" />
+    <property name="options.lastSelected" value="web.server" />
+    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
+  </component>
+  <component name="PublishConfig">
+    <servers>
+      <server id="46d8b6f0-8efb-4534-83d3-75430f036b97">
+        <serverdata>
+          <mappings>
+            <mapping local="$PROJECT_DIR$" />
+          </mappings>
+        </serverdata>
+      </server>
+    </servers>
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Dvir Cohen\Programming\phonegap\MyTremp\MyTremp\www" />
+      <recent name="D:\Dvir Cohen\Programming\phonegap\MyTremp\MyTremp" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Dvir Cohen\Programming\phonegap\MyTremp\MyTremp\www" />
+      <recent name="D:\Dvir Cohen\Programming\phonegap\MyTremp\MyTremp\www\res\xml" />
+      <recent name="D:\Dvir Cohen\Programming\phonegap\MyTremp\MyTremp\www\js" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
+      <TestRunner />
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpLocalRunConfigurationType" factoryName="PHP Console">
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug" singleton="true">
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpUnitRemoteRunConfigurationType" factoryName="PHPUnit on Server">
+      <method />
+    </configuration>
+    <list size="0" />
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="136e5f2a-33d8-45d4-a7db-3e64b2176aa7" name="Default" comment="" />
+      <created>1403177547936</created>
+      <updated>1403177547936</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3294893" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25841874" sideWeight="0.6705107" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+    </layout>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="myTodoPanelSettings">
+      <TodoPanelSettings />
+    </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/MyTremp/www/spec.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="36" column="0" selection-start="1576" selection-end="1576" vertical-scroll-proportion="0.48120302" vertical-offset="536" max-vertical-offset="1408">
+          <folding>
+            <element signature="e#1600#2346#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MyTremp/www/AndroidManifest.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="65" selection-start="511" selection-end="511" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="352">
+          <folding>
+            <marker date="1403182733278" expanded="true" signature="-1:-1" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MyTremp/www/config.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="68" column="0" selection-start="3927" selection-end="3927" vertical-scroll-proportion="0.25754884" vertical-offset="1351" max-vertical-offset="2904">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MyTremp/www/utils/views_factory.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="41" column="0" selection-start="4465" selection-end="5117" vertical-scroll-proportion="0.0" vertical-offset="361" max-vertical-offset="1078">
+          <folding>
+            <marker date="1403177479628" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1403177479628" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1403177479628" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1403177479628" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1403177479628" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1403177479628" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1403177479628" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1403177479628" expanded="false" signature="-1:-1" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/Rar$DI40.960/stylesheet.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="23" selection-start="419" selection-end="419" vertical-scroll-proportion="0.0" vertical-offset="66" max-vertical-offset="770">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MyTremp/www/js/gps.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="21" column="6" selection-start="501" selection-end="501" vertical-scroll-proportion="0.0" vertical-offset="566" max-vertical-offset="1826">
+          <folding>
+            <element signature="e#413#500#0" expanded="true" />
+            <element signature="e#522#764#0" expanded="true" />
+            <element signature="e#795#879#0" expanded="true" />
+            <element signature="e#900#984#0" expanded="true" />
+            <element signature="e#1018#2022#0" expanded="true" />
+            <element signature="e#2051#2492#0" expanded="true" />
+            <element signature="e#2521#2751#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MyTremp/www/css/styles.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="37" column="0" selection-start="614" selection-end="658" vertical-scroll-proportion="0.91806334" vertical-offset="321" max-vertical-offset="2288">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MyTremp/www/css/index.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="42" column="18" selection-start="1301" selection-end="1301" vertical-scroll-proportion="-0.5239787" vertical-offset="1219" max-vertical-offset="1782">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MyTremp/www/css/main_style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="190" column="6" selection-start="3712" selection-end="3712" vertical-scroll-proportion="7.4245114" vertical-offset="0" max-vertical-offset="7018">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MyTremp/www/css/titles.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="17" selection-start="77" selection-end="77" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2618">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MyTremp/www/pages/main_page.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="21" selection-start="131" selection-end="131" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="814">
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+            <marker date="1403177479430" expanded="false" signature="-1:-1" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MyTremp/www/css/page_manager_style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="48" column="0" selection-start="888" selection-end="888" vertical-scroll-proportion="0.0" vertical-offset="1012" max-vertical-offset="1562">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MyTremp/www/js/pager.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="9" selection-start="4" selection-end="9" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="660">
+          <folding>
+            <element signature="n#!!block;n#addPage#0;n#addPage#0;n#!!block;n#pager#0;n#!!top" expanded="true" />
+            <element signature="n#!!block;n#moveToPage#0;n#moveToPage#0;n#!!block;n#pager#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MyTremp/www/js/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="217" column="34" selection-start="7142" selection-end="7142" vertical-scroll-proportion="-5.1034484" vertical-offset="4478" max-vertical-offset="6314">
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+            <element signature="n#!!block;n#registerPushwooshIOS#0" expanded="true" />
+            <element signature="e#995#1294#0" expanded="true" />
+            <element signature="e#1443#1614#0" expanded="true" />
+            <element signature="e#1642#1817#0" expanded="true" />
+            <element signature="n#!!block;n#onPushwooshiOSInitialized#0" expanded="true" />
+            <element signature="e#2084#2165#0" expanded="true" />
+            <element signature="e#2191#2268#0" expanded="true" />
+            <element signature="e#2489#2557#0" expanded="true" />
+            <element signature="n#!!block;n#registerPushwooshAndroid#0" expanded="true" />
+            <element signature="e#2755#3177#0" expanded="true" />
+            <element signature="e#3355#3486#0" expanded="true" />
+            <element signature="e#3514#3653#0" expanded="true" />
+            <element signature="n#!!block;n#onPushwooshAndroidInitialized#0" expanded="true" />
+            <element signature="e#3891#3970#0" expanded="true" />
+            <element signature="e#3995#4070#0" expanded="true" />
+            <element signature="e#4804#4859#0" expanded="true" />
+            <element signature="e#4887#4941#0" expanded="true" />
+            <element signature="n#!!block;n#geolocationSuccess#0;n#!!block;n#onPushwooshAndroidInitialized#0" expanded="true" />
+            <element signature="e#5109#5170#0" expanded="true" />
+            <element signature="e#5198#5258#0" expanded="true" />
+            <element signature="n#!!block;n#geolocationError#0;n#!!block;n#onPushwooshAndroidInitialized#0" expanded="true" />
+            <element signature="n#!!block;n#getCurrentPosition#0;n#!!block;n#onPushwooshAndroidInitialized#0" expanded="true" />
+            <element signature="n#!!block;n#initPushwoosh#0" expanded="true" />
+            <element signature="n#!!block;n#onBackKeyDown#0" expanded="true" />
+            <element signature="e#6731#6892#0" expanded="true" />
+            <element signature="e#7339#7494#0" expanded="true" />
+            <element signature="e#7710#7809#0" expanded="true" />
+            <element signature="e#7881#8269#0" expanded="true" />
+            <element signature="e#8304#9006#0" expanded="true" />
+            <element signature="e#9045#9327#0" expanded="true" />
+            <element signature="e#9357#9409#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MyTremp/www/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="58" column="14" selection-start="3458" selection-end="3458" vertical-scroll-proportion="-14.903226" vertical-offset="814" max-vertical-offset="2376">
+          <folding>
+            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MyTremp/www/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="40" column="14" selection-start="771" selection-end="771" vertical-scroll-proportion="0.66023165" vertical-offset="538" max-vertical-offset="2970">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
+
