@@ -21,7 +21,7 @@
         following tag to your config.xml; you will still have the INTERNET
         permission on your app, which PhoneGap requires.
     -->
-    <preference name="permissions"                value="none"/>
+    <preference name="permissions" value="none"/>
 
     <feature name="http://api.phonegap.com/1.0/device" />
 
@@ -38,11 +38,29 @@
     <preference name="disable-cursor"             value="false" />          <!-- blackberry: prevents a mouse-icon/cursor from being displayed on the app -->
     <preference name="android-minSdkVersion"      value="7" />              <!-- android: MIN SDK version supported on the target device. MAX version is blank by default. -->
     <preference name="android-installLocation"    value="auto" />           <!-- android: app install location. 'auto' will choose. 'internalOnly' is device memory. 'preferExternal' is SDCard. -->
-    <!-- GPS App -->
-    <preference name="permissions" value="none" />
-    <preference name="stay-in-webview" value="false" />
 
+    <feature name="NetworkStatus">
+        <param name="android-package" value="org.apache.cordova.NetworkManager" />
+    </feature>
+    <feature name="NetworkStatus">
+        <param name="ios-package" value="CDVConnection" />
+    </feature>
+    <feature name="Geolocation">
+        <param name="android-package" value="org.apache.cordova.GeoBroker" />
+    </feature>
+    <feature name="Geolocation">
+        <param name="ios-package" value="CDVLocation" />
+    </feature>
+    <feature name="Notification">
+        <param name="android-package" value="org.apache.cordova.Notification" />
+    </feature>
+    <feature name="Notification">
+        <param name="ios-package" value="CDVNotification" />
+    </feature>
     <!-- Plugins -->
+    <plugin name="Geolocation" value="org.apache.cordova.GeoBroker" />
+    <plugin name="NetworkStatus" value="org.apache.cordova.NetworkManager" />
+    <plugin name="Notification" value="org.apache.cordova.Notification" />
 
     <!-- Core plugins -->
     <gap:plugin name="com.pushwoosh.plugins.pushwoosh" version="3.0.2" />
