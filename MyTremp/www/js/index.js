@@ -209,6 +209,7 @@ var app = {
         this.bindEvents();
         FastClick.attach(document.body);
         this.initPages();
+        //document.body.addEventlistener('touchstart',function(){},false);
         //cPages.moveToPage(this.container,"main","right");
     },
     initPages: function() {
