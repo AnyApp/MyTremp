@@ -33,7 +33,6 @@
     right: 0;
     /* overflow-y: auto; */
     bottom: 0px;
-    overflow-y: scroll;
     -webkit-overflow-scrolling: touch;
     height: 15px;
     color: #ffffff;
@@ -70,19 +69,20 @@
      font-weight: bold;
      cursor: pointer;
  }
-.tabbed_menu_element:active {
+.tabbed_menu_element:active, .tabbed_menu_element_chosen{
     background: #386B52;
 }
 
 
+
 .button_start_ride{
     width: 80%;
-    background: #355E7E;
+    background: #306894;
     color: #ffffff;
     margin: 0 auto;
     font-weight: bold;
     font-size: 22px;
-    margin-top: 20px;
+    margin-top: 40px;
     height: 200px;
     line-height: 200px;
     max-width: 200px;
@@ -118,6 +118,9 @@
     -webkit-box-shadow: 0px 2px 1px 0px rgba(50, 50, 50, 0.75);
     -moz-box-shadow:    0px 2px 1px 0px rgba(50, 50, 50, 0.75);
     box-shadow:         0px 2px 1px 0px rgba(50, 50, 50, 0.75);
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
 }
 
 .button_emergency:active{

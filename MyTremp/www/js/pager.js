@@ -15,7 +15,7 @@ var pager =
         {
             for (var pageId in this.pages)
             {
-                document.getElementById(this.pages[id].menuId).className='tabbed_menu_element';
+                document.getElementById(this.pages[pageId].menuId).className='tabbed_menu_element';
                 document.getElementById(this.pages[pageId].contentId).className='page_content page_hidden';
             }
             // Move to page.
