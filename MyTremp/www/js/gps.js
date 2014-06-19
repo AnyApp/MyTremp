@@ -20,6 +20,20 @@ var gps = {
         gps.start();
 
 	},
+    handleClick: function()
+    {
+        var button = document.getElementById('id_button_start_ride');
+        if (gps.GPSWatchId == null)
+        {
+            gps.start();
+            button.innerHTML='ירדתי מטרמפ';
+        }
+        else
+        {
+            gps.stop();
+            button.innerHTML='עליתי על טרמפ';
+        }
+    },
 	start : function() {
         gps.log("started");
 		var gpsOptions = {
@@ -37,6 +51,7 @@ var gps = {
 	stop : function() {
         gps.log("stopped");
 		navigator.geolocation.clearWatch(gps.GPSWatchId);
+        gps.GPSWatchId = null;
 	},
 	onSuccess : function(position) {
 		// reset error counter
@@ -62,7 +77,11 @@ var gps = {
 	onError : function(error) {
 		gps.gpsErrorCount++;
 
-		if (true || gps.gpsErrorCount > 3) {
+        if (gps.gpsErrorCount > 100) {
+            gps.stop();
+            alert('נכשל בנסיון לקבל מיקום');
+        }
+		else if (gps.gpsErrorCount > 3) {
 			//$(elem).removeClass("success");
 			//$(elem).addClass("fail");
 			gps.log ('There is an error, restarting GPS. '
@@ -77,11 +96,11 @@ var gps = {
 	},
     log: function(msg)
     {
-        var elem = document.getElementById('app_container');
-        if (elem.innerHTML.length>1000){
-            elem.innerHTML ="";
-        }
-        elem.innerHTML = elem.innerHTML+msg+'<br/>';
-        console.log(msg);
+        //var elem = document.getElementById('app_container');
+        //if (elem.innerHTML.length>1000){
+         //   elem.innerHTML ="";
+        //}
+        //elem.innerHTML = elem.innerHTML+msg+'<br/>';
+        window.console.log(msg);
     }
 };
