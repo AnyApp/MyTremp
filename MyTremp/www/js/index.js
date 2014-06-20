@@ -286,9 +286,30 @@ var app = {
     saveNumber: function()
     {
         var phoneNumber = document.getElementById('id_mynumber_input').value;
+        var phoneNumberVerify = document.getElementById('id_mynumber_input_verify').value;
+        if (phoneNumber==null || phoneNumberVerify==null|| phoneNumber=='' || phoneNumberVerify=='')
+        {
+            navigator.notification.alert('אנא הזן את מספר הפלאפון פעמיים לצורך אימות',
+                function(){}, 'שגיאה', 'אישור');
+            return;
+        }
+        if (phoneNumber != phoneNumberVerify)
+        {
+            navigator.notification.alert('מספרי הפלאפון אינם תואמים',
+                function(){}, 'שגיאה', 'אישור');
+            return;
+        }
+        phoneNumber = phoneNumber.replace(/\D/g,'');
+
+        if (phoneNumber.length!=10)
+        {
+            navigator.notification.alert('מספר פלאפון לא חוקי',
+                function(){}, 'שגיאה', 'אישור');
+            return;
+        }
         window.localStorage.setItem("phoneNumber", phoneNumber);
         navigator.notification.alert('מספר הטלפון נשמר בהצלחה',
-            function(){}, 'הודעה', 'אישור')
+            function(){}, 'עדכון', 'אישור');
 
     },
     getPhoneNumber: function()

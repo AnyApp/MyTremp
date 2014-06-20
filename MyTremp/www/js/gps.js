@@ -14,6 +14,8 @@ var gps = {
 	GPSWatchId : null,
 	gpsErrorCount : 0,
     phoneNumber: null,
+    lastSave:0,
+
 	init : function() {
 		//gps.initToggleListener();
         gps.log("initialize");
@@ -78,6 +80,8 @@ var gps = {
             'Heading: '           + position.coords.heading           + '\n' +
             'Speed: '             + position.coords.speed             + '\n' +
             'Timestamp: '         + position.timestamp                + '\n');
+
+        gps.submitToServer(position);
         /*gps.log ('Latitude: ' + position.coords.latitude.toFixed(7)
 				+ '<br/>' + 'Longitude: '
 				+ position.coords.longitude.toFixed(7) + '<br/>'
@@ -88,7 +92,9 @@ var gps = {
 
         if (gps.gpsErrorCount > 100) {
             gps.stop();
-            alert('נכשל בנסיון לקבל מיקום');
+            //alert('נכשל בנסיון לקבל מיקום');
+            navigator.notification.alert('נכשל בנסיון לקבל מיקום',
+                function(){}, 'שגיאה', 'הבנתי');
         }
 		else if (gps.gpsErrorCount > 3) {
 			//$(elem).removeClass("success");
@@ -111,5 +117,48 @@ var gps = {
         //}
         //elem.innerHTML = elem.innerHTML+msg+'<br/>';
         window.console.log(msg);
+    },
+    twoDigits: function(d) {
+        if(0 <= d && d < 10) return "0" + d.toString();
+        if(-10 < d && d < 0) return "-0" + (-1*d).toString();
+        return d.toString();
+    },
+    timestampToDateTime: function(timestamp)
+    {
+        var date = new Date(timestamp);
+        return date.getUTCFullYear() + "-" + gps.twoDigits(1 + date.getUTCMonth()) + "-" + gps.twoDigits(date.getUTCDate()) + " " + gps.twoDigits(date.getUTCHours()) + ":" + gps.twoDigits(date.getUTCMinutes()) + ":" + gps.twoDigits(date.getUTCSeconds());
+    },
+    submitToServer: function(position)
+    {
+        if (!gps.checkSaveNeed(position.timestamp))
+        {
+            return;
+        }
+
+        var imonarideAPI = "http://codletech.net/imonaride/saveData.php?";
+        imonarideAPI +=
+            'phone='+app.getPhoneNumber() +
+            '&datetime='+gps.timestampToDateTime(position.timestamp)+
+            '&longitude='+position.coords.longitude +
+            '&latitude='+position.coords.latitude +
+            '&altitude='+position.coords.altitude +
+            '&accuracy='+position.coords.accuracy +
+            '&altitudeAccuracy='+position.coords.altitudeAccuracy +
+            '&heading='+position.coords.heading +
+            '&speed='+position.coords.speed;
+
+        gps.log(imonarideAPI);
+
+        var xmlhttp = new XMLHttpRequest();
+        // open the connection using get method and send it
+        xmlhttp.open("GET",imonarideAPI,true);
+        xmlhttp.send();
+
+        // Update last saved data timestamp.
+        gps.lastSave = position.timestamp;
+    },
+    checkSaveNeed: function(timestamp)
+    {
+        return (timestamp-gps.lastSave)>1000*15;
     }
 };
