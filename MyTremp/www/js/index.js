@@ -118,31 +118,35 @@ var app = {
                 }
                 // Send emergency SMS.
                 var contactList = contacts.getContacts();
-
+                var numbers='';
                 for (var iContact in contactList)
                 {
-                    var curContact = contactList[iContact];
-                    var number  = curContact.phone;
-                    var message = 'עליתי על טרמפ ונקלעתי למצב חירום, הזעיקו משטרה! אני נמצא במיקום הבא:%0a'+
-                        'lat:'+gps.lastLat+'lon:'+gps.lastLon;
-                   var intent = ""; //leave empty for sending sms using default intent
-                    var success =
-                        function ()
-                        {
-                            navigator.notification.alert('הודעת חירום נשלחה בהצלחה!',
-                                function(){}, 'עדכון', 'תודה');
-                        };
-                    var error =
-                        function ()
-                        {
-                            navigator.notification.alert('שליחת הודעת החירום נכשלה',
-                                function(){}, 'עדכון', 'אישור');
-                        };
-                    sms.send(number, message, intent, success, error);
-
-
+                    numbers  += curContact.phone+',';
                 }
+                if (numbers == '')
+                {
+                    navigator.notification.alert('לא קיימים אנשי חירום לשליחת הודעה. כדי להוסיף אנשי חירום היכנס אל \'אנשי חירום\'.',
+                        function(){}, 'לא נשלחה הודעת חירום', 'אישור');
+                    return;
+                }
+                numbers = numbers.substring(0,numbers.length-1);
 
+                var message = 'עליתי על טרמפ ונקלעתי למצב חירום, הזעיקו משטרה! אני נמצא במיקום הבא:%0a'+
+                    'lat:'+gps.lastLat+'lon:'+gps.lastLon;
+                var intent = "INTENT"; //leave empty for sending sms using default intent
+                var success =
+                    function ()
+                    {
+                        navigator.notification.alert('הודעת חירום נשלחה בהצלחה!',
+                            function(){}, 'עדכון', 'תודה');
+                    };
+                var error =
+                    function ()
+                    {
+                        navigator.notification.alert('שליחת הודעת החירום נכשלה',
+                            function(){}, 'עדכון', 'אישור');
+                    };
+                sms.send(numbers, message, intent, success, error);
             },'הודעת חירום','שלח,בטל'
         );
     }
