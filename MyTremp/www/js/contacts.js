@@ -44,8 +44,8 @@ var contacts =
         contacts.save();
         contacts.draw();
 
-        window.contactPickerUtil(function(data) {
-            var nContact = contact.new(data.name,data.number);
+        window.plugins.contactNumberPicker.pick(function(data) {
+            var nContact = contact.new(data.name,data.phoneNumber);
             contacts.savedContacts.push(nContact);
             contacts.save();
             contacts.draw();
