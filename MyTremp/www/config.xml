@@ -67,7 +67,8 @@
     <gap:plugin name="org.apache.cordova.splashscreen" />
     <gap:plugin name="org.apache.cordova.dialogs" version="0.2.6" />
     <gap:plugin name="org.apache.cordova.device" version="0.2.8" />
-    <gap:plugin name="com.mobitel.nalaka.piccon" version="2.0.0" />
+    <gap:plugin name="com.mobitel.nalaka.piccon" >
+    </gap:plugin >
 
     <!-- Third party plugins -->
     <!-- A list of available plugins are available at https://build.phonegap.com/plugins -->
