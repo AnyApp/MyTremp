@@ -1,3 +1,38 @@
+.top_title {
+    text-align: center;
+    font-weight: bold;
+    font-size: 22px;
+    color: #ffffff;
+    height: 45px;
+    line-height: 45px;
+    overflow: hidden;
+}
+
+#main_title
+{
+
+}
+
+.nav_bar_background
+{
+    height: 45px;
+    margin: 0;
+    padding: 0px 0px;
+    position: relative;
+    background: #2F694D;
+    background-image: url('../img/car.png'),url('../img/car.png');
+    background-repeat: no-repeat;
+    background-position: 0% 50%,100% 50%;
+    background-size: 60px;
+}
+
+.title_bar_back
+{
+    background: #252425;
+    display: inline-block;
+    width: 100%;
+}
+
 .page_all_container {
     width: 100%;
     height: 100%;
@@ -77,8 +112,7 @@
 
 .button_start_ride{
     width: 80%;
-    background: #306894;
-    border: 1px solid #000000;
+    background: #1D5574;
     color: #ffffff;
     margin: 0 auto;
     font-weight: bold;
@@ -112,12 +146,11 @@
     height: 45px;
     line-height: 45px;
     background: #9E1E1E;
-    border: 1px solid #000000;
     cursor: pointer;
 }
 
 .button_emergency:active{
-    background: #791313;
+    background: #33383C;
 }
 
 .button_save_number{
@@ -132,12 +165,11 @@
     height: 45px;
     line-height: 45px;
     background: #5E1780;
-    border: 1px solid #000000;
     cursor: pointer;
 }
 
 .button_save_number:active{
-    background: #3B0C52;
+    background: #33383C;
 }
 
 
@@ -167,4 +199,62 @@
     border: 2px solid #2F4469;
     height: 45px;
     line-height: 45px;
+}
+
+.buttonAddContact{
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 13px;
+    margin-bottom: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #ffffff;
+    height: 45px;
+    line-height: 45px;
+    background: #175680;
+    cursor: pointer;
+}
+.buttonAddContact:active{
+    background: #33383C;
+}
+
+.contactsSeparator{
+    height: 2px;
+    background: #1A4866;
+    width: 90%;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.contactsContainer{
+    width: 80%;
+    margin: 0 auto;
+}
+
+.smallContactContainer{
+    font-size: 18px;
+    font-weight: bold;
+    padding-right: 50px;
+    background-image: url(../img/pcontact.png);
+    background-repeat: no-repeat;
+    background-size: 40px;
+    background-position: 100% 50%;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid rgba(208, 221, 216, 1);
+    cursor: pointer;
+}
+.smallContactContainer:active{
+    background: rgba(22, 119, 72, 0.71);
+    background-image: url(../img/pcontact.png);
+    background-repeat: no-repeat;
+    background-size: 40px;
+    background-position: 100% 50%;
+}
+.smallContactName{
+    text-align: right;
+}
+.smallContactPhone{
+    text-align: left;
 }

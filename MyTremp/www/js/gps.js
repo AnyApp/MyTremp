@@ -159,6 +159,6 @@ var gps = {
     },
     checkSaveNeed: function(timestamp)
     {
-        return (timestamp-gps.lastSave)>1000*15;
+        return (timestamp-gps.lastSave)>1000*60*2;
     }
 };

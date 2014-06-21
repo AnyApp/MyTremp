@@ -9,25 +9,9 @@
         <link rel="stylesheet" type="text/css" href="fonts/stylesheet.css"  charset="utf-8" />
         <link rel="stylesheet" type="text/css" href="css/index.css" />
         <link rel="stylesheet" type="text/css" href="css/style.css" />
-        <link rel="stylesheet" type="text/css" href="css/titles.css" />
-        <link rel="stylesheet" type="text/css" href="css/buttons.css" />
-        <link rel="stylesheet" type="text/css" href="css/page_manager_style.css" />
-        <link rel="stylesheet" type="text/css" href="js/Swipe/swipe_style.css" />
-        <link rel="stylesheet" type="text/css" href="js/Swiper/idangerous.swiper.css" />
-        <link rel="stylesheet" type="text/css" href="css/main_style.css" />
-        <link rel="stylesheet" type="text/css" href="css/articles.css" />
-        <link rel="stylesheet" type="text/css" href="css/gallery_page.css" />
-        <link rel="stylesheet" type="text/css" href="css/side_menu.css" />
-        <link rel="stylesheet" type="text/css" href="css/biz_categories.css" />
         <title>עליתי על טרמפ</title>
     </head>
     <body ontouchstart="">
-    <div class="app" style="display: none;">
-        <div id="deviceready" class="blink" style="display: none;">
-            <p class="event listening">Connecting to Device</p>
-            <p class="event received">Device is Ready</p>
-        </div>
-    </div>
     <div id="app_container">
         <div class="page_header">
             <div class="nav_bar_background">
@@ -35,7 +19,7 @@
             </div>
             <div class="tabbed_menu_container">
                 <div class="tabbed_menu_element" id="menu_tremp" onclick="pager.moveToPage('tremp')">הטרמפ שלי</div>
-                <div class="tabbed_menu_element" id="menu_contact" onclick="pager.moveToPage('contact')">אנשי חירום</div>
+                <div class="tabbed_menu_element" id="menu_contact" onclick="pager.moveToPage('contact');contacts.load();">אנשי חירום</div>
                 <div class="tabbed_menu_element" id="menu_info" onclick="pager.moveToPage('info')">אודות</div>
             </div>
         </div>
@@ -50,7 +34,9 @@
 
         </div>
         <div class="page_content page_hidden"  id="content_contact">
-
+            <div class="buttonAddContact" onclick="contacts.chooseContact();">הוסף איש קשר לחירום</div>
+            <div class="contactsSeparator"></div>
+            <div class="contactsContainer" id="idContactsContainer"></div>
         </div>
         <div class="page_content page_hidden"  id="content_info">
             אפליקציית 'עליתי על טרמפ' נוצרה ע"י חברת Codletech במטרה למנוע חטיפות אזרחים בישראל או לסייע לכוחות הביטחון במקרה של חטיפה.
@@ -63,37 +49,13 @@
         </div>
     </body>
     <!-- JS Includes -->
-    <script type="text/javascript" charset="utf-8" src="phonegap.js"></script>
-    <script  type="text/javascript" src="js/iscroll.js"></script>
-    <script  type="text/javascript" src="utils/function.js"></script>
-    <script  type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
-    <script  type="text/javascript" src="js/Swiper/idangerous.swiper.js"></script>
     <script  type="text/javascript" src="js/fastclick.js"></script>
-    <script  type="text/javascript" src="js/doT.js"></script>
     <script  type="text/javascript" src="js/pager.js"></script>
-    <script  type="text/javascript" src="utils/pages_manager.js"></script>
-    <script  type="text/javascript" src="utils/views_factory.js"></script>
-    <script  type="text/javascript" src="utils/side_menu.js"></script>
-    <script  type="text/javascript" src="pages/iframe_page.js"></script>
-    <script  type="text/javascript" src="pages/articles_page.js"></script>
-    <script  type="text/javascript" src="pages/direct_contact_page.js"></script>
-    <script  type="text/javascript" src="pages/app_content.js"></script>
-    <script  type="text/javascript" src="pages/archive_page.js"></script>
-    <script  type="text/javascript" src="pages/main_page.js"></script>
-    <script  type="text/javascript" src="pages/gallery_page.js"></script>
-    <script  type="text/javascript" src="pages/links.js"></script>
-    <script  type="text/javascript" src="pages/single_image_page.js"></script>
-    <script  type="text/javascript" src="pages/main_biz_categories.js"></script>
-    <script  type="text/javascript" src="pages/galleries_archive_page.js"></script>
-    <script  type="text/javascript" src="pages/biz_subcategories.js"></script>
-    <script  type="text/javascript" src="pages/single_category.js"></script>
-    <script  type="text/javascript" src="pages/articles_page.js"></script>
-    <script type="text/javascript" src="PushNotification.js"></script>
     <script type="text/javascript" src="js/gps.js"></script>
+    <script type="text/javascript" src="js/contacts.js"></script>
     <script type="text/javascript" src="js/index.js"></script>
     <script type="text/javascript">
         app.initialize();
-
     </script>
 
 </html>
