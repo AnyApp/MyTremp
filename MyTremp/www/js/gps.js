@@ -103,7 +103,7 @@ var gps = {
 			//$(elem).removeClass("success");
 			//$(elem).addClass("fail");
 			gps.log ('There is an error, restarting GPS. '
-					+  "<br/> message:" + error.message);
+					+ app.getReadableTime(new Date()) + "<br/> message:" + error.message);
 			/*console.log('error with GPS: error.code: ' + error.code
 					+ ' Message: ' + error.message);*/
 
@@ -162,6 +162,6 @@ var gps = {
     },
     checkSaveNeed: function(timestamp)
     {
-        return (timestamp-gps.lastSave)>1000*5*2;
+        return (timestamp-gps.lastSave)>1000*10*2;
     }
 };
