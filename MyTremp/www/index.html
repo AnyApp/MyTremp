@@ -24,19 +24,19 @@
             </div>
         </div>
         <div class="page_content" id="content_tremp">
-            <div ontouchstart=""id="id_button_start_ride" class="button_start_ride" onclick="gps.handleClick();">עליתי על טרמפ</div>
-            <div ontouchstart="" class="button_emergency" onclick="app.sendSMS();">שלח הודעת חירום</div>
+            <div  id="id_button_start_ride" class="button_start_ride" onclick="gps.handleClick();">עליתי על טרמפ</div>
+            <div  id="id_button_emergency" class="button_emergency " onclick="app.sendSMS();">שלח הודעת חירום</div>
             <div class="mynumber_title">מספר פלאפון מזהה - חובה</div>
             <input id="id_mynumber_input" class="mynumber_input" type="number"/>
-            <div id="id_mynumber_editmode" ontouchstart="" class="button_edit_number" onclick="app.setEditNumberMode(true);">ערוך מספר</div>
+            <div id="id_mynumber_editmode" class="button_edit_number" onclick="app.setEditNumberMode(true);">ערוך מספר</div>
             <div id="id_mynumber_verify_title" class="mynumber_title">הקש שוב לצורך אימות</div>
             <input id="id_mynumber_input_verify" class="mynumber_input" type="number"/>
-            <div id="id_mynumber_button_save" ontouchstart="" class="button_save_number" onclick="app.saveNumber();">שמור מספר</div>
-            <div id="id_mynumber_button_cancel" ontouchstart="" class="button_cancel_edit" onclick="app.setEditNumberMode(false);">בטל עריכה</div>
+            <div id="id_mynumber_button_save"  class="button_save_number" onclick="app.saveNumber();">שמור מספר</div>
+            <div id="id_mynumber_button_cancel"  class="button_cancel_edit" onclick="app.setEditNumberMode(false);">בטל עריכה</div>
 
         </div>
         <div class="page_content hidden"  id="content_contact">
-            <div class="buttonAddContact" onclick="contacts.chooseContact();">הוסף איש קשר לחירום</div>
+            <div id="id_button_add_contact" class="buttonAddContact" onclick="contacts.chooseContact();">הוסף איש קשר לחירום</div>
             <div class="contactsSeparator"></div>
             <div class="contactsContainer" id="idContactsContainer"></div>
         </div>
@@ -50,12 +50,36 @@
             <br/>
             <strong>מוצרים נוספים מבית Codletech:</strong>
             <br/>
-            - <strong>האירוע שלנו</strong> - ארגון אירועים וחתונות: <a href="#" onclick="window.open('http://ourevent.co.il', '_system');">http://ourevent.co.il</a>
+            - <strong>האירוע שלנו</strong> - ארגון אירועים וחתונות: <a href="#" onclick="navigator.app.loadUrl('http://ourevent.co.il', { openExternal:true });">http://ourevent.co.il</a>
             <br/>
-            - <strong>יומן קל</strong> - נהלו את סדר היום שלכם בקלות: <a href="#" onclick="window.open('https://play.google.com/store/apps/details?id=com.dvircn.easy.calendar', '_system');">Google Play</a>
+            - <strong>יומן קל</strong> - נהלו את סדר היום שלכם בקלות: <a href="#"  onclick="navigator.app.loadUrl('https://play.google.com/store/apps/details?id=com.dvircn.easy.calendar', { openExternal:true });">Google Play</a>
             <br/>
-            - <strong>העבודות שלי</strong> - ניהול משמרות ולקוחות: <a href="#" onclick="window.open('https://play.google.com/store/apps/details?id=com.dtdevs.my.jobs', '_system');">Google Play</a>
+            - <strong>העבודות שלי</strong> - ניהול משמרות ולקוחות: <a href="#"  onclick="navigator.app.loadUrl('https://play.google.com/store/apps/details?id=com.dtdevs.my.jobs', { openExternal:true });">Google Play</a>
             <br/>
+            <br/>
+            <strong>תנאי השימוש:</strong>
+            <br/>
+            1. למשתמש רשות להשתמש בשירותי השירות אך ורק בכפוף לאמור בתנאי הסכם זה.
+            <br/>
+            2. חברת Codletech אינה אחראית לכל נזק אשר יגרם בעקבות שימוש באפליקציה זו.
+            <br/>
+            3. חברת Codletech אינה מתחייבת לאמינות האפליקציה.
+            <br/>
+            4. בשימוש באפליקציה זו הנך נותן לחברת Codletech את האישור להשתמש ולשמור פרטים אודותייך, לרבות מספר הטלפון והמיקומים שלך.
+            <br/>
+            5. השימוש ביישום נעשה על אחריות המשתמשים בלבד ובכל מקרה אין ולא תהיה לחברת Codletech כל חבות חוזית, נזיקית ו/או אחרת כלפי המשתמשים ביישום.
+            <br/>
+            6. חברת Codletech רשאית להעביר נתונים אודות היסטוריית המיקומים שלך לגופי ביטחון וממשלה בעת הצורך.
+            <br/>
+            7. זכות היוצרים בעיצוב האפליקציה, קוד המקור, אלמנטים ותכני האתר נתונים לחברת Codletech, ואין לבצע בהם כל פעולה אשר הזכות לבצעה נתונה באופן בלעדי, לפי חוק זכויות יוצרים, התשס"ח-2007, לבעל זכות היוצרים ללא קבלת רשות מפורשת מבעל הזכות.
+            <br/>
+            8. הנך מצהיר בזאת כי אתה בלבד תשא בכל אחריות וסיכון לכל נזק ו/או הפסד שייגרמו לך בגין השימוש בשירות השירות: תאונות, עוגמת נפש, היבטים כלכליים וכל אירוע אחר, לרבות פלילי שיתרחש במהלך הנסיעה, לפניה, אחריה, בהקשר לה  או הנובעת ממנה.
+            <br/>
+            9. בעלי השירות אינם מבטיחים את התאמת שירותי השירות למשתמש או בכלל, וכן אינם יכולים להבטיח את זמינות השירות.
+            <br/>
+            10. מובהר בזאת כי הדינים אשר יחולו על הסכם זה  המפורטים לעיל הינם דיני מדינת ישראל. סמכות השיפוט הבלעדית, בכל סכסוך העולה מהסכם זה או מהשימוש בשירותי השירות, נתונה לבתי המשפט המוסמכים במחוז תל אביב.
+            <br/>
+
 
         </div>
         <div class="page_bottom">מבית Codletech</div>

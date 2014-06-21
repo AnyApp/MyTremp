@@ -12,14 +12,17 @@ function onBackKeyDown() {
 
 }
 function onDeviceReady() {
+
+
+
+    FastClick.attach(document.body);
+    fixButtonClicks();
+    document.addEventListener("backbutton", onBackKeyDown, false);
+    window.console.log('device ready');
     /**
      * Enables the background mode. The app will not pause while in background.
      */
     window.plugin.backgroundMode.enable();
-
-    FastClick.attach(document.body);
-    document.addEventListener("backbutton", onBackKeyDown, false);
-    window.console.log('device ready');
     if (window.localStorage.getItem("agreed") != 'agreed')
     {
         navigator.notification.confirm(document.getElementById('agreement').innerHTML,
@@ -35,6 +38,50 @@ function onDeviceReady() {
             },'תנאי שימוש','מסכים,אינני מסכים'
         );
     }
+
+
+}
+
+function hasClass(el, name) {
+    return new RegExp('(\\s|^)'+name+'(\\s|$)').test(el.className);
+}
+function addClass(el, name)
+{
+    if (!hasClass(el, name)) { el.className += (el.className ? ' ' : '') +name; }
+}
+function removeClass(el, name)
+{
+    if (hasClass(el, name)) {
+        el.className=el.className.replace(new RegExp('(\\s|^)'+name+'(\\s|$)'),' ').replace(/^\s+|\s+$/g, '');
+    }
+}
+function setTouchEvent(elm)
+{
+    elm.addEventListener("touchstart", function()
+    {
+        window.console.log('touched');
+        addClass(elm,'buttonTouch');
+    });
+    elm.addEventListener("touchend", function()
+    {
+        removeClass(elm,'buttonTouch');
+    });
+    elm.addEventListener("tap", function(e){
+        e.preventDefault();
+        return false;
+    });
+
+}
+function fixButtonClicks() {
+    //if (navigator.userAgent.toLowerCase().indexOf("android") > -1) {
+        setTouchEvent(document.getElementById('id_button_start_ride'));
+        setTouchEvent(document.getElementById('id_button_emergency'));
+        setTouchEvent(document.getElementById('id_mynumber_editmode'));
+        setTouchEvent(document.getElementById('id_mynumber_button_save'));
+        setTouchEvent(document.getElementById('id_mynumber_button_cancel'));
+        setTouchEvent(document.getElementById('id_button_add_contact'));
+
+    //}
 }
 
 var app = {

@@ -1,3 +1,8 @@
+*:not(input):not(textarea) {
+    -webkit-user-select: none; /* disable selection/Copy of UIWebView */
+    -webkit-touch-callout: none; /* disable the IOS popup when long-press on a link */
+}
+
 .top_title {
     text-align: center;
     font-weight: bold;
@@ -109,6 +114,9 @@
 }
 
 
+.buttonTouch{
+    background: #33383C !important;
+}
 
 .button_start_ride{
     width: 80%;
@@ -131,9 +139,6 @@
 
 
 }
-.button_start_ride:active{
-    background: #28445A;
-}
 
 .button_emergency{
     width: 80%;
@@ -149,9 +154,6 @@
     cursor: pointer;
 }
 
-.button_emergency:active{
-    background: #33383C;
-}
 
 .button_save_number{
     width: 80%;
@@ -168,9 +170,6 @@
     cursor: pointer;
 }
 
-.button_save_number:active{
-    background: #33383C;
-}
 
 .button_edit_number{
     width: 80%;
@@ -187,9 +186,6 @@
     cursor: pointer;
 }
 
-.button_edit_number:active{
-    background: #33383C;
-}
 
 .button_cancel_edit{
     width: 80%;
@@ -206,9 +202,6 @@
     cursor: pointer;
 }
 
-.button_cancel_edit:active{
-    background: #33383C;
-}
 
 .mynumber_title{
     width: 80%;
@@ -253,9 +246,7 @@
     background: #175680;
     cursor: pointer;
 }
-.buttonAddContact:active{
-    background: #33383C;
-}
+
 
 .contactsSeparator{
     height: 2px;
@@ -295,4 +286,5 @@
 }
 .smallContactPhone{
     text-align: left;
+    direction: ltr;
 }
