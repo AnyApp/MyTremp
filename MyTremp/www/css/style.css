@@ -224,6 +224,7 @@
 }
 
 .mynumber_input {
+    direction: ltr;
     width: 80%;
     display: block;
     margin: 0 auto;

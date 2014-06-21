@@ -20,6 +20,21 @@ function onDeviceReady() {
     FastClick.attach(document.body);
     document.addEventListener("backbutton", onBackKeyDown, false);
     window.console.log('device ready');
+    if (window.localStorage.getItem("agreed") != 'agreed')
+    {
+        navigator.notification.confirm(document.getElementById('agreement').innerHTML,
+            function(choosed)
+            {
+                if (choosed == 2)
+                {
+                    navigator.app.exitApp();
+                    return;
+                }
+                window.localStorage.setItem("agreed",'agreed');
+
+            },'תנאי שימוש','מסכים,אינני מסכים'
+        );
+    }
 }
 
 var app = {
@@ -154,5 +169,5 @@ var app = {
                 sms.send(numbers, message, intent, success, error);
             },'הודעת חירום','שלח,בטל'
         );
-    }
+    },
 };

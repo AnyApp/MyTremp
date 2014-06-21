@@ -104,7 +104,7 @@ var gps = {
 			//$(elem).removeClass("success");
 			//$(elem).addClass("fail");
 			gps.log ('There is an error, restarting GPS. '
-					+ app.getReadableTime(new Date()) + "<br/> message:" + error.message);
+					 + "<br/> message:" + error.message);
 			/*console.log('error with GPS: error.code: ' + error.code
 					+ ' Message: ' + error.message);*/
 
@@ -120,7 +120,7 @@ var gps = {
          //   elem.innerHTML ="";
         //}
         //elem.innerHTML = elem.innerHTML+msg+'<br/>';
-        window.console.log(msg);
+        //window.console.log(msg);
     },
     twoDigits: function(d) {
         if(0 <= d && d < 10) return "0" + d.toString();
