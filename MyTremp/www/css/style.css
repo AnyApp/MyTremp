@@ -79,7 +79,7 @@
     line-height: 12px;
     text-align: center;
 }
-.page_hidden{
+.hidden {
     display: none;
 }
 
@@ -164,7 +164,7 @@
     color: #ffffff;
     height: 45px;
     line-height: 45px;
-    background: #5E1780;
+    background: #257386;
     cursor: pointer;
 }
 
@@ -172,6 +172,43 @@
     background: #33383C;
 }
 
+.button_edit_number{
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 13px;
+    margin-bottom: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #ffffff;
+    height: 45px;
+    line-height: 45px;
+    background: #257386;
+    cursor: pointer;
+}
+
+.button_edit_number:active{
+    background: #33383C;
+}
+
+.button_cancel_edit{
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 13px;
+    margin-bottom: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #ffffff;
+    height: 45px;
+    line-height: 45px;
+    background: #9E1E1E;
+    cursor: pointer;
+}
+
+.button_cancel_edit:active{
+    background: #33383C;
+}
 
 .mynumber_title{
     width: 80%;

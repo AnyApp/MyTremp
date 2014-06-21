@@ -39,10 +39,10 @@ var contacts =
     },
     chooseContact: function()
     {
-        contacts.savedContacts.push(contact.new('דביר כהן','044499449-4'));
-        contacts.savedContacts.push(contact.new('dvir cohen','044499449-4'));
-        contacts.save();
-        contacts.draw();
+        //contacts.savedContacts.push(contact.new('דביר כהן','044499449-4'));
+        //contacts.savedContacts.push(contact.new('dvir cohen','044499449-4'));
+        //contacts.save();
+        //contacts.draw();
 
         window.plugins.contactNumberPicker.pick(function(data) {
             var nContact = contact.new(data.name  ,data.phoneNumber );
@@ -100,6 +100,18 @@ var contacts =
             contacts.savedContacts = Array();
         }
         contacts.draw();
+    },
+    getContacts: function()
+    {
+       if(contacts.savedContacts==null || contacts.savedContacts==undefined)
+       {
+           contacts.savedContacts = JSON.parse(window.localStorage.getItem("contacts"));
+           if (contacts.savedContacts ==null || contacts.savedContacts==undefined || contacts.savedContacts=='')
+           {
+               contacts.savedContacts = Array();
+           }
+       }
+        return contacts.savedContacts;
     }
 }
 

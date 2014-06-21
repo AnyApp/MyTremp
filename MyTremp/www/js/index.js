@@ -1,9 +1,19 @@
 function onBackKeyDown() {
-    //navigator.app.exitApp();
+    navigator.notification.confirm('האם אתה בטוח כי ברצונך לצאת מהאפליקציה?',
+        function(choosed)
+        {
+            if (choosed == 1)
+            {
+                return;
+            }
+            navigator.app.exitApp();
+        },'יציאה','הישאר,צא'
+    );
+
 }
 function onDeviceReady() {
     FastClick.attach(document.body);
-    app.receivedEvent('deviceready');
+    document.addEventListener("backbutton", onBackKeyDown, false);
     window.console.log('device ready');
 }
 
@@ -12,11 +22,19 @@ var app = {
     container: document.getElementById("app_container"),
     // Application Constructor
     initialize: function() {
-        app.bindEvents();
+
         app.initPages();
         document.getElementById('id_mynumber_input').value = this.getPhoneNumber();
-        document.getElementById('id_mynumber_input').setProperty('value',this.getPhoneNumber());
-
+        document.getElementById('id_mynumber_input').setAttribute ('value',this.getPhoneNumber());
+        if ( this.getPhoneNumber()==null|| this.getPhoneNumber()==''|| this.getPhoneNumber()==undefined)
+        {
+            app.setEditNumberMode(true);
+        }
+        else
+        {
+            app.setEditNumberMode(false);
+        }
+        window.setTimeout(onDeviceReady, 3000);
     },
     initPages: function() {
         pager.addPage('tremp','menu_tremp','content_tremp');
@@ -29,9 +47,31 @@ var app = {
     //
     // Bind any events that are required on startup. Common events are:
     // 'load', 'deviceready', 'offline', and 'online'.
-    bindEvents: function() {
+    bindEvents: function()
+    {
         document.addEventListener('deviceready', onDeviceReady, false);
         document.addEventListener("backbutton", onBackKeyDown, false);
+    },
+    setEditNumberMode: function(state)
+    {
+        if (state == true)
+        {
+            document.getElementById('id_mynumber_button_save').className='button_save_number';
+            document.getElementById('id_mynumber_input_verify').className='mynumber_input';
+            document.getElementById('id_mynumber_verify_title').className='mynumber_title';
+            document.getElementById('id_mynumber_button_cancel').className='button_cancel_edit';
+            document.getElementById('id_mynumber_editmode').className='hidden';
+        }
+        else
+        {
+            document.getElementById('id_mynumber_button_save').className='hidden';
+            document.getElementById('id_mynumber_input_verify').className='hidden';
+            document.getElementById('id_mynumber_verify_title').className='hidden';
+            document.getElementById('id_mynumber_button_cancel').className='hidden';
+            document.getElementById('id_mynumber_editmode').className='button_edit_number';
+
+        }
+
     },
     saveNumber: function()
     {
@@ -58,6 +98,7 @@ var app = {
             return;
         }
         window.localStorage.setItem("phoneNumber", phoneNumber);
+        app.setEditNumberMode(false);
         navigator.notification.alert('מספר הטלפון נשמר בהצלחה',
             function(){}, 'עדכון', 'אישור');
 
@@ -65,5 +106,44 @@ var app = {
     getPhoneNumber: function()
     {
         return window.localStorage.getItem("phoneNumber");
+    },
+    sendSMS: function()
+    {
+        navigator.notification.confirm('האם ברצונך לשלוח הודעת חירום אל אנשי החירום שלך?',
+            function(choosed)
+            {
+                if (choosed == 2)
+                {
+                    return;
+                }
+                // Send emergency SMS.
+                var contactList = contacts.getContacts();
+
+                for (var iContact in contactList)
+                {
+                    var curContact = contactList[iContact];
+                    var number  = curContact.phone;
+                    var message = 'עליתי על טרמפ ונקלעתי למצב חירום, הזעיקו משטרה! אני נמצא במיקום הבא:%0a'+
+                        'lat:'+gps.lastLat+'lon:'+gps.lastLon;
+                    //var intent = "INTENT"; //leave empty for sending sms using default intent
+                    var success =
+                        function ()
+                        {
+                            navigator.notification.alert('הודעת חירום נשלחה בהצלחה!',
+                                function(){}, 'עדכון', 'תודה');
+                        };
+                    var error =
+                        function ()
+                        {
+                            navigator.notification.alert('שליחת הודעת החירום נכשלה',
+                                function(){}, 'עדכון', 'אישור');
+                        };
+                    sms.send(number, message, intent, success, error);
+
+
+                }
+
+            },'הודעת חירום','שלח,בטל'
+        );
     }
 };

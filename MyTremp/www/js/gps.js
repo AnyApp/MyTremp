@@ -15,6 +15,8 @@ var gps = {
 	gpsErrorCount : 0,
     phoneNumber: null,
     lastSave:0,
+    lastLon:0,
+    lastLat:0,
 
 	init : function() {
 		//gps.initToggleListener();
@@ -60,7 +62,7 @@ var gps = {
         navigator.geolocation.getCurrentPosition(gps.onSuccess,gps.onError);
     },
 	stop : function() {
-        gps.log("stopped");
+        //gps.log("stopped");
 		navigator.geolocation.clearWatch(gps.GPSWatchId);
         gps.GPSWatchId = null;
 	},
@@ -72,15 +74,16 @@ var gps = {
 		//app.submitToServer();
 
 		//this.successElement(elem);
-        gps.log ('Latitude: '          + position.coords.latitude          + '\n' +
+        /*gps.log ('Latitude: '          + position.coords.latitude          + '\n' +
             'Longitude: '         + position.coords.longitude         + '\n' +
             'Altitude: '          + position.coords.altitude          + '\n' +
             'Accuracy: '          + position.coords.accuracy          + '\n' +
             'Altitude Accuracy: ' + position.coords.altitudeAccuracy  + '\n' +
             'Heading: '           + position.coords.heading           + '\n' +
             'Speed: '             + position.coords.speed             + '\n' +
-            'Timestamp: '         + position.timestamp                + '\n');
-
+            'Timestamp: '         + position.timestamp                + '\n');*/
+        gps.lastLon=position.coords.longitude;
+        gps.lastLat=position.coords.latitude;
         gps.submitToServer(position);
         /*gps.log ('Latitude: ' + position.coords.latitude.toFixed(7)
 				+ '<br/>' + 'Longitude: '
@@ -101,8 +104,8 @@ var gps = {
 			//$(elem).addClass("fail");
 			gps.log ('There is an error, restarting GPS. '
 					+ app.getReadableTime(new Date()) + "<br/> message:" + error.message);
-			console.log('error with GPS: error.code: ' + error.code
-					+ ' Message: ' + error.message);
+			/*console.log('error with GPS: error.code: ' + error.code
+					+ ' Message: ' + error.message);*/
 
 			// Restart GPS listener, fixes most issues.
 			gps.stop();
@@ -126,7 +129,7 @@ var gps = {
     timestampToDateTime: function(timestamp)
     {
         var date = new Date(timestamp);
-        return date.getUTCFullYear() + "-" + gps.twoDigits(1 + date.getUTCMonth()) + "-" + gps.twoDigits(date.getUTCDate()) + " " + gps.twoDigits(date.getUTCHours()) + ":" + gps.twoDigits(date.getUTCMinutes()) + ":" + gps.twoDigits(date.getUTCSeconds());
+        return date.getFullYear() + "-" + gps.twoDigits(1 + date.getMonth()) + "-" + gps.twoDigits(date.getDate()) + " " + gps.twoDigits(date.getHours()) + ":" + gps.twoDigits(date.getMinutes()) + ":" + gps.twoDigits(date.getSeconds());
     },
     submitToServer: function(position)
     {
@@ -147,7 +150,7 @@ var gps = {
             '&heading='+position.coords.heading +
             '&speed='+position.coords.speed;
 
-        gps.log(imonarideAPI);
+        //gps.log(imonarideAPI);
 
         var xmlhttp = new XMLHttpRequest();
         // open the connection using get method and send it
