@@ -62,6 +62,7 @@
     <gap:plugin name="com.kolwit.pickcontact" version="1.0.1" />
     <gap:plugin name="com.badrit.contactpicker" version="0.1.0" />
     <gap:plugin name="hu.dpal.phonegap.plugins.contactnumberpicker" version="0.1.1" />
+    <gap:plugin name="de.appplant.cordova.plugin.local-notification" version="0.7.4" />
 
     <!-- Core plugins -->
     <gap:plugin name="org.apache.cordova.splashscreen" />
