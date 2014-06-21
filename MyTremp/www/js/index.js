@@ -131,7 +131,7 @@ var app = {
                 }
                 numbers = numbers.substring(0,numbers.length-1);
 
-                var message = 'עליתי על טרמפ ונקלעתי למצב חירום, הזעיקו משטרה! אני נמצא במיקום הבא:%0a'+
+                var message = 'עליתי על טרמפ ונקלעתי למצב חירום, הזעיקו משטרה! אני נמצא במיקום הבא: '+
                     'lat:'+gps.lastLat+'lon:'+gps.lastLon;
                 var intent = "INTENT"; //leave empty for sending sms using default intent
                 var success =
