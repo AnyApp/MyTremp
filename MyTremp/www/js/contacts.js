@@ -44,12 +44,12 @@ var contacts =
         contacts.save();
         contacts.draw();
 
-        window.plugins.PickContact.chooseContact(function(data) {
-            var nContact = contact.new(data.displayName ,data.phoneNr );
+        window.plugins.contactNumberPicker.pick(function(data) {
+            var nContact = contact.new(data.name  ,data.phoneNumber );
             contacts.savedContacts.push(nContact);
             contacts.save();
             contacts.draw();
-        });
+        },function(){data} );
     },
 
     deleteContact: function(name,phone)
