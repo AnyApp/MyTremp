@@ -117,7 +117,7 @@
       <file leaf-file-name="config.xml" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/MyTremp/www/config.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="72" column="0" selection-start="4298" selection-end="4298" vertical-scroll-proportion="0.6483126" vertical-offset="1219" max-vertical-offset="3014">
+            <state line="70" column="48" selection-start="4191" selection-end="4191" vertical-scroll-proportion="0.57015985" vertical-offset="1219" max-vertical-offset="3014">
               <folding />
             </state>
           </provider>
@@ -510,7 +510,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/MyTremp/www/config.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="72" column="0" selection-start="4298" selection-end="4298" vertical-scroll-proportion="0.6483126" vertical-offset="1219" max-vertical-offset="3014">
+        <state line="70" column="48" selection-start="4191" selection-end="4191" vertical-scroll-proportion="0.57015985" vertical-offset="1219" max-vertical-offset="3014">
           <folding />
         </state>
       </provider>
