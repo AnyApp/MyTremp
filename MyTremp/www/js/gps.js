@@ -29,8 +29,11 @@ var gps = {
         var button = document.getElementById('id_button_start_ride');
         if (gps.GPSWatchId == null)
         {
-            gps.start();
-            button.innerHTML='ירדתי מטרמפ';
+            var result = gps.start();
+            if (result==true)
+            {
+                button.innerHTML='ירדתי מטרמפ';
+            }
         }
         else
         {
@@ -44,7 +47,7 @@ var gps = {
         {
             navigator.notification.alert('יש להזין מספר פלאפון אישי ולשמור אותו.',
                 function(){}, 'הטרמפ לא התחיל', 'הבנתי');
-            return;
+            return false;
         }
 
         gps.log("started");
@@ -56,6 +59,7 @@ var gps = {
 		};
 		gps.GPSWatchId = navigator.geolocation.watchPosition(gps.onSuccess,
 				gps.onError, gpsOptions);
+        return true;
 	},
     pickOnce: function()
     {
