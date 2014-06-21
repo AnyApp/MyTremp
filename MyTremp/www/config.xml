@@ -59,17 +59,14 @@
     </feature>
     <!-- Plugins -->
     <gap:plugin name="org.apache.cordova.geolocation" version="0.3.7" />
-    <gap:plugin name="de.appplant.cordova.plugin.local-notification" version="0.7.4" />
+    <gap:plugin name="com.kolwit.pickcontact" version="1.0.1" />
+    <gap:plugin name="com.badrit.contactpicker" version="0.1.0" />
+    <gap:plugin name="hu.dpal.phonegap.plugins.contactnumberpicker" version="0.1.1" />
 
     <!-- Core plugins -->
-    <gap:plugin name="com.pushwoosh.plugins.pushwoosh" version="3.0.2" />
     <gap:plugin name="org.apache.cordova.splashscreen" />
     <gap:plugin name="org.apache.cordova.dialogs" version="0.2.6" />
     <gap:plugin name="org.apache.cordova.device" version="0.2.8" />
-    <gap:plugin name="com.kolwit.pickcontact" version="1.0.1" />
-    <gap:plugin name="com.badrit.contactpicker" version="0.1.0" />
-    <gap:plugin name="com.mobitel.nalaka.piccon" />
-    <gap:plugin name="hu.dpal.phonegap.plugins.contactnumberpicker" version="0.1.1" />
 
 
     <!-- Third party plugins -->
