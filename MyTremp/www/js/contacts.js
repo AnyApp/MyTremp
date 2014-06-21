@@ -27,6 +27,7 @@ var contact =
 var contacts =
 {
     savedContacts: Array(),
+    loaded:false,
     currentDeleteName:'',
     currentDeletePhone:'',
     draw: function () {
@@ -99,11 +100,12 @@ var contacts =
         {
             contacts.savedContacts = Array();
         }
+        contacts.loaded = true;
         contacts.draw();
     },
     getContacts: function()
     {
-       if(contacts.savedContacts==null || contacts.savedContacts==undefined)
+       if(contacts.savedContacts==null || contacts.savedContacts==undefined || !contacts.loaded)
        {
            contacts.savedContacts = JSON.parse(window.localStorage.getItem("contacts"));
            if (contacts.savedContacts ==null || contacts.savedContacts==undefined || contacts.savedContacts=='')
@@ -111,7 +113,8 @@ var contacts =
                contacts.savedContacts = Array();
            }
        }
-        return contacts.savedContacts;
+        contacts.loaded = true;
+       return contacts.savedContacts;
     }
 }
 
