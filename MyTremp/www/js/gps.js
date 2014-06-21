@@ -96,8 +96,9 @@ var gps = {
         if (gps.gpsErrorCount > 100) {
             gps.stop();
             //alert('נכשל בנסיון לקבל מיקום');
-            navigator.notification.alert('נכשל בנסיון לקבל מיקום',
-                function(){}, 'שגיאה', 'הבנתי');
+            gps.log('gps failure!');
+            /*navigator.notification.alert('נכשל בנסיון לקבל מיקום',
+                function(){}, 'שגיאה', 'הבנתי');*/
         }
 		else if (gps.gpsErrorCount > 3) {
 			//$(elem).removeClass("success");
