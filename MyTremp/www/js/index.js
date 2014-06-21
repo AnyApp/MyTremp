@@ -125,7 +125,7 @@ var app = {
                     var number  = curContact.phone;
                     var message = 'עליתי על טרמפ ונקלעתי למצב חירום, הזעיקו משטרה! אני נמצא במיקום הבא:%0a'+
                         'lat:'+gps.lastLat+'lon:'+gps.lastLon;
-                    //var intent = "INTENT"; //leave empty for sending sms using default intent
+                   var intent = ""; //leave empty for sending sms using default intent
                     var success =
                         function ()
                         {
