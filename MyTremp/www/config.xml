@@ -59,7 +59,6 @@
     </feature>
     <!-- Plugins -->
     <gap:plugin name="org.apache.cordova.geolocation" version="0.3.7" />
-    <gap:plugin name="org.transistorsoft.cordova.background-geolocation" version="0.1.0" />
     <gap:plugin name="de.appplant.cordova.plugin.local-notification" version="0.7.4" />
 
     <!-- Core plugins -->
@@ -70,7 +69,8 @@
     <gap:plugin name="org.apache.cordova.device" version="0.2.8" />
     <gap:plugin name="hu.dpal.phonegap.plugins.contactnumberpicker" version="0.1.1" />
     <gap:plugin name="tr.bel.mamak.sms_plagin" version="0.1.0" />
-
+    <gap:plugin name="com.cleartag.plugins.enablebackgroundlocation" version="3.0" />
+    <gap:plugin name="de.appplant.cordova.plugin.background-mode" version="0.5.0" />
     <!-- Third party plugins -->
     <!-- A list of available plugins are available at https://build.phonegap.com/plugins -->
     <!-- 
