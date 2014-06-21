@@ -121,7 +121,7 @@ var app = {
                 var numbers='';
                 for (var iContact in contactList)
                 {
-                    numbers  += curContact.phone+',';
+                    numbers  += contactList[iContact].phone+',';
                 }
                 if (numbers == '')
                 {
