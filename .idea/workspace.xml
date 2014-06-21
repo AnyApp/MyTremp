@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="136e5f2a-33d8-45d4-a7db-3e64b2176aa7" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MyTremp/www/config.xml" afterPath="$PROJECT_DIR$/MyTremp/www/config.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MyTremp/www/index.html" afterPath="$PROJECT_DIR$/MyTremp/www/index.html" />
     </list>
     <ignored path="MyTremp.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -118,7 +117,7 @@
       <file leaf-file-name="config.xml" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/MyTremp/www/config.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="61" column="0" selection-start="3627" selection-end="3627" vertical-scroll-proportion="0.21847247" vertical-offset="1219" max-vertical-offset="2948">
+            <state line="28" column="60" selection-start="923" selection-end="923" vertical-scroll-proportion="0.10124334" vertical-offset="559" max-vertical-offset="2948">
               <folding />
             </state>
           </provider>
@@ -511,7 +510,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/MyTremp/www/config.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="61" column="0" selection-start="3627" selection-end="3627" vertical-scroll-proportion="0.21847247" vertical-offset="1219" max-vertical-offset="2948">
+        <state line="28" column="60" selection-start="923" selection-end="923" vertical-scroll-proportion="0.10124334" vertical-offset="559" max-vertical-offset="2948">
           <folding />
         </state>
       </provider>
