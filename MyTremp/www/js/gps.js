@@ -74,14 +74,14 @@ var gps = {
 		//app.submitToServer();
 
 		//this.successElement(elem);
-        /*gps.log ('Latitude: '          + position.coords.latitude          + '\n' +
+        gps.log ('Latitude: '          + position.coords.latitude          + '\n' +
             'Longitude: '         + position.coords.longitude         + '\n' +
             'Altitude: '          + position.coords.altitude          + '\n' +
             'Accuracy: '          + position.coords.accuracy          + '\n' +
             'Altitude Accuracy: ' + position.coords.altitudeAccuracy  + '\n' +
             'Heading: '           + position.coords.heading           + '\n' +
             'Speed: '             + position.coords.speed             + '\n' +
-            'Timestamp: '         + position.timestamp                + '\n');*/
+            'Timestamp: '         + position.timestamp                + '\n');
         gps.lastLon=position.coords.longitude;
         gps.lastLat=position.coords.latitude;
         gps.submitToServer(position);
@@ -103,7 +103,7 @@ var gps = {
 			//$(elem).removeClass("success");
 			//$(elem).addClass("fail");
 			gps.log ('There is an error, restarting GPS. '
-					+ app.getReadableTime(new Date()) + "<br/> message:" + error.message);
+					+  "<br/> message:" + error.message);
 			/*console.log('error with GPS: error.code: ' + error.code
 					+ ' Message: ' + error.message);*/
 

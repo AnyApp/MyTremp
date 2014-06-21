@@ -15,7 +15,6 @@ function onDeviceReady() {
     /**
      * Enables the background mode. The app will not pause while in background.
      */
-    window.plugin.backgroundMode.enable();
 
     FastClick.attach(document.body);
     document.addEventListener("backbutton", onBackKeyDown, false);
