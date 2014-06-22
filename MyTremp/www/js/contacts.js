@@ -37,6 +37,7 @@ var contacts =
             view += contact.smallView(contacts.savedContacts[iContact]);
         }
         document.getElementById('idContactsContainer').innerHTML = view;
+        refreshScrolling();
     },
     chooseContact: function()
     {

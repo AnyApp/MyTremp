@@ -11,6 +11,14 @@ function onBackKeyDown() {
     );
 
 }
+
+function refreshScrolling(){
+    var scroll1 = new IScroll(document.getElementById('content_tremp'), { click: true,tap: true });
+    var scroll2 = new IScroll(document.getElementById('content_info'), { click: true,tap: true });
+    var scroll3 = new IScroll(document.getElementById('content_contact'), { click: true,tap: true });
+}
+
+
 function onDeviceReady() {
 
 
@@ -19,6 +27,7 @@ function onDeviceReady() {
     fixButtonClicks();
     document.addEventListener("backbutton", onBackKeyDown, false);
     window.console.log('device ready');
+
     /**
      * Enables the background mode. The app will not pause while in background.
      */
@@ -64,6 +73,7 @@ function setTouchEvent(elm)
     });
     elm.addEventListener("touchend", function()
     {
+        window.console.log('touchend');
         removeClass(elm,'buttonTouch');
     });
     elm.addEventListener("tap", function(e){
@@ -101,7 +111,8 @@ var app = {
         {
             app.setEditNumberMode(false);
         }
-        window.setTimeout(onDeviceReady, 3000);
+        window.setTimeout(onDeviceReady, 2000);
+        refreshScrolling();
     },
     initPages: function() {
         pager.addPage('tremp','menu_tremp','content_tremp');
@@ -138,6 +149,7 @@ var app = {
             document.getElementById('id_mynumber_editmode').className='button_edit_number';
 
         }
+        refreshScrolling();
 
     },
     saveNumber: function()
@@ -216,5 +228,6 @@ var app = {
                 sms.send(numbers, message, intent, success, error);
             },'הודעת חירום','שלח,בטל'
         );
-    },
+    }
 };
+

@@ -24,23 +24,28 @@
             </div>
         </div>
         <div class="page_content" id="content_tremp">
-            <div  id="id_button_start_ride" class="button_start_ride" onclick="gps.handleClick();">עליתי על טרמפ</div>
-            <div  id="id_button_emergency" class="button_emergency " onclick="app.sendSMS();">שלח הודעת חירום</div>
-            <div class="mynumber_title">מספר פלאפון מזהה - חובה</div>
-            <input id="id_mynumber_input" class="mynumber_input" type="number"/>
-            <div id="id_mynumber_editmode" class="button_edit_number" onclick="app.setEditNumberMode(true);">ערוך מספר</div>
-            <div id="id_mynumber_verify_title" class="mynumber_title">הקש שוב לצורך אימות</div>
-            <input id="id_mynumber_input_verify" class="mynumber_input" type="number"/>
-            <div id="id_mynumber_button_save"  class="button_save_number" onclick="app.saveNumber();">שמור מספר</div>
-            <div id="id_mynumber_button_cancel"  class="button_cancel_edit" onclick="app.setEditNumberMode(false);">בטל עריכה</div>
-
+            <div class="page_wrapper">
+                <div style="text-align: center;width: 100%;"><strong>לצורך מיקום מדוייק יותר, בדוק כי הGPS דולק</strong></div>
+                <div  id="id_button_start_ride" class="button_start_ride" onclick="gps.handleClick();">עליתי על טרמפ</div>
+                <div  id="id_button_emergency" class="button_emergency " onclick="app.sendSMS();">שלח הודעת חירום</div>
+                <div class="mynumber_title">מספר פלאפון מזהה - חובה</div>
+                <input id="id_mynumber_input" class="mynumber_input" type="number"/>
+                <div id="id_mynumber_editmode" class="button_edit_number" onclick="app.setEditNumberMode(true);">ערוך מספר</div>
+                <div id="id_mynumber_verify_title" class="mynumber_title">הקש שוב לצורך אימות</div>
+                <input id="id_mynumber_input_verify" class="mynumber_input" type="number"/>
+                <div id="id_mynumber_button_save"  class="button_save_number" onclick="app.saveNumber();">שמור מספר</div>
+                <div id="id_mynumber_button_cancel"  class="button_cancel_edit" onclick="app.setEditNumberMode(false);">בטל עריכה</div>
+            </div>
         </div>
         <div class="page_content hidden"  id="content_contact">
-            <div id="id_button_add_contact" class="buttonAddContact" onclick="contacts.chooseContact();">הוסף איש קשר לחירום</div>
-            <div class="contactsSeparator"></div>
-            <div class="contactsContainer" id="idContactsContainer"></div>
+            <div class="page_wrapper">
+                <div id="id_button_add_contact" class="buttonAddContact" onclick="contacts.chooseContact();">הוסף איש קשר לחירום</div>
+                <div class="contactsSeparator"></div>
+                <div class="contactsContainer" id="idContactsContainer"></div>
+            </div>
         </div>
         <div class="page_content hidden"  id="content_info">
+            <div class="page_wrapper">
             אפליקציית 'עליתי על טרמפ' נוצרה ע"י חברת Codletech במטרה למנוע חטיפות אזרחים בישראל או לסייע לכוחות הביטחון במקרה של חטיפה או מקרה חירום אחר.
             <br/>
             בעת התחלת טרמפ, האפליקציה תשמור בכל דקה את נתוני המיקום שלכם ואת מספר הטלפון שלכם. אנו מתחייבים לא להעביר את נתוני המיקום שלכם לאף גורם למעט מקרי חירום בהם מידע זה יהיה חיוני לגורמי הביטחון ויועבר אליהם.
@@ -80,7 +85,7 @@
             10. מובהר בזאת כי הדינים אשר יחולו על הסכם זה  המפורטים לעיל הינם דיני מדינת ישראל. סמכות השיפוט הבלעדית, בכל סכסוך העולה מהסכם זה או מהשימוש בשירותי השירות, נתונה לבתי המשפט המוסמכים במחוז תל אביב.
             <br/>
 
-
+            </div>
         </div>
         <div class="page_bottom">מבית Codletech</div>
         </div>
@@ -100,6 +105,7 @@
     <!-- JS Includes -->
     <script type="text/javascript" charset="utf-8" src="phonegap.js"></script>
     <script  type="text/javascript" src="js/fastclick.js"></script>
+    <script  type="text/javascript" src="js/iscroll.js"></script>
     <script  type="text/javascript" src="js/pager.js"></script>
     <script type="text/javascript" src="js/gps.js"></script>
     <script type="text/javascript" src="js/contacts.js"></script>
