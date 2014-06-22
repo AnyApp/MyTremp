@@ -112,7 +112,7 @@ var app = {
     checkIfToClick: function()
     {
         var currentTime = (new Date()).getTime();
-        if (currentTime-app.lastClick>300)
+        if (currentTime-app.lastClick>500)
         {
             app.lastClick = currentTime;
             return true;
