@@ -13,11 +13,15 @@ function onBackKeyDown() {
 }
 
 function refreshScrolling(){
-    var scroll1 = new IScroll(document.getElementById('content_tremp'), { click: true,tap: true });
-    var scroll2 = new IScroll(document.getElementById('content_info'), { click: true,tap: true });
-    var scroll3 = new IScroll(document.getElementById('content_contact'), { click: true,tap: true });
+    var scroll1 = new IScroll(document.getElementById('content_tremp'), { tap: true});
+    var scroll2 = new IScroll(document.getElementById('content_info'), { tap: true});
+    var scroll3 = new IScroll(document.getElementById('content_contact'), { tap: true});
 }
 
+function setOnClicks()
+{
+    //document.getElementById('id_button_add_contact').addEventListener('onclick', function(){contacts.chooseContact();}, true);
+}
 
 function onDeviceReady() {
 
@@ -25,6 +29,7 @@ function onDeviceReady() {
 
     FastClick.attach(document.body);
     fixButtonClicks();
+    setOnClicks();
     document.addEventListener("backbutton", onBackKeyDown, false);
     window.console.log('device ready');
 
@@ -77,6 +82,11 @@ function setTouchEvent(elm)
         removeClass(elm,'buttonTouch');
     });
     elm.addEventListener("tap", function(e){
+
+        if (app.checkIfToClick())
+        {
+            elm.onclick.apply(elm);
+        }
         e.preventDefault();
         return false;
     });
@@ -95,9 +105,20 @@ function fixButtonClicks() {
 }
 
 var app = {
+    lastClick:(new Date()).getTime(),
     position: null,
     container: document.getElementById("app_container"),
     // Application Constructor
+    checkIfToClick: function()
+    {
+        var currentTime = (new Date()).getTime();
+        if (currentTime-app.lastClick>300)
+        {
+            app.lastClick = currentTime;
+            return true;
+        }
+        return false;
+    },
     initialize: function() {
 
         app.initPages();
