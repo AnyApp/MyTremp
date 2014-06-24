@@ -12,15 +12,35 @@ function onBackKeyDown() {
 
 }
 
-function refreshScrolling(){
-    var scroll1 = new IScroll(document.getElementById('content_tremp'), { tap: true});
-    var scroll2 = new IScroll(document.getElementById('content_info'), { tap: true});
-    var scroll3 = new IScroll(document.getElementById('content_contact'), { tap: true});
+function getScrollY(scroller)
+{
+    if (scroller!= undefined && scroller!=null)
+    {
+        return scroller.y;
+    }
+    return 0;
 }
 
-function setOnClicks()
+function refreshScrolling(){
+    var y1 = getScrollY(window.scroll1);
+    var y2 = getScrollY(window.scroll2);
+    var y3 = getScrollY(window.scroll3);
+
+    window.scroll1 = new IScroll(document.getElementById('content_tremp'), { tap: true});
+    window.scroll2 = new IScroll(document.getElementById('content_info'), { tap: true});
+    window.scroll3 = new IScroll(document.getElementById('content_contact'), { tap: true});
+
+    window.scroll1.scrollTo(0,y1);
+    window.scroll2.scrollTo(0,y2);
+    window.scroll3.scrollTo(0,y3);
+}
+
+function onResume()
 {
-    //document.getElementById('id_button_add_contact').addEventListener('onclick', function(){contacts.chooseContact();}, true);
+    FastClick.attach(document.body);
+    refreshScrolling();
+    updateButtonClicks();
+
 }
 
 function onDeviceReady() {
@@ -28,9 +48,9 @@ function onDeviceReady() {
 
 
     FastClick.attach(document.body);
-    fixButtonClicks();
-    setOnClicks();
+    updateButtonClicks();
     document.addEventListener("backbutton", onBackKeyDown, false);
+    document.addEventListener("resume", onResume, false);
     window.console.log('device ready');
 
     /**
@@ -69,39 +89,53 @@ function removeClass(el, name)
         el.className=el.className.replace(new RegExp('(\\s|^)'+name+'(\\s|$)'),' ').replace(/^\s+|\s+$/g, '');
     }
 }
-function setTouchEvent(elm)
+function setTouchEvent(elm,eventHandler,buttonClass)
 {
+    if (buttonClass==null || buttonClass=="")
+    {
+        buttonClass = 'buttonTouch';
+    }
+
     elm.addEventListener("touchstart", function()
     {
         window.console.log('touched');
-        addClass(elm,'buttonTouch');
+        addClass(elm,buttonClass);
     });
     elm.addEventListener("touchend", function()
     {
         window.console.log('touchend');
-        removeClass(elm,'buttonTouch');
+        removeClass(elm,buttonClass);
     });
     elm.addEventListener("tap", function(e){
 
         if (app.checkIfToClick())
         {
-            elm.onclick.apply(elm);
+            eventHandler();//elm.onclick.apply(elm);
         }
         e.preventDefault();
         return false;
     });
 
 }
-function fixButtonClicks() {
-    //if (navigator.userAgent.toLowerCase().indexOf("android") > -1) {
-        setTouchEvent(document.getElementById('id_button_start_ride'));
-        setTouchEvent(document.getElementById('id_button_emergency'));
-        setTouchEvent(document.getElementById('id_mynumber_editmode'));
-        setTouchEvent(document.getElementById('id_mynumber_button_save'));
-        setTouchEvent(document.getElementById('id_mynumber_button_cancel'));
-        setTouchEvent(document.getElementById('id_button_add_contact'));
+function updateButtonClicks() {
+    setTouchEvent(document.getElementById('id_button_start_ride'),function(){gps.handleClick();});
+    setTouchEvent(document.getElementById('id_button_emergency'),function(){app.sendSMS();});
+    setTouchEvent(document.getElementById('id_mynumber_editmode'),function(){app.setEditNumberMode(true);});
+    setTouchEvent(document.getElementById('id_mynumber_button_save'),function(){app.saveNumber();});
+    setTouchEvent(document.getElementById('id_mynumber_button_cancel'),function(){app.setEditNumberMode(false);});
+    setTouchEvent(document.getElementById('id_button_add_contact'),function(){contacts.chooseContact();});
+    //Update contacts views.
+    for (var i=0;i<contacts.maxContactIndex;i++)
+    {
+        (function()
+        {
+            var currentName = contacts.savedContacts[i].name;
+            var currentPhone = contacts.savedContacts[i].phone;
+            setTouchEvent(document.getElementById(contacts.baseId+""+i),function(){contacts.deleteContact(currentName,currentPhone);},'contactTouch');
+        })();
+    }
 
-    //}
+
 }
 
 var app = {
@@ -112,7 +146,7 @@ var app = {
     checkIfToClick: function()
     {
         var currentTime = (new Date()).getTime();
-        if (currentTime-app.lastClick>500)
+        if (currentTime-app.lastClick>400)
         {
             app.lastClick = currentTime;
             return true;
@@ -168,7 +202,7 @@ var app = {
             document.getElementById('id_mynumber_verify_title').className='hidden';
             document.getElementById('id_mynumber_button_cancel').className='hidden';
             document.getElementById('id_mynumber_editmode').className='button_edit_number';
-
+            window.scroll1.scrollTo(0, 0);
         }
         refreshScrolling();
 

@@ -16,9 +16,9 @@ var contact =
             };
         },
     smallView:
-        function(oContact)
+        function(index,oContact)
         {
-            return  '<div class="smallContactContainer" onclick="contacts.deleteContact(\''+oContact.name+'\',\''+oContact.phone+'\');">'+
+            return  '<div id="smallContactViewId'+index+'" class="smallContactContainer">'+
                         '<div class="smallContactName">'+oContact.name+'</div>'+
                         '<div class="smallContactPhone">'+oContact.phone+'</div>'+
                     '</div>';
@@ -26,18 +26,22 @@ var contact =
 }
 var contacts =
 {
+    baseId: 'smallContactViewId',
     savedContacts: Array(),
     loaded:false,
     currentDeleteName:'',
     currentDeletePhone:'',
+    maxContactIndex:-1,
     draw: function () {
         var view = '';
         for (var iContact in contacts.savedContacts)
         {
-            view += contact.smallView(contacts.savedContacts[iContact]);
+            view += contact.smallView(iContact,contacts.savedContacts[iContact]);
+            contacts.maxContactIndex = iContact;
         }
         document.getElementById('idContactsContainer').innerHTML = view;
         refreshScrolling();
+        updateButtonClicks();
     },
     chooseContact: function()
     {
@@ -56,6 +60,7 @@ var contacts =
 
     deleteContact: function(name,phone)
     {
+        window.console.log(name+","+phone);
         contacts.currentDeleteName=name;
         contacts.currentDeletePhone=phone;
         // Confirm delete,
