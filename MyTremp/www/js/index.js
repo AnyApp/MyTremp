@@ -227,13 +227,13 @@ var app = {
         if (phoneNumber==null || phoneNumberVerify==null|| phoneNumber=='' || phoneNumberVerify=='')
         {
             navigator.notification.alert('אנא הזן את מספר הפלאפון פעמיים לצורך אימות',
-                function(){window.scroll1.scrollTo(0, 0);refreshScrolling();}, 'שגיאה', 'אישור');
+                function(){refreshScrolling();}, 'שגיאה', 'אישור');
             return;
         }
         if (phoneNumber != phoneNumberVerify)
         {
             navigator.notification.alert('מספרי הפלאפון אינם תואמים',
-                function(){window.scroll1.scrollTo(0, 0);refreshScrolling();}, 'שגיאה', 'אישור');
+                function(){refreshScrolling();}, 'שגיאה', 'אישור');
             return;
         }
         phoneNumber = phoneNumber.replace(/\D/g,'');
@@ -241,13 +241,13 @@ var app = {
         if (phoneNumber.length!=10)
         {
             navigator.notification.alert('מספר פלאפון לא חוקי',
-                function(){window.scroll1.scrollTo(0, 0);refreshScrolling();}, 'שגיאה', 'אישור');
+                function(){refreshScrolling();}, 'שגיאה', 'אישור');
             return;
         }
         window.localStorage.setItem("phoneNumber", phoneNumber);
         app.setEditNumberMode(false);
         navigator.notification.alert('מספר הטלפון נשמר בהצלחה',
-            function(){window.scroll1.scrollTo(0, 0);refreshScrolling();}, 'עדכון', 'אישור');
+            function(){refreshScrolling();}, 'עדכון', 'אישור');
 
     },
     getPhoneNumber: function()
