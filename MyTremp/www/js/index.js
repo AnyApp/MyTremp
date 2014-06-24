@@ -43,9 +43,9 @@ function refreshScrolling(toTop){
     setTimeout(function () { window.scroll2.refresh(); }, 0);
     setTimeout(function () { window.scroll3.refresh(); }, 0);
 
-    window.scroll1.scrollTo(0,y1);
-    window.scroll2.scrollTo(0,y2);
-    window.scroll3.scrollTo(0,y3);
+    //window.scroll1.scrollTo(0,y1);
+    //window.scroll2.scrollTo(0,y2);
+    //window.scroll3.scrollTo(0,y3);
 }
 
 function onResume()
