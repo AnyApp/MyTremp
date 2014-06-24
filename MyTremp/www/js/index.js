@@ -21,10 +21,17 @@ function getScrollY(scroller)
     return 0;
 }
 
-function refreshScrolling(){
+function refreshScrolling(toTop){
     var y1 = getScrollY(window.scroll1);
     var y2 = getScrollY(window.scroll2);
     var y3 = getScrollY(window.scroll3);
+    //Scroll to top
+    if (toTop!= undefined && toTop!=null && toTop==true)
+    {
+        window.scroll1.scrollTo(0,0);
+        window.scroll2.scrollTo(0,0);
+        window.scroll3.scrollTo(0,0);
+    }
 
     window.scroll1 = new IScroll(document.getElementById('content_tremp'), { tap: true});
     window.scroll2 = new IScroll(document.getElementById('content_info'), { tap: true});
@@ -46,7 +53,7 @@ function onResume()
 function onDeviceReady() {
 
 
-
+    refreshScrolling(true);
     FastClick.attach(document.body);
     updateButtonClicks();
     document.addEventListener("backbutton", onBackKeyDown, false);
@@ -167,7 +174,7 @@ var app = {
             app.setEditNumberMode(false);
         }
         window.setTimeout(onDeviceReady, 2000);
-        refreshScrolling();
+
     },
     initPages: function() {
         pager.addPage('tremp','menu_tremp','content_tremp');
