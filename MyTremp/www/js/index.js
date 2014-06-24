@@ -209,7 +209,7 @@ var app = {
             document.getElementById('id_mynumber_verify_title').className='hidden';
             document.getElementById('id_mynumber_button_cancel').className='hidden';
             document.getElementById('id_mynumber_editmode').className='button_edit_number';
-            window.scroll1.scrollTo(0, 0);
+            //window.scroll1.scrollTo(0, 0);
         }
         refreshScrolling();
 
