@@ -39,9 +39,9 @@ function refreshScrolling(toTop){
         window.scroll2 = new IScroll(document.getElementById('content_info'), { tap: true});
         window.scroll3 = new IScroll(document.getElementById('content_contact'), { tap: true});
     }
-    setTimeout(function () { window.scroll1.refresh(); }, 0);
-    setTimeout(function () { window.scroll2.refresh(); }, 0);
-    setTimeout(function () { window.scroll3.refresh(); }, 0);
+    setTimeout(function () { window.scroll1.refresh(); }, 100);
+    setTimeout(function () { window.scroll2.refresh(); }, 100);
+    setTimeout(function () { window.scroll3.refresh(); }, 100);
 
     //window.scroll1.scrollTo(0,y1);
     //window.scroll2.scrollTo(0,y2);
