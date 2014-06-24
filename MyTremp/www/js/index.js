@@ -33,19 +33,13 @@ function refreshScrolling(toTop){
         window.scroll3.scrollTo(0,0);
     }
 
-    if (window.scroll1==undefined || window.scroll1==null)
-    {
-        window.scroll1 = new IScroll(document.getElementById('content_tremp'), { tap: true});
-        window.scroll2 = new IScroll(document.getElementById('content_info'), { tap: true});
-        window.scroll3 = new IScroll(document.getElementById('content_contact'), { tap: true});
-    }
-    setTimeout(function () { window.scroll1.refresh(); }, 100);
-    setTimeout(function () { window.scroll2.refresh(); }, 100);
-    setTimeout(function () { window.scroll3.refresh(); }, 100);
+    window.scroll1 = new IScroll(document.getElementById('content_tremp'), { tap: true});
+    window.scroll2 = new IScroll(document.getElementById('content_info'), { tap: true});
+    window.scroll3 = new IScroll(document.getElementById('content_contact'), { tap: true});
 
-    //window.scroll1.scrollTo(0,y1);
-    //window.scroll2.scrollTo(0,y2);
-    //window.scroll3.scrollTo(0,y3);
+    window.scroll1.scrollTo(0,y1);
+    window.scroll2.scrollTo(0,y2);
+    window.scroll3.scrollTo(0,y3);
 }
 
 function onResume()
@@ -215,7 +209,7 @@ var app = {
             document.getElementById('id_mynumber_verify_title').className='hidden';
             document.getElementById('id_mynumber_button_cancel').className='hidden';
             document.getElementById('id_mynumber_editmode').className='button_edit_number';
-            //window.scroll1.scrollTo(0, 0);
+            window.scroll1.scrollTo(0, 0);
         }
         refreshScrolling();
 
@@ -227,13 +221,13 @@ var app = {
         if (phoneNumber==null || phoneNumberVerify==null|| phoneNumber=='' || phoneNumberVerify=='')
         {
             navigator.notification.alert('אנא הזן את מספר הפלאפון פעמיים לצורך אימות',
-                function(){refreshScrolling();}, 'שגיאה', 'אישור');
+                function(){window.scroll1.scrollTo(0, 0);refreshScrolling();}, 'שגיאה', 'אישור');
             return;
         }
         if (phoneNumber != phoneNumberVerify)
         {
             navigator.notification.alert('מספרי הפלאפון אינם תואמים',
-                function(){refreshScrolling();}, 'שגיאה', 'אישור');
+                function(){window.scroll1.scrollTo(0, 0);refreshScrolling();}, 'שגיאה', 'אישור');
             return;
         }
         phoneNumber = phoneNumber.replace(/\D/g,'');
@@ -241,13 +235,13 @@ var app = {
         if (phoneNumber.length!=10)
         {
             navigator.notification.alert('מספר פלאפון לא חוקי',
-                function(){refreshScrolling();}, 'שגיאה', 'אישור');
+                function(){window.scroll1.scrollTo(0, 0);refreshScrolling();}, 'שגיאה', 'אישור');
             return;
         }
         window.localStorage.setItem("phoneNumber", phoneNumber);
         app.setEditNumberMode(false);
         navigator.notification.alert('מספר הטלפון נשמר בהצלחה',
-            function(){refreshScrolling();}, 'עדכון', 'אישור');
+            function(){window.scroll1.scrollTo(0, 0);refreshScrolling();}, 'עדכון', 'אישור');
 
     },
     getPhoneNumber: function()
