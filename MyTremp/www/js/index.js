@@ -125,7 +125,7 @@ function updateButtonClicks() {
     setTouchEvent(document.getElementById('id_mynumber_button_cancel'),function(){app.setEditNumberMode(false);});
     setTouchEvent(document.getElementById('id_button_add_contact'),function(){contacts.chooseContact();});
     //Update contacts views.
-    for (var i=0;i<contacts.maxContactIndex;i++)
+    for (var i=0;i<=contacts.maxContactIndex;i++)
     {
         (function()
         {
@@ -234,7 +234,7 @@ var app = {
         window.localStorage.setItem("phoneNumber", phoneNumber);
         app.setEditNumberMode(false);
         navigator.notification.alert('מספר הטלפון נשמר בהצלחה',
-            function(){}, 'עדכון', 'אישור');
+            function(){refreshScrolling();}, 'עדכון', 'אישור');
 
     },
     getPhoneNumber: function()
