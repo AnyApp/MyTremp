@@ -19,9 +19,9 @@ function onBackKeyDown() {
 
 }
 
-function refreshScrolling(){
+function refreshScrolling(forceCreate){
 
-    if (window.scroll1==null || window.scroll1 == undefined)
+    if (forceCreate || window.scroll1==null || window.scroll1 == undefined)
     {
         window.scroll1 = new IScroll(document.getElementById('content_tremp'), { tap: true});
         window.scroll2 = new IScroll(document.getElementById('content_info'), { tap: true});
@@ -235,13 +235,13 @@ var app = {
         if (phoneNumber==null || phoneNumberVerify==null|| phoneNumber=='' || phoneNumberVerify=='')
         {
             alertify.alert('אנא הזן את מספר הפלאפון פעמיים לצורך אימות');
-            refreshScrolling();
+            setTimeout(function () {refreshScrolling(true);}, 200);
             return;
         }
         if (phoneNumber != phoneNumberVerify)
         {
             alertify.alert('מספרי הפלאפון אינם תואמים');
-            refreshScrolling();
+            setTimeout(function () {refreshScrolling(true);}, 200);
             return;
         }
         phoneNumber = phoneNumber.replace(/\D/g,'');
@@ -249,7 +249,7 @@ var app = {
         if (phoneNumber.length!=10)
         {
             alertify.alert('מספר פלאפון לא חוקי');
-            refreshScrolling();
+            setTimeout(function () {refreshScrolling(true);}, 200);
             return;
         }
         window.localStorage.setItem("phoneNumber", phoneNumber);
