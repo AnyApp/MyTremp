@@ -9,7 +9,7 @@ function onBackKeyDown() {
     alertify.confirm('האם אתה בטוח כי ברצונך לצאת מהאפליקציה?',
         function(ok)
         {
-            if (!ok)
+            if (ok)
             {
                 return;
             }
