@@ -213,7 +213,6 @@ ul{
     width: 80%;
     margin: 0 auto;
     text-align: center;
-    margin-top: 13px;
     margin-bottom: 10px;
     font-size: 20px;
     font-weight: bold;
@@ -254,6 +253,20 @@ ul{
     line-height: 45px;
 }
 
+.mynumber_label{
+    direction: ltr;
+    width: 80%;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    color: #2F4469;
+    border: 2px solid rgba(255, 255, 255, 0);
+    height: 45px;
+    line-height: 45px;
+}
+
 .mynumber_input {
     direction: ltr;
     width: 80%;
@@ -269,6 +282,7 @@ ul{
     height: 45px;
     line-height: 45px;
 }
+
 
 .buttonAddContact{
     width: 80%;
@@ -320,3 +334,69 @@ ul{
     text-align: left;
     direction: ltr;
 }
+
+
+/**
+ Alertify
+**/
+
+.alertify-inner {
+    text-align: center;
+    background: #ffffff;
+    border: 1px solid #A2A2A2;
+    font-size: 15px;
+    font-weight: bold;
+    padding-top: 1px;
+    color: #000000;
+}
+
+.alertify-button, .alertify-button:hover, .alertify-button:active, .alertify-button:visited .alertify-button:visited {
+    background: none;
+    text-decoration: none;
+    border: none;
+    line-height: 1.5;
+    font-size: 100%;
+    display: inline-block;
+    cursor: pointer;
+    margin-left: 5px;
+    color: #ffffff;
+    font-weight: bold;
+    width: 100%;
+    margin: 0;
+    padding: 7px 0;
+    outline:0;
+}
+
+#alertify-cancel {
+    background: #C73C3C;
+}
+
+#alertify-ok {
+    background: #399767;
+}
+
+
+
+.alertify-cover {
+    position: fixed;
+    z-index: 99999;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: white;
+    filter: alpha(opacity=0);
+    opacity: 0.5;
+    background: #000000;
+}
+
+
+
+
+
+
+
+
+
+
+

@@ -1,37 +1,26 @@
+function customizeAlertify()
+{
+
+}
+
 function onBackKeyDown() {
-    navigator.notification.confirm('האם אתה בטוח כי ברצונך לצאת מהאפליקציה?',
-        function(choosed)
+    alertify.set({ labels: {ok: "הישאר",cancel : "צא" } });
+
+    alertify.confirm('האם אתה בטוח כי ברצונך לצאת מהאפליקציה?',
+        function(ok)
         {
-            if (choosed == 1)
+            if (!ok)
             {
                 return;
             }
             navigator.app.exitApp();
-        },'יציאה','הישאר,צא'
+        }
     );
 
 }
 
-function getScrollY(scroller)
-{
-    if (scroller!= undefined && scroller!=null)
-    {
-        return scroller.y;
-    }
-    return 0;
-}
+function refreshScrolling(){
 
-function refreshScrolling(toTop){
-    var y1 = getScrollY(window.scroll1);
-    var y2 = getScrollY(window.scroll2);
-    var y3 = getScrollY(window.scroll3);
-
-    if (toTop!= undefined && toTop!=null && toTop==true)
-    {
-        //window.scroll1.scrollTo(0,0);
-        //window.scroll2.scrollTo(0,0);
-        //window.scroll3.scrollTo(0,0);
-    }
     if (window.scroll1==null || window.scroll1 == undefined)
     {
         window.scroll1 = new IScroll(document.getElementById('content_tremp'), { tap: true});
@@ -45,9 +34,6 @@ function refreshScrolling(toTop){
         setTimeout(function () {window.scroll3.refresh();}, 0);
     }
 
-   // window.scroll1.scrollTo(0,y1);
-   // window.scroll2.scrollTo(0,y2);
-    //window.scroll3.scrollTo(0,y3);
 }
 
 function onResume()
@@ -59,13 +45,14 @@ function onResume()
 }
 
 function onDeviceReady() {
-
-
-    refreshScrolling(true);
-    FastClick.attach(document.body);
-    updateButtonClicks();
     document.addEventListener("backbutton", onBackKeyDown, false);
     document.addEventListener("resume", onResume, false);
+
+    customizeAlertify();
+    refreshScrolling();
+    FastClick.attach(document.body);
+    updateButtonClicks();
+
     window.console.log('device ready');
 
     /**
@@ -177,8 +164,7 @@ var app = {
     initialize: function() {
 
         app.initPages();
-        document.getElementById('id_mynumber_input').value = this.getPhoneNumber();
-        document.getElementById('id_mynumber_input').setAttribute ('value',this.getPhoneNumber());
+        app.updatePhoneNumberView();
         if ( this.getPhoneNumber()==null|| this.getPhoneNumber()==''|| this.getPhoneNumber()==undefined)
         {
             app.setEditNumberMode(true);
@@ -189,6 +175,12 @@ var app = {
         }
         window.setTimeout(onDeviceReady, 2000);
 
+    },
+    updatePhoneNumberView: function()
+    {
+        document.getElementById('id_mynumber_input').value = this.getPhoneNumber();
+        document.getElementById('id_mynumber_input').setAttribute ('value',this.getPhoneNumber());
+        document.getElementById('id_mynumber_label_ul').innerHTML=this.getPhoneNumber();
     },
     initPages: function() {
         pager.addPage('tremp','menu_tremp','content_tremp');
@@ -214,7 +206,11 @@ var app = {
             document.getElementById('id_mynumber_input_verify_ul').className='';
             document.getElementById('id_mynumber_verify_title_ul').className='';
             document.getElementById('id_mynumber_button_cancel_ul').className='';
+            document.getElementById('id_mynumber_input_ul').className='';
             document.getElementById('id_mynumber_editmode_ul').className='hidden';
+            document.getElementById('id_mynumber_label_ul').className='hidden';
+
+
         }
         else
         {
@@ -222,7 +218,9 @@ var app = {
             document.getElementById('id_mynumber_input_verify_ul').className='hidden';
             document.getElementById('id_mynumber_verify_title_ul').className='hidden';
             document.getElementById('id_mynumber_button_cancel_ul').className='hidden';
+            document.getElementById('id_mynumber_input_ul').className='hidden';
             document.getElementById('id_mynumber_editmode_ul').className='';
+            document.getElementById('id_mynumber_label_ul').className='mynumber_label';
             //window.scroll1.scrollTo(0, 0);
         }
         refreshScrolling();
@@ -230,32 +228,33 @@ var app = {
     },
     saveNumber: function()
     {
+        alertify.set({ labels: { ok: "אישור" } });
+
         var phoneNumber = document.getElementById('id_mynumber_input').value;
         var phoneNumberVerify = document.getElementById('id_mynumber_input_verify').value;
         if (phoneNumber==null || phoneNumberVerify==null|| phoneNumber=='' || phoneNumberVerify=='')
         {
-            navigator.notification.alert('אנא הזן את מספר הפלאפון פעמיים לצורך אימות',
-                function(){refreshScrolling();}, 'שגיאה', 'אישור');
+            alertify.alert('אנא הזן את מספר הפלאפון פעמיים לצורך אימות');
             return;
         }
         if (phoneNumber != phoneNumberVerify)
         {
-            navigator.notification.alert('מספרי הפלאפון אינם תואמים',
-                function(){refreshScrolling();}, 'שגיאה', 'אישור');
+            alertify.alert('מספרי הפלאפון אינם תואמים');
             return;
         }
         phoneNumber = phoneNumber.replace(/\D/g,'');
 
         if (phoneNumber.length!=10)
         {
-            navigator.notification.alert('מספר פלאפון לא חוקי',
-                function(){refreshScrolling();}, 'שגיאה', 'אישור');
+            alertify.alert('מספר פלאפון לא חוקי');
             return;
         }
         window.localStorage.setItem("phoneNumber", phoneNumber);
+        document.getElementById('id_mynumber_label_ul').innerHTML=phoneNumber; //Update View.
         app.setEditNumberMode(false);
-        navigator.notification.alert('מספר הטלפון נשמר בהצלחה',
-            function(){refreshScrolling();}, 'עדכון', 'אישור');
+
+        alertify.set({ labels: {ok: "הישאר",cancel : "צא" } });
+        alertify.alert('מספר הטלפון נשמר בהצלחה');
 
     },
     getPhoneNumber: function()
@@ -264,10 +263,11 @@ var app = {
     },
     sendSMS: function()
     {
-        navigator.notification.confirm('האם ברצונך לשלוח הודעת חירום אל אנשי החירום שלך?',
-            function(choosed)
+        alertify.set({ labels: {ok: "שלח",cancel : "בטל" } });
+        alertify.confirm('האם ברצונך לשלוח הודעת חירום אל אנשי החירום שלך?',
+            function(ok)
             {
-                if (choosed == 2)
+                if (!ok)
                 {
                     return;
                 }
@@ -280,8 +280,8 @@ var app = {
                 }
                 if (numbers == '')
                 {
-                    navigator.notification.alert('לא קיימים אנשי חירום לשליחת הודעה. כדי להוסיף אנשי חירום היכנס אל \'אנשי חירום\'.',
-                        function(){}, 'לא נשלחה הודעת חירום', 'אישור');
+                    alertify.set({ labels: {ok: "אישור"} });
+                    alertify.alert('לא קיימים אנשי חירום לשליחת הודעה. כדי להוסיף אנשי חירום היכנס אל \'אנשי חירום\'.');
                     return;
                 }
                 numbers = numbers.substring(0,numbers.length-1);
@@ -292,17 +292,17 @@ var app = {
                 var success =
                     function ()
                     {
-                        navigator.notification.alert('הודעת חירום נשלחה בהצלחה!',
-                            function(){}, 'עדכון', 'תודה');
+                        alertify.set({ labels: {ok: "תודה"} });
+                        alertify.alert('הודעת חירום נשלחה בהצלחה!');
                     };
                 var error =
                     function ()
                     {
-                        navigator.notification.alert('שליחת הודעת החירום נכשלה',
-                            function(){}, 'עדכון', 'אישור');
+                        alertify.set({ labels: {ok: "אישור"} });
+                        alertify.alert('שליחת הודעת החירום נכשלה');
                     };
                 sms.send(numbers, message, intent, success, error);
-            },'הודעת חירום','שלח,בטל'
+            }
         );
     }
 };

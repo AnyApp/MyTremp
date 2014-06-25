@@ -8,7 +8,9 @@
         <!-- CSS Includes -->
         <link rel="stylesheet" type="text/css" href="fonts/stylesheet.css"  charset="utf-8" />
         <link rel="stylesheet" type="text/css" href="css/index.css" />
+        <link rel="stylesheet" type="text/css" href="css/alertify.core.css" />
         <link rel="stylesheet" type="text/css" href="css/style.css" />
+
         <title>עליתי על טרמפ</title>
     </head>
     <body ontouchstart="">
@@ -30,7 +32,8 @@
                 <ul><div  id="id_button_start_ride" class="button_start_ride" >עליתי על טרמפ</div></ul>
                 <ul><div  id="id_button_emergency" class="button_emergency ">שלח הודעת חירום</div></ul>
                 <ul><div class="mynumber_title">מספר פלאפון מזהה - חובה</div></ul>
-                <ul><input id="id_mynumber_input" class="mynumber_input" type="number"/></ul>
+                <ul id="id_mynumber_label_ul" ><div id="mynumber_labelclass" class="mynumber_label"></div></ul>
+                <ul id="id_mynumber_input_ul"><input id="id_mynumber_input" class="mynumber_input" type="number"/></ul>
                 <ul id="id_mynumber_editmode_ul"><div id="id_mynumber_editmode" class="button_edit_number" >ערוך מספר</div></ul>
                 <ul id="id_mynumber_verify_title_ul"><div id="id_mynumber_verify_title" class="mynumber_title">הקש שוב לצורך אימות</div></ul>
                 <ul id="id_mynumber_input_verify_ul"><input id="id_mynumber_input_verify" class="mynumber_input" type="number"/></ul>
@@ -111,6 +114,7 @@
     <script type="text/javascript" charset="utf-8" src="phonegap.js"></script>
     <script  type="text/javascript" src="js/fastclick.js"></script>
     <script  type="text/javascript" src="js/iscroll.js"></script>
+    <script  type="text/javascript" src="js/alertify.min.js"></script>
     <script  type="text/javascript" src="js/pager.js"></script>
     <script type="text/javascript" src="js/gps.js"></script>
     <script type="text/javascript" src="js/contacts.js"></script>
