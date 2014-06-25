@@ -253,7 +253,7 @@ var app = {
         document.getElementById('id_mynumber_label_ul').innerHTML=phoneNumber; //Update View.
         app.setEditNumberMode(false);
 
-        alertify.set({ labels: {ok: "הישאר",cancel : "צא" } });
+        alertify.set({ labels: {ok: "אישור"} });
         alertify.alert('מספר הטלפון נשמר בהצלחה');
         refreshScrolling();
 
