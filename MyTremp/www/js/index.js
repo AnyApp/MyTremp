@@ -235,11 +235,13 @@ var app = {
         if (phoneNumber==null || phoneNumberVerify==null|| phoneNumber=='' || phoneNumberVerify=='')
         {
             alertify.alert('אנא הזן את מספר הפלאפון פעמיים לצורך אימות');
+            refreshScrolling();
             return;
         }
         if (phoneNumber != phoneNumberVerify)
         {
             alertify.alert('מספרי הפלאפון אינם תואמים');
+            refreshScrolling();
             return;
         }
         phoneNumber = phoneNumber.replace(/\D/g,'');
@@ -247,6 +249,7 @@ var app = {
         if (phoneNumber.length!=10)
         {
             alertify.alert('מספר פלאפון לא חוקי');
+            refreshScrolling();
             return;
         }
         window.localStorage.setItem("phoneNumber", phoneNumber);
