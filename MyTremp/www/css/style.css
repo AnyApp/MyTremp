@@ -2,6 +2,11 @@
     -webkit-user-select: none; /* disable selection/Copy of UIWebView */
     -webkit-touch-callout: none; /* disable the IOS popup when long-press on a link */
 }
+ul{
+    margin:0;
+    padding: 0;
+    text-align: center;
+}
 
 .top_title {
     text-align: center;
@@ -90,7 +95,8 @@
     text-align: center;
 }
 .hidden {
-    display: none;
+    visibility: hidden;
+    height: 0;
 }
 
 .tabbed_menu_container {
@@ -130,6 +136,10 @@
     background-position: 100% 50%;
 }
 
+.donationTouch{
+    background: #33383C !important;
+}
+
 .button_start_ride{
     width: 80%;
     background: #1D5574;
@@ -150,6 +160,22 @@
 
 
 
+}
+
+.button_donation{
+    width: 80%;
+    margin: 8px auto;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    color: #ffffff;
+    height: 36px;
+    line-height: 36px;
+    background: #9E421E;
+    cursor: pointer;
+    text-decoration: none;
+    padding: 0;
+    display: block;
 }
 
 .button_emergency{

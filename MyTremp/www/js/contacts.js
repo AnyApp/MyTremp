@@ -18,10 +18,10 @@ var contact =
     smallView:
         function(index,oContact)
         {
-            return  '<div id="smallContactViewId'+index+'" class="smallContactContainer">'+
+            return  '<ul><div id="smallContactViewId'+index+'" class="smallContactContainer">'+
                         '<div class="smallContactName">'+oContact.name+'</div>'+
                         '<div class="smallContactPhone">'+oContact.phone+'</div>'+
-                    '</div>';
+                    '</div></ul>';
         }
 }
 var contacts =

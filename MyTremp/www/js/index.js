@@ -25,21 +25,29 @@ function refreshScrolling(toTop){
     var y1 = getScrollY(window.scroll1);
     var y2 = getScrollY(window.scroll2);
     var y3 = getScrollY(window.scroll3);
-    //Scroll to top
+
     if (toTop!= undefined && toTop!=null && toTop==true)
     {
-        window.scroll1.scrollTo(0,0);
-        window.scroll2.scrollTo(0,0);
-        window.scroll3.scrollTo(0,0);
+        //window.scroll1.scrollTo(0,0);
+        //window.scroll2.scrollTo(0,0);
+        //window.scroll3.scrollTo(0,0);
+    }
+    if (window.scroll1==null || window.scroll1 == undefined)
+    {
+        window.scroll1 = new IScroll(document.getElementById('content_tremp'), { tap: true});
+        window.scroll2 = new IScroll(document.getElementById('content_info'), { tap: true});
+        window.scroll3 = new IScroll(document.getElementById('content_contact'), { tap: true});
+    }
+    else
+    {
+        setTimeout(function () {window.scroll1.refresh();}, 0);
+        setTimeout(function () {window.scroll2.refresh();}, 0);
+        setTimeout(function () {window.scroll3.refresh();}, 0);
     }
 
-    window.scroll1 = new IScroll(document.getElementById('content_tremp'), { tap: true});
-    window.scroll2 = new IScroll(document.getElementById('content_info'), { tap: true});
-    window.scroll3 = new IScroll(document.getElementById('content_contact'), { tap: true});
-
-    window.scroll1.scrollTo(0,y1);
-    window.scroll2.scrollTo(0,y2);
-    window.scroll3.scrollTo(0,y3);
+   // window.scroll1.scrollTo(0,y1);
+   // window.scroll2.scrollTo(0,y2);
+    //window.scroll3.scrollTo(0,y3);
 }
 
 function onResume()
@@ -131,6 +139,11 @@ function updateButtonClicks() {
     setTouchEvent(document.getElementById('id_mynumber_button_save'),function(){app.saveNumber();});
     setTouchEvent(document.getElementById('id_mynumber_button_cancel'),function(){app.setEditNumberMode(false);});
     setTouchEvent(document.getElementById('id_button_add_contact'),function(){contacts.chooseContact();});
+    setTouchEvent(document.getElementById('id_button_donation1'),function(){navigator.app.loadUrl(app.donationUrl, { openExternal:true });},'donationTouch');
+    setTouchEvent(document.getElementById('id_button_donation2'),function(){navigator.app.loadUrl(app.donationUrl, { openExternal:true });},'donationTouch');
+    setTouchEvent(document.getElementById('id_button_donation3'),function(){navigator.app.loadUrl(app.donationUrl, { openExternal:true });},'donationTouch');
+
+
     //Update contacts views.
     for (var i=0;i<=contacts.maxContactIndex;i++)
     {
@@ -146,6 +159,7 @@ function updateButtonClicks() {
 }
 
 var app = {
+    donationUrl:'https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=9CVH4ET84KWQA',
     lastClick:(new Date()).getTime(),
     position: null,
     container: document.getElementById("app_container"),
@@ -196,20 +210,20 @@ var app = {
     {
         if (state == true)
         {
-            document.getElementById('id_mynumber_button_save').className='button_save_number';
-            document.getElementById('id_mynumber_input_verify').className='mynumber_input';
-            document.getElementById('id_mynumber_verify_title').className='mynumber_title';
-            document.getElementById('id_mynumber_button_cancel').className='button_cancel_edit';
-            document.getElementById('id_mynumber_editmode').className='hidden';
+            document.getElementById('id_mynumber_button_save_ul').className='';
+            document.getElementById('id_mynumber_input_verify_ul').className='';
+            document.getElementById('id_mynumber_verify_title_ul').className='';
+            document.getElementById('id_mynumber_button_cancel_ul').className='';
+            document.getElementById('id_mynumber_editmode_ul').className='hidden';
         }
         else
         {
-            document.getElementById('id_mynumber_button_save').className='hidden';
-            document.getElementById('id_mynumber_input_verify').className='hidden';
-            document.getElementById('id_mynumber_verify_title').className='hidden';
-            document.getElementById('id_mynumber_button_cancel').className='hidden';
-            document.getElementById('id_mynumber_editmode').className='button_edit_number';
-            window.scroll1.scrollTo(0, 0);
+            document.getElementById('id_mynumber_button_save_ul').className='hidden';
+            document.getElementById('id_mynumber_input_verify_ul').className='hidden';
+            document.getElementById('id_mynumber_verify_title_ul').className='hidden';
+            document.getElementById('id_mynumber_button_cancel_ul').className='hidden';
+            document.getElementById('id_mynumber_editmode_ul').className='';
+            //window.scroll1.scrollTo(0, 0);
         }
         refreshScrolling();
 
