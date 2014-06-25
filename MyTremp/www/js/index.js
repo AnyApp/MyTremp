@@ -255,6 +255,7 @@ var app = {
 
         alertify.set({ labels: {ok: "הישאר",cancel : "צא" } });
         alertify.alert('מספר הטלפון נשמר בהצלחה');
+        refreshScrolling();
 
     },
     getPhoneNumber: function()
