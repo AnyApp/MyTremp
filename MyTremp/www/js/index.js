@@ -235,13 +235,13 @@ var app = {
         if (phoneNumber==null || phoneNumberVerify==null|| phoneNumber=='' || phoneNumberVerify=='')
         {
             alertify.alert('אנא הזן את מספר הפלאפון פעמיים לצורך אימות');
-            setTimeout(function () {refreshScrolling(true);}, 200);
+            setTimeout(function () {refreshScrolling();}, 200);
             return;
         }
         if (phoneNumber != phoneNumberVerify)
         {
             alertify.alert('מספרי הפלאפון אינם תואמים');
-            setTimeout(function () {refreshScrolling(true);}, 200);
+            setTimeout(function () {refreshScrolling();}, 200);
             return;
         }
         phoneNumber = phoneNumber.replace(/\D/g,'');
@@ -249,7 +249,7 @@ var app = {
         if (phoneNumber.length!=10)
         {
             alertify.alert('מספר פלאפון לא חוקי');
-            setTimeout(function () {refreshScrolling(true);}, 200);
+            setTimeout(function () {refreshScrolling();}, 200);
             return;
         }
         window.localStorage.setItem("phoneNumber", phoneNumber);

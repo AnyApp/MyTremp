@@ -64,10 +64,11 @@ var contacts =
         contacts.currentDeleteName=name;
         contacts.currentDeletePhone=phone;
         // Confirm delete,
-        navigator.notification.confirm('האם למחוק את איש קשר החירום?',
+        alertify.set({ labels: {ok: "מחק",cancel : "בטל" } });
+        alertify.confirm('האם למחוק את איש קשר החירום?',
             function(choosed)
             {
-                if (choosed == 2)
+                if (!choosed)
                 {
                     contacts.currentDeleteName='';
                     contacts.currentDeletePhone='';
@@ -90,7 +91,7 @@ var contacts =
                 contacts.savedContacts = newContactList;
                 contacts.save();
                 contacts.draw();
-            },'אישור מחיקה','מחק, בטל'
+            }
         );
 
 
