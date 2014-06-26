@@ -26,12 +26,14 @@ function refreshScrolling(forceCreate){
         window.scroll1 = new IScroll(document.getElementById('content_tremp'), { tap: true});
         window.scroll2 = new IScroll(document.getElementById('content_info'), { tap: true});
         window.scroll3 = new IScroll(document.getElementById('content_contact'), { tap: true});
+        window.scroll4 = new IScroll(document.getElementById('content_phone_form'), { tap: true});
     }
     else
     {
         setTimeout(function () {window.scroll1.refresh();}, 0);
         setTimeout(function () {window.scroll2.refresh();}, 0);
         setTimeout(function () {window.scroll3.refresh();}, 0);
+        setTimeout(function () {window.scroll4.refresh();}, 0);
     }
 
 }
@@ -52,6 +54,7 @@ function onDeviceReady() {
     refreshScrolling();
     FastClick.attach(document.body);
     updateButtonClicks();
+    app.setEditNumberMode(false);
 
     window.console.log('device ready');
 
@@ -180,7 +183,12 @@ var app = {
     {
         document.getElementById('id_mynumber_input').value = this.getPhoneNumber();
         document.getElementById('id_mynumber_input').setAttribute ('value',this.getPhoneNumber());
-        document.getElementById('id_mynumber_label_ul').innerHTML=this.getPhoneNumber();
+        var phoneNumberViewText = this.getPhoneNumber();
+        if (phoneNumberViewText==undefined || phoneNumberViewText==null || phoneNumberViewText=="")
+        {
+            phoneNumberViewText='לא הוגדר מספר פלאפון';
+        }
+        document.getElementById('mynumber_label_text').innerHTML=phoneNumberViewText;
     },
     initPages: function() {
         pager.addPage('tremp','menu_tremp','content_tremp');
@@ -202,6 +210,7 @@ var app = {
     {
         if (state == true)
         {
+/*
             document.getElementById('id_mynumber_button_save_ul').className='';
             document.getElementById('id_mynumber_input_verify_ul').className='';
             document.getElementById('id_mynumber_verify_title_ul').className='';
@@ -209,11 +218,15 @@ var app = {
             document.getElementById('id_mynumber_input_ul').className='';
             document.getElementById('id_mynumber_editmode_ul').className='hidden';
             document.getElementById('id_mynumber_label_ul').className='hidden';
+*/
 
-
+            document.getElementById('content_phone_form').className='page_content';
+            document.getElementById('content_tremp').className='page_content hidden';
+            window.scroll4.scrollTo(0, 0);
         }
         else
         {
+/*
             document.getElementById('id_mynumber_button_save_ul').className='hidden';
             document.getElementById('id_mynumber_input_verify_ul').className='hidden';
             document.getElementById('id_mynumber_verify_title_ul').className='hidden';
@@ -221,6 +234,10 @@ var app = {
             document.getElementById('id_mynumber_input_ul').className='hidden';
             document.getElementById('id_mynumber_editmode_ul').className='';
             document.getElementById('id_mynumber_label_ul').className='mynumber_label';
+*/
+            //window.scroll1.scrollTo(0, 0);
+            document.getElementById('content_phone_form').className='page_content hidden';
+            document.getElementById('content_tremp').className='page_content';
             //window.scroll1.scrollTo(0, 0);
         }
         refreshScrolling();
@@ -253,7 +270,7 @@ var app = {
             return;
         }
         window.localStorage.setItem("phoneNumber", phoneNumber);
-        document.getElementById('id_mynumber_label_ul').innerHTML=phoneNumber; //Update View.
+        document.getElementById('mynumber_label_text').innerHTML=phoneNumber; //Update View.
         app.setEditNumberMode(false);
 
         alertify.set({ labels: {ok: "אישור"} });
