@@ -1,6 +1,6 @@
 function customizeAlertify()
 {
-
+    alertify.set({ buttonReverse: true });
 }
 
 function onBackKeyDown() {
@@ -54,7 +54,6 @@ function onDeviceReady() {
     refreshScrolling();
     FastClick.attach(document.body);
     updateButtonClicks();
-    app.setEditNumberMode(false);
 
     window.console.log('device ready');
 
@@ -168,14 +167,7 @@ var app = {
 
         app.initPages();
         app.updatePhoneNumberView();
-        if ( this.getPhoneNumber()==null|| this.getPhoneNumber()==''|| this.getPhoneNumber()==undefined)
-        {
-            app.setEditNumberMode(true);
-        }
-        else
-        {
-            app.setEditNumberMode(false);
-        }
+        app.setEditNumberMode(false);
         window.setTimeout(onDeviceReady, 2000);
 
     },
