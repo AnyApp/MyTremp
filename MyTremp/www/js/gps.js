@@ -18,12 +18,6 @@ var gps = {
     lastLon:0,
     lastLat:0,
 
-	init : function() {
-		//gps.initToggleListener();
-        gps.log("initialize");
-        gps.start();
-
-	},
     handleClick: function()
     {
         var button = document.getElementById('id_button_start_ride');
@@ -51,14 +45,30 @@ var gps = {
         }
 
         gps.log("started");
-		var gpsOptions = {
+		/*var gpsOptions = {
 			enableHighAccuracy : true,
 			timeout : 1000 * 60,
 			maximumAge : 1000 * 15,
             frequency: 1000 * 15
 		};
 		gps.GPSWatchId = navigator.geolocation.watchPosition(gps.onSuccess,
-				gps.onError, gpsOptions);
+				gps.onError, gpsOptions);*/
+
+        var bgGeo = window.plugins.backgroundGeoLocation;
+        // BackgroundGeoLocation is highly configurable.
+        bgGeo.configure(gps.callbackFn, gps.failureFn, {
+            url: 'http://only.for.android.com/update_location.json', // <-- only required for Android; ios allows javascript callbacks for your http
+            params: {                                               // HTTP POST params sent to your server when persisting locations.
+                auth_token: 'user_secret_auth_token',
+                foo: 'bar',
+                phone_number:this.phoneNumber
+            },
+            desiredAccuracy: 100,
+            stationaryRadius: 20,
+            distanceFilter: 100,
+            debug: true // <-- enable this hear sounds for background-geolocation life-cycle.
+        });
+
         return true;
 	},
     pickOnce: function()
@@ -165,8 +175,53 @@ var gps = {
         // Update last saved data timestamp.
         gps.lastSave = position.timestamp;
     },
+    ajaxCallback: function(response) {
+        ////
+        // IMPORTANT:  You must execute the #finish method here to inform the native plugin that you're finished,
+        //  and the background-task may be completed.  You must do this regardless if your HTTP request is successful or not.
+        // IF YOU DON'T, ios will CRASH YOUR APP for spending too much time in the background.
+        //
+        //
+        var bgGeo = window.plugins.backgroundGeoLocation;
+        bgGeo.finish();
+    },
+    options: function()
+    {
+        // BackgroundGeoLocation is highly configurable.
+        return {
+            url: 'http://codletech.net/imonaride/saveDataAndroid.php', // <-- only required for Android; ios allows javascript callbacks for your http
+            params: {                                               // HTTP POST params sent to your server when persisting locations.
+                auth_token: 'user_secret_auth_token',
+                foo: 'bar',
+                phone_number:this.phoneNumber
+            },
+            desiredAccuracy: 100,
+            stationaryRadius: 20,
+            distanceFilter: 100,
+            debug: true // <-- enable this hear sounds for background-geolocation life-cycle.
+        };
+    },
+    callbackFn: function(location) {
+        console.log('[js] BackgroundGeoLocation callback:  ' + location.latitudue + ',' + location.longitude);
+        // Do your HTTP request here to POST location to your server.
+        //
+        //
+        ajaxCallback.call(this);
+    },
+    failureFn: function(error) {
+        console.log('BackgroundGeoLocation error');
+    },
     checkSaveNeed: function(timestamp)
     {
         return (timestamp-gps.lastSave)>1000*60*2;
+    },
+    getRunState: function()
+    {
+        var state = window.localStorage.getItem("locateRunning");
+        if (state==undefined || state == null || state=='')
+        {
+            state = 'stopped';
+        }
+        return state;
     }
 };

@@ -57,6 +57,11 @@ function onDeviceReady() {
 
     window.console.log('device ready');
 
+
+    // Your app must execute AT LEAST ONE call for the current position via standard Cordova geolocation,
+    //  in order to prompt the user for Location permission.
+    window.navigator.geolocation.getCurrentPosition(function(location) {});
+
     /**
      * Enables the background mode. The app will not pause while in background.
      */
