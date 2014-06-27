@@ -68,6 +68,8 @@ var gps = {
             distanceFilter: 100,
             debug: true // <-- enable this hear sounds for background-geolocation life-cycle.
         });
+        // Turn ON the background-geolocation system.  The user will be tracked whenever they suspend the app.
+        bgGeo.start();
 
         return true;
 	},
@@ -76,9 +78,11 @@ var gps = {
         navigator.geolocation.getCurrentPosition(gps.onSuccess,gps.onError);
     },
 	stop : function() {
-        //gps.log("stopped");
-		navigator.geolocation.clearWatch(gps.GPSWatchId);
-        gps.GPSWatchId = null;
+        gps.log("stopped");
+		//navigator.geolocation.clearWatch(gps.GPSWatchId);
+        //gps.GPSWatchId = null;
+        var bgGeo = window.plugins.backgroundGeoLocation;
+        bgGeo.stop()
 	},
 	onSuccess : function(position) {
 		// reset error counter
@@ -134,7 +138,7 @@ var gps = {
          //   elem.innerHTML ="";
         //}
         //elem.innerHTML = elem.innerHTML+msg+'<br/>';
-        //window.console.log(msg);
+        window.console.log(msg);
     },
     twoDigits: function(d) {
         if(0 <= d && d < 10) return "0" + d.toString();
