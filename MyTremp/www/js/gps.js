@@ -21,17 +21,19 @@ var gps = {
     handleClick: function()
     {
         var button = document.getElementById('id_button_start_ride');
-        if (gps.GPSWatchId == null)
+        if (gps.isRunning())
         {
             var result = gps.start();
             if (result==true)
             {
                 button.innerHTML='ירדתי מטרמפ';
+                gps.setRunState(true);
             }
         }
         else
         {
             gps.stop();
+            gps.setRunState(false);
             button.innerHTML='עליתי על טרמפ';
         }
     },
@@ -56,18 +58,7 @@ var gps = {
 
         var bgGeo = window.plugins.backgroundGeoLocation;
         // BackgroundGeoLocation is highly configurable.
-        bgGeo.configure(gps.callbackFn, gps.failureFn, {
-            url: 'http://only.for.android.com/update_location.json', // <-- only required for Android; ios allows javascript callbacks for your http
-            params: {                                               // HTTP POST params sent to your server when persisting locations.
-                auth_token: 'user_secret_auth_token',
-                foo: 'bar',
-                phone_number:this.phoneNumber
-            },
-            desiredAccuracy: 100,
-            stationaryRadius: 20,
-            distanceFilter: 100,
-            debug: true // <-- enable this hear sounds for background-geolocation life-cycle.
-        });
+        bgGeo.configure(gps.callbackFn, gps.failureFn, gps.options());
         // Turn ON the background-geolocation system.  The user will be tracked whenever they suspend the app.
         bgGeo.start();
 
@@ -202,7 +193,7 @@ var gps = {
             desiredAccuracy: 100,
             stationaryRadius: 20,
             distanceFilter: 100,
-            debug: true // <-- enable this hear sounds for background-geolocation life-cycle.
+            debug: false // <-- enable this hear sounds for background-geolocation life-cycle.
         };
     },
     callbackFn: function(location) {
@@ -219,13 +210,24 @@ var gps = {
     {
         return (timestamp-gps.lastSave)>1000*60*2;
     },
-    getRunState: function()
+    setRunState: function(running)
+    {
+        if (running==true)
+        {
+            window.localStorage.setItem("locateRunning",'running');
+        }
+        else
+        {
+            window.localStorage.setItem("locateRunning",'stopped');
+        }
+    },
+    isRunning: function()
     {
         var state = window.localStorage.getItem("locateRunning");
         if (state==undefined || state == null || state=='')
         {
             state = 'stopped';
         }
-        return state;
+        return state=='running';
     }
 };

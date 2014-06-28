@@ -146,8 +146,29 @@ li{
 }
 
 .button_start_ride{
+    background: #176F77;
+    display: inline-block;
+    color: #ffffff;
+    margin: 0 auto;
+    font-weight: bold;
+    font-size: 22px;
+    margin-top: 2px;
+    height: 196px;
+    line-height: 196px;
+    max-width: 196px;
+    width: 196px;
+    text-align: center;
+    cursor: pointer;
+    -webkit-border-radius: 10000px;
+    -moz-border-radius: 10000px;
+    border-radius: 10000px;
+    /* border: 1px solid #194D52; */
+}
+
+
+.button_start_ride_wrapper{
     width: 80%;
-    background: #1D5574;
+    background: #FFFFFF;
     color: #ffffff;
     margin: 0 auto;
     font-weight: bold;
@@ -161,12 +182,8 @@ li{
     -webkit-border-radius: 10000px;
     -moz-border-radius: 10000px;
     border-radius: 10000px;
-    /* border: 1px solid #194D52; */
-
-
-
+    border: 1px solid #175C77;
 }
-
 .button_donation{
     width: 80%;
     margin: 8px auto;
