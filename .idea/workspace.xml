@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="136e5f2a-33d8-45d4-a7db-3e64b2176aa7" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MyTremp/www/index.html" afterPath="$PROJECT_DIR$/MyTremp/www/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MyTremp/www/js/gps.js" afterPath="$PROJECT_DIR$/MyTremp/www/js/gps.js" />
     </list>
     <ignored path="MyTremp.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -51,22 +51,22 @@
       <file leaf-file-name="gps.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/MyTremp/www/js/gps.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="198" column="36" selection-start="7240" selection-end="7240" vertical-scroll-proportion="3.3357017" vertical-offset="894" max-vertical-offset="3674">
+            <state line="58" column="8" selection-start="1580" selection-end="1580" vertical-scroll-proportion="0.9609236" vertical-offset="735" max-vertical-offset="3674">
               <folding>
                 <element signature="n#!!doc" expanded="true" />
-                <element signature="e#495#943#0" expanded="true" />
-                <element signature="e#965#1915#0" expanded="true" />
-                <element signature="e#1946#2030#0" expanded="true" />
-                <element signature="e#2051#2249#0" expanded="true" />
-                <element signature="e#4162#4409#0" expanded="true" />
-                <element signature="e#4438#4592#0" expanded="true" />
-                <element signature="e#4643#4927#0" expanded="true" />
-                <element signature="e#5996#6455#0" expanded="true" />
-                <element signature="e#6485#7202#0" expanded="true" />
-                <element signature="e#7515#7574#0" expanded="true" />
-                <element signature="e#7619#7677#0" expanded="true" />
-                <element signature="e#7718#7941#0" expanded="true" />
-                <element signature="e#7973#8190#0" expanded="true" />
+                <element signature="e#495#944#0" expanded="true" />
+                <element signature="e#1947#2031#0" expanded="true" />
+                <element signature="e#2052#2250#0" expanded="true" />
+                <element signature="e#4163#4410#0" expanded="true" />
+                <element signature="e#4439#4593#0" expanded="true" />
+                <element signature="e#4644#4928#0" expanded="true" />
+                <element signature="e#5997#6456#0" expanded="true" />
+                <element signature="e#6486#7203#0" expanded="true" />
+                <element signature="e#7240#7483#0" expanded="true" />
+                <element signature="e#7516#7575#0" expanded="true" />
+                <element signature="e#7620#7678#0" expanded="true" />
+                <element signature="e#7719#7942#0" expanded="true" />
+                <element signature="e#7974#8193#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -188,8 +188,8 @@
         <option value="$PROJECT_DIR$/MyTremp/www/js/index.js" />
         <option value="$PROJECT_DIR$/MyTremp/www/css/style.css" />
         <option value="$USER_HOME$/AppData/Local/Temp/scp43619/domains/codletech.net/public_html/imonaride/saveDataAndroid.php" />
-        <option value="$PROJECT_DIR$/MyTremp/www/js/gps.js" />
         <option value="$PROJECT_DIR$/MyTremp/www/index.html" />
+        <option value="$PROJECT_DIR$/MyTremp/www/js/gps.js" />
       </list>
     </option>
   </component>
@@ -591,22 +591,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/MyTremp/www/js/gps.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="198" column="36" selection-start="7240" selection-end="7240" vertical-scroll-proportion="3.3357017" vertical-offset="894" max-vertical-offset="3674">
+        <state line="58" column="8" selection-start="1580" selection-end="1580" vertical-scroll-proportion="0.9609236" vertical-offset="735" max-vertical-offset="3674">
           <folding>
             <element signature="n#!!doc" expanded="true" />
-            <element signature="e#495#943#0" expanded="true" />
-            <element signature="e#965#1915#0" expanded="true" />
-            <element signature="e#1946#2030#0" expanded="true" />
-            <element signature="e#2051#2249#0" expanded="true" />
-            <element signature="e#4162#4409#0" expanded="true" />
-            <element signature="e#4438#4592#0" expanded="true" />
-            <element signature="e#4643#4927#0" expanded="true" />
-            <element signature="e#5996#6455#0" expanded="true" />
-            <element signature="e#6485#7202#0" expanded="true" />
-            <element signature="e#7515#7574#0" expanded="true" />
-            <element signature="e#7619#7677#0" expanded="true" />
-            <element signature="e#7718#7941#0" expanded="true" />
-            <element signature="e#7973#8190#0" expanded="true" />
+            <element signature="e#495#944#0" expanded="true" />
+            <element signature="e#1947#2031#0" expanded="true" />
+            <element signature="e#2052#2250#0" expanded="true" />
+            <element signature="e#4163#4410#0" expanded="true" />
+            <element signature="e#4439#4593#0" expanded="true" />
+            <element signature="e#4644#4928#0" expanded="true" />
+            <element signature="e#5997#6456#0" expanded="true" />
+            <element signature="e#6486#7203#0" expanded="true" />
+            <element signature="e#7240#7483#0" expanded="true" />
+            <element signature="e#7516#7575#0" expanded="true" />
+            <element signature="e#7620#7678#0" expanded="true" />
+            <element signature="e#7719#7942#0" expanded="true" />
+            <element signature="e#7974#8193#0" expanded="true" />
           </folding>
         </state>
       </provider>

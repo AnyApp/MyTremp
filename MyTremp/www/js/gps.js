@@ -21,7 +21,7 @@ var gps = {
     handleClick: function()
     {
         var button = document.getElementById('id_button_start_ride');
-        if (gps.isRunning())
+        if (!gps.isRunning())
         {
             var result = gps.start();
             if (result==true)
@@ -228,6 +228,6 @@ var gps = {
         {
             state = 'stopped';
         }
-        return state=='running';
+        return (state=='running');
     }
 };
