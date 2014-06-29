@@ -283,47 +283,47 @@ var app = {
     },
     sendSMS: function()
     {
-        alertify.set({ labels: {ok: "שלח",cancel : "בטל" } });
+        /*alertify.set({ labels: {ok: "שלח",cancel : "בטל" } });
         alertify.confirm('האם ברצונך לשלוח הודעת חירום אל אנשי החירום שלך?',
             function(ok)
             {
                 if (!ok)
                 {
                     return;
-                }
-                // Send emergency SMS.
-                var contactList = contacts.getContacts();
-                var numbers='';
-                for (var iContact in contactList)
-                {
-                    numbers  += contactList[iContact].phone+',';
-                }
-                if (numbers == '')
-                {
-                    alertify.set({ labels: {ok: "אישור"} });
-                    alertify.alert('לא קיימים אנשי חירום לשליחת הודעה. כדי להוסיף אנשי חירום היכנס אל \'אנשי חירום\'.');
-                    return;
-                }
-                numbers = numbers.substring(0,numbers.length-1);
+                }*/
+        // Send emergency SMS.
+        var contactList = contacts.getContacts();
+        var numbers='';
+        for (var iContact in contactList)
+        {
+            numbers  += contactList[iContact].phone+',';
+        }
+        if (numbers == '')
+        {
+            alertify.set({ labels: {ok: "אישור"} });
+            alertify.alert('לא קיימים אנשי חירום לשליחת הודעה. כדי להוסיף אנשי חירום היכנס אל \'אנשי חירום\'.');
+            return;
+        }
+        numbers = numbers.substring(0,numbers.length-1);
 
-                var message = 'עליתי על טרמפ ונקלעתי למצב חירום, הזעיקו משטרה! אני נמצא במיקום הבא: '+
-                    'lat:'+gps.lastLat+'lon:'+gps.lastLon;
-                var intent = "INTENT"; //leave empty for sending sms using default intent
-                var success =
-                    function ()
-                    {
-                        alertify.set({ labels: {ok: "תודה"} });
-                        alertify.alert('הודעת חירום נשלחה בהצלחה!');
-                    };
-                var error =
-                    function ()
-                    {
-                        alertify.set({ labels: {ok: "אישור"} });
-                        alertify.alert('שליחת הודעת החירום נכשלה');
-                    };
-                sms.send(numbers, message, intent, success, error);
-            }
-        );
+        var message = 'עליתי על טרמפ ונקלעתי למצב חירום, הזעיקו משטרה! אני נמצא במיקום הבא: '+
+            'lat:'+gps.lastLat+'lon:'+gps.lastLon;
+        var intent = "INTENT"; //leave empty for sending sms using default intent
+        var success =
+            function ()
+            {
+                alertify.set({ labels: {ok: "תודה"} });
+                alertify.alert('הודעת חירום נשלחה בהצלחה!');
+            };
+        var error =
+            function ()
+            {
+                alertify.set({ labels: {ok: "אישור"} });
+                alertify.alert('שליחת הודעת החירום נכשלה');
+            };
+        sms.send(numbers, message, intent, success, error);
+          /*  }
+        );*/
     }
 };
 

@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="136e5f2a-33d8-45d4-a7db-3e64b2176aa7" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MyTremp/www/js/imageHandler.js" afterPath="$PROJECT_DIR$/MyTremp/www/js/imageHandler.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MyTremp/www/js/index.js" afterPath="$PROJECT_DIR$/MyTremp/www/js/index.js" />
     </list>
     <ignored path="MyTremp.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -39,10 +39,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="index.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/MyTremp/www/js/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="235" column="29" selection-start="8394" selection-end="8411" vertical-scroll-proportion="-7.0689654" vertical-offset="3858" max-vertical-offset="5698">
+            <state line="321" column="59" selection-start="11371" selection-end="11371" vertical-scroll-proportion="0.5407098" vertical-offset="5131" max-vertical-offset="5698">
               <folding>
                 <element signature="n#!!block;n#shuffle#0" expanded="true" />
                 <element signature="n#!!block;n#customizeAlertify#0" expanded="true" />
@@ -62,11 +62,9 @@
                 <element signature="e#3786#3951#0" expanded="true" />
                 <element signature="n#!!block;n#updateButtonClicks#0" expanded="true" />
                 <element signature="e#5473#5761#0" expanded="true" />
+                <element signature="e#7889#8465#0" expanded="true" />
                 <element signature="e#9924#9958#0" expanded="true" />
-                <element signature="e#9988#11713#0" expanded="true" />
-                <element signature="e#10167#11696#0" expanded="true" />
-                <element signature="e#11219#11375#0" expanded="true" />
-                <element signature="e#11457#11613#0" expanded="true" />
+                <element signature="e#11063#11195#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -90,10 +88,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="imageHandler.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="imageHandler.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/MyTremp/www/js/imageHandler.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="70" column="29" selection-start="2560" selection-end="2560" vertical-scroll-proportion="0.7783985" vertical-offset="1122" max-vertical-offset="1804">
+            <state line="73" column="11" selection-start="2603" selection-end="2603" vertical-scroll-proportion="0.0" vertical-offset="1122" max-vertical-offset="1804">
               <folding>
                 <element signature="n#!!block;n#checkTakePicture#0;n#checkTakePicture#0;n#!!block;n#imgs#0;n#!!top" expanded="true" />
                 <element signature="e#227#367#0" expanded="true" />
@@ -206,10 +204,10 @@
         <option value="$USER_HOME$/AppData/Local/Temp/scp03774/domains/codletech.net/public_html/imonaride/saveLocationData.php" />
         <option value="$PROJECT_DIR$/MyTremp/www/config.xml" />
         <option value="$PROJECT_DIR$/MyTremp/www/css/style.css" />
-        <option value="$PROJECT_DIR$/MyTremp/www/js/index.js" />
         <option value="$PROJECT_DIR$/MyTremp/www/js/pager.js" />
         <option value="$USER_HOME$/AppData/Local/Temp/scp06417/domains/codletech.net/public_html/imonaride/saveImage.php" />
         <option value="$PROJECT_DIR$/MyTremp/www/js/imageHandler.js" />
+        <option value="$PROJECT_DIR$/MyTremp/www/js/index.js" />
       </list>
     </option>
   </component>
@@ -581,37 +579,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/MyTremp/www/js/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="235" column="29" selection-start="8394" selection-end="8411" vertical-scroll-proportion="-7.0689654" vertical-offset="3858" max-vertical-offset="5698">
-          <folding>
-            <element signature="n#!!block;n#shuffle#0" expanded="true" />
-            <element signature="n#!!block;n#customizeAlertify#0" expanded="true" />
-            <element signature="n#!!block;n#onBackKeyDown#0" expanded="true" />
-            <element signature="e#409#529#0" expanded="true" />
-            <element signature="n#!!block;n#refreshScrolling#0" expanded="true" />
-            <element signature="n#!!block;n#onResume#0" expanded="true" />
-            <element signature="n#!!block;n#onDeviceReady#0" expanded="true" />
-            <element signature="e#2310#2401#0" expanded="true" />
-            <element signature="e#2639#2862#0" expanded="true" />
-            <element signature="n#!!block;n#hasClass#0" expanded="true" />
-            <element signature="n#!!block;n#addClass#0" expanded="true" />
-            <element signature="n#!!block;n#removeClass#0" expanded="true" />
-            <element signature="n#!!block;n#setTouchEvent#0" expanded="true" />
-            <element signature="e#3519#3600#0" expanded="true" />
-            <element signature="e#3655#3740#0" expanded="true" />
-            <element signature="e#3786#3951#0" expanded="true" />
-            <element signature="n#!!block;n#updateButtonClicks#0" expanded="true" />
-            <element signature="e#5473#5761#0" expanded="true" />
-            <element signature="e#9924#9958#0" expanded="true" />
-            <element signature="e#9988#11713#0" expanded="true" />
-            <element signature="e#10167#11696#0" expanded="true" />
-            <element signature="e#11219#11375#0" expanded="true" />
-            <element signature="e#11457#11613#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/MyTremp/www/js/pager.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="17" column="13" selection-start="344" selection-end="344" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="682">
@@ -635,7 +602,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/MyTremp/www/js/imageHandler.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="70" column="29" selection-start="2560" selection-end="2560" vertical-scroll-proportion="0.7783985" vertical-offset="1122" max-vertical-offset="1804">
+        <state line="73" column="11" selection-start="2603" selection-end="2603" vertical-scroll-proportion="0.0" vertical-offset="1122" max-vertical-offset="1804">
           <folding>
             <element signature="n#!!block;n#checkTakePicture#0;n#checkTakePicture#0;n#!!block;n#imgs#0;n#!!top" expanded="true" />
             <element signature="e#227#367#0" expanded="true" />
@@ -644,6 +611,35 @@
             <element signature="e#1617#1795#0" expanded="true" />
             <element signature="e#1834#1914#0" expanded="true" />
             <element signature="e#2132#2266#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MyTremp/www/js/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="321" column="59" selection-start="11371" selection-end="11371" vertical-scroll-proportion="0.5407098" vertical-offset="5131" max-vertical-offset="5698">
+          <folding>
+            <element signature="n#!!block;n#shuffle#0" expanded="true" />
+            <element signature="n#!!block;n#customizeAlertify#0" expanded="true" />
+            <element signature="n#!!block;n#onBackKeyDown#0" expanded="true" />
+            <element signature="e#409#529#0" expanded="true" />
+            <element signature="n#!!block;n#refreshScrolling#0" expanded="true" />
+            <element signature="n#!!block;n#onResume#0" expanded="true" />
+            <element signature="n#!!block;n#onDeviceReady#0" expanded="true" />
+            <element signature="e#2310#2401#0" expanded="true" />
+            <element signature="e#2639#2862#0" expanded="true" />
+            <element signature="n#!!block;n#hasClass#0" expanded="true" />
+            <element signature="n#!!block;n#addClass#0" expanded="true" />
+            <element signature="n#!!block;n#removeClass#0" expanded="true" />
+            <element signature="n#!!block;n#setTouchEvent#0" expanded="true" />
+            <element signature="e#3519#3600#0" expanded="true" />
+            <element signature="e#3655#3740#0" expanded="true" />
+            <element signature="e#3786#3951#0" expanded="true" />
+            <element signature="n#!!block;n#updateButtonClicks#0" expanded="true" />
+            <element signature="e#5473#5761#0" expanded="true" />
+            <element signature="e#7889#8465#0" expanded="true" />
+            <element signature="e#9924#9958#0" expanded="true" />
+            <element signature="e#11063#11195#0" expanded="true" />
           </folding>
         </state>
       </provider>
