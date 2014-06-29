@@ -35,10 +35,12 @@ var imgs =
 
 
                 //Save image to device
-                var myCanvas = document.createElement('canvas');
-                var ctx = myCanvas.getContext('2d');
                 var img = new Image;
                 img.onload = function(){
+                    var myCanvas = document.createElement('canvas');
+                    myCanvas.height = img.height;
+                    myCanvas.width = img.width;
+                    var ctx = myCanvas.getContext('2d');
                     ctx.drawImage(img,0,0);
                     // Save image to device.
                     window.canvas2ImagePlugin.saveImageDataToLibrary(
