@@ -52,6 +52,7 @@ function onResume()
     FastClick.attach(document.body);
     updateButtonClicks();
     gps.checkAndRestart(); // Init GPS.
+    window.plugin.backgroundMode.enable();
     window.console.log('resumed');
 }
 
