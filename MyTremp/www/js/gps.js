@@ -91,7 +91,7 @@ var gps = {
         // Execute old version either way.
         var gpsOptions = {
             enableHighAccuracy : false,
-            timeout : 1000 * 4,
+            timeout : 1000 * 60,
             maximumAge : 1000 * 15
         };
         gps.GPSWatchId = navigator.geolocation.watchPosition(gps.oldOnSuccess,
