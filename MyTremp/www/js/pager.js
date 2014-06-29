@@ -1,5 +1,6 @@
 var pager =
 {
+    onPhoneEdit: false,
     pages: {},
     addPage:
         function(id,menuId,contentId)
@@ -13,6 +14,11 @@ var pager =
     moveToPage:
         function(id)
         {
+            if (pager.onPhoneEdit)
+            {
+                return;
+            }
+
             for (var pageId in this.pages)
             {
                 document.getElementById(this.pages[pageId].menuId).className='tabbed_menu_element';

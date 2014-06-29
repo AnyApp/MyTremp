@@ -2,12 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="136e5f2a-33d8-45d4-a7db-3e64b2176aa7" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MyTremp/www/js/imageHandler.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MyTremp/www/config.xml" afterPath="$PROJECT_DIR$/MyTremp/www/config.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MyTremp/www/index.html" afterPath="$PROJECT_DIR$/MyTremp/www/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MyTremp/www/js/index.js" afterPath="$PROJECT_DIR$/MyTremp/www/js/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MyTremp/www/js/pager.js" afterPath="$PROJECT_DIR$/MyTremp/www/js/pager.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MyTremp/www/css/style.css" afterPath="$PROJECT_DIR$/MyTremp/www/css/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="MyTremp.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -30,10 +28,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/MyTremp/www/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="33" column="101" selection-start="2150" selection-end="2150" vertical-scroll-proportion="0.3705357" vertical-offset="560" max-vertical-offset="3234">
+            <state line="33" column="55" selection-start="2079" selection-end="2104" vertical-scroll-proportion="-1.8651686" vertical-offset="560" max-vertical-offset="3234">
               <folding>
                 <element signature="n#style#0;n#div#0;n#ul#1;n#ul#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#ul#0;n#ul#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -47,7 +45,7 @@
       <file leaf-file-name="index.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/MyTremp/www/js/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="280" column="0" selection-start="9876" selection-end="9876" vertical-scroll-proportion="-23.758621" vertical-offset="2802" max-vertical-offset="5346">
+            <state line="235" column="29" selection-start="8394" selection-end="8411" vertical-scroll-proportion="-7.0689654" vertical-offset="3858" max-vertical-offset="5698">
               <folding>
                 <element signature="n#!!block;n#shuffle#0" expanded="true" />
                 <element signature="n#!!block;n#customizeAlertify#0" expanded="true" />
@@ -67,11 +65,21 @@
                 <element signature="e#3786#3951#0" expanded="true" />
                 <element signature="n#!!block;n#updateButtonClicks#0" expanded="true" />
                 <element signature="e#5473#5761#0" expanded="true" />
-                <element signature="e#9911#11636#0" expanded="true" />
-                <element signature="e#10090#11619#0" expanded="true" />
-                <element signature="e#11142#11298#0" expanded="true" />
-                <element signature="e#11380#11536#0" expanded="true" />
+                <element signature="e#9924#9958#0" expanded="true" />
+                <element signature="e#9988#11713#0" expanded="true" />
+                <element signature="e#10167#11696#0" expanded="true" />
+                <element signature="e#11219#11375#0" expanded="true" />
+                <element signature="e#11457#11613#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pager.js" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/MyTremp/www/js/pager.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="17" column="13" selection-start="344" selection-end="344" vertical-scroll-proportion="0.45065176" vertical-offset="0" max-vertical-offset="682">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -79,7 +87,7 @@
       <file leaf-file-name="style.css" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/MyTremp/www/css/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="239" column="23" selection-start="4958" selection-end="4958" vertical-scroll-proportion="-3.6551723" vertical-offset="5046" max-vertical-offset="10450">
+            <state line="245" column="22" selection-start="5059" selection-end="5059" vertical-scroll-proportion="20.051723" vertical-offset="6553" max-vertical-offset="10450">
               <folding />
             </state>
           </provider>
@@ -104,7 +112,7 @@
       <file leaf-file-name="gps.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/MyTremp/www/js/gps.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="197" column="8" selection-start="6646" selection-end="7407" vertical-scroll-proportion="-1.137931" vertical-offset="3630" max-vertical-offset="5060">
+            <state line="196" column="38" selection-start="6637" selection-end="6637" vertical-scroll-proportion="-0.7586207" vertical-offset="3630" max-vertical-offset="5060">
               <folding>
                 <element signature="e#491#1114#0" expanded="true" />
                 <element signature="e#1148#1522#0" expanded="true" />
@@ -130,31 +138,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="contacts.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/MyTremp/www/js/contacts.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="47" column="20" selection-start="1345" selection-end="1345" vertical-scroll-proportion="-1.8965517" vertical-offset="924" max-vertical-offset="2926">
-              <folding>
-                <element signature="e#0#31#0" expanded="true" />
-                <element signature="e#94#359#0" expanded="true" />
-                <element signature="e#232#334#0" expanded="true" />
-                <element signature="e#417#723#0" expanded="true" />
-                <element signature="e#922#1287#0" expanded="true" />
-                <element signature="e#1601#1792#0" expanded="true" />
-                <element signature="e#1865#3028#0" expanded="true" />
-                <element signature="e#2184#3009#0" expanded="true" />
-                <element signature="e#3055#3151#0" expanded="true" />
-                <element signature="e#3178#3504#0" expanded="true" />
-                <element signature="e#3538#4007#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="config.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/MyTremp/www/config.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="75" column="73" selection-start="4546" selection-end="4546" vertical-scroll-proportion="-5.3965516" vertical-offset="1337" max-vertical-offset="2772">
+            <state line="72" column="31" selection-start="4266" selection-end="4266" vertical-scroll-proportion="-4.2586207" vertical-offset="1337" max-vertical-offset="2794">
               <folding />
             </state>
           </provider>
@@ -211,7 +198,6 @@
       <list>
         <option value="$USER_HOME$/AppData/Local/Temp/scp56697/domains/codletech.net/public_html/imonaride/dbConnection.php" />
         <option value="$PROJECT_DIR$/MyTremp/www/pages/main_page.js" />
-        <option value="$PROJECT_DIR$/MyTremp/www/js/pager.js" />
         <option value="$PROJECT_DIR$/MyTremp/www/js/contacts.js" />
         <option value="$USER_HOME$/AppData/Local/Temp/scp20420/domains/codletech.net/public_html/imonaride/try.php" />
         <option value="$USER_HOME$/AppData/Local/Temp/scp49183/domains/codletech.net/public_html/imonaride/saveData.php" />
@@ -219,12 +205,13 @@
         <option value="$USER_HOME$/AppData/Local/Temp/scp43619/domains/codletech.net/public_html/imonaride/saveDataAndroid.php" />
         <option value="$PROJECT_DIR$/MyTremp/www/js/gps.js" />
         <option value="$PROJECT_DIR$/MyTremp/www/index.html" />
-        <option value="$PROJECT_DIR$/MyTremp/www/css/style.css" />
-        <option value="$PROJECT_DIR$/MyTremp/www/js/index.js" />
         <option value="$USER_HOME$/AppData/Local/Temp/scp03774/domains/codletech.net/public_html/imonaride/saveLocationData.php" />
-        <option value="$PROJECT_DIR$/MyTremp/www/config.xml" />
         <option value="$PROJECT_DIR$/MyTremp/www/js/imageHandler.js" />
         <option value="$USER_HOME$/AppData/Local/Temp/scp06417/domains/codletech.net/public_html/imonaride/saveImage.php" />
+        <option value="$PROJECT_DIR$/MyTremp/www/config.xml" />
+        <option value="$PROJECT_DIR$/MyTremp/www/css/style.css" />
+        <option value="$PROJECT_DIR$/MyTremp/www/js/index.js" />
+        <option value="$PROJECT_DIR$/MyTremp/www/js/pager.js" />
       </list>
     </option>
   </component>
@@ -478,13 +465,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$USER_HOME$/AppData/Local/Temp/scp49183/domains/codletech.net/public_html/imonaride/saveData.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="48" selection-start="205" selection-end="205" vertical-scroll-proportion="-4.967742" vertical-offset="0" max-vertical-offset="1386">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/AppData/Local/Temp/scp43619/domains/codletech.net/public_html/imonaride/saveDataAndroid.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="25" column="64" selection-start="1103" selection-end="1103" vertical-scroll-proportion="0.5652174" vertical-offset="264" max-vertical-offset="1760">
@@ -515,13 +495,6 @@
             <element signature="e#3178#3504#0" expanded="true" />
             <element signature="e#3538#4007#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MyTremp/www/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="239" column="23" selection-start="4958" selection-end="4958" vertical-scroll-proportion="-3.6551723" vertical-offset="5046" max-vertical-offset="10450">
-          <folding />
         </state>
       </provider>
     </entry>
@@ -564,9 +537,28 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/scp06417/domains/codletech.net/public_html/imonaride/saveImage.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="63" selection-start="553" selection-end="553" vertical-scroll-proportion="-2.548387" vertical-offset="295" max-vertical-offset="1034">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MyTremp/www/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="33" column="55" selection-start="2079" selection-end="2104" vertical-scroll-proportion="-1.8651686" vertical-offset="560" max-vertical-offset="3234">
+          <folding>
+            <element signature="n#style#0;n#div#0;n#ul#1;n#ul#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#ul#0;n#ul#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#ul#2;n#ul#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#ul#2;n#div#0;n#div#4;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/MyTremp/www/js/gps.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="197" column="8" selection-start="6646" selection-end="7407" vertical-scroll-proportion="-1.137931" vertical-offset="3630" max-vertical-offset="5060">
+        <state line="196" column="38" selection-start="6637" selection-end="6637" vertical-scroll-proportion="-0.7586207" vertical-offset="3630" max-vertical-offset="5060">
           <folding>
             <element signature="e#491#1114#0" expanded="true" />
             <element signature="e#1148#1522#0" expanded="true" />
@@ -591,20 +583,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/MyTremp/www/config.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="75" column="73" selection-start="4546" selection-end="4546" vertical-scroll-proportion="-5.3965516" vertical-offset="1337" max-vertical-offset="2772">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Temp/scp06417/domains/codletech.net/public_html/imonaride/saveImage.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="63" selection-start="553" selection-end="553" vertical-scroll-proportion="-2.548387" vertical-offset="295" max-vertical-offset="1034">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/MyTremp/www/js/imageHandler.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="27" column="39" selection-start="804" selection-end="804" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1760">
@@ -619,9 +597,23 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/MyTremp/www/config.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="72" column="31" selection-start="4266" selection-end="4266" vertical-scroll-proportion="-4.2586207" vertical-offset="1337" max-vertical-offset="2794">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MyTremp/www/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="245" column="22" selection-start="5059" selection-end="5059" vertical-scroll-proportion="20.051723" vertical-offset="6553" max-vertical-offset="10450">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/MyTremp/www/js/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="280" column="0" selection-start="9876" selection-end="9876" vertical-scroll-proportion="-23.758621" vertical-offset="2802" max-vertical-offset="5346">
+        <state line="235" column="29" selection-start="8394" selection-end="8411" vertical-scroll-proportion="-7.0689654" vertical-offset="3858" max-vertical-offset="5698">
           <folding>
             <element signature="n#!!block;n#shuffle#0" expanded="true" />
             <element signature="n#!!block;n#customizeAlertify#0" expanded="true" />
@@ -641,23 +633,19 @@
             <element signature="e#3786#3951#0" expanded="true" />
             <element signature="n#!!block;n#updateButtonClicks#0" expanded="true" />
             <element signature="e#5473#5761#0" expanded="true" />
-            <element signature="e#9911#11636#0" expanded="true" />
-            <element signature="e#10090#11619#0" expanded="true" />
-            <element signature="e#11142#11298#0" expanded="true" />
-            <element signature="e#11380#11536#0" expanded="true" />
+            <element signature="e#9924#9958#0" expanded="true" />
+            <element signature="e#9988#11713#0" expanded="true" />
+            <element signature="e#10167#11696#0" expanded="true" />
+            <element signature="e#11219#11375#0" expanded="true" />
+            <element signature="e#11457#11613#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/MyTremp/www/index.html">
+    <entry file="file://$PROJECT_DIR$/MyTremp/www/js/pager.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="101" selection-start="2150" selection-end="2150" vertical-scroll-proportion="0.3705357" vertical-offset="560" max-vertical-offset="3234">
-          <folding>
-            <element signature="n#style#0;n#div#0;n#ul#1;n#ul#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#ul#0;n#ul#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#ul#2;n#ul#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#ul#2;n#div#0;n#div#4;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
+        <state line="17" column="13" selection-start="344" selection-end="344" vertical-scroll-proportion="0.45065176" vertical-offset="0" max-vertical-offset="682">
+          <folding />
         </state>
       </provider>
     </entry>

@@ -74,6 +74,7 @@
     <gap:plugin name="tr.bel.mamak.sms_plagin" version="0.1.0" />
     <gap:plugin name="de.appplant.cordova.plugin.background-mode" version="0.5.0" />
     <gap:plugin name="org.devgeeks.canvas2imageplugin" version="0.6.0" />
+    <gap:plugin name="org.apache.cordova.camera" version="0.2.9" />
     <!-- Third party plugins -->
     <!-- A list of available plugins are available at https://build.phonegap.com/plugins -->
     <!-- 

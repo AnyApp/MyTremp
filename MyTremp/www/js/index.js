@@ -227,11 +227,13 @@ var app = {
             document.getElementById('content_phone_form').className='page_content';
             document.getElementById('content_tremp').className='page_content hidden';
             window.scroll4.scrollTo(0, 0);
+            pager.onPhoneEdit = true;
         }
         else
         {
             document.getElementById('content_phone_form').className='page_content hidden';
             document.getElementById('content_tremp').className='page_content';
+            pager.onPhoneEdit = false;
         }
         refreshScrolling();
 
