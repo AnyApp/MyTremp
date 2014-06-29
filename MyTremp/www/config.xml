@@ -60,7 +60,7 @@
         <param name="ios-package" value="CDVNotification" />
     </feature>
     <!-- Plugins -->
-    <gap:plugin name="org.apache.cordova.geolocation" version="0.3.7" />
+    <gap:plugin name="org.apache.cordova.geolocation" version="0.3.6"/>
     <gap:plugin name="de.appplant.cordova.plugin.local-notification" version="0.7.4" />
     <gap:plugin name="org.transistorsoft.cordova.background-geolocation" version="0.2.0" />
 

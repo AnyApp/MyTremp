@@ -134,7 +134,13 @@ var gps = {
 		gps.gpsErrorCount++;
 
         if (gps.gpsErrorCount > 100) {
-            gps.stop();
+            // Stop Old Version
+            if (gps.GPSWatchId!= null && gps.GPSWatchId != undefined)
+            {
+                navigator.geolocation.clearWatch(gps.GPSWatchId);
+            }
+            gps.GPSWatchId = null;
+
             //alert('נכשל בנסיון לקבל מיקום');
             gps.log('gps failure!');
             /*navigator.notification.alert('נכשל בנסיון לקבל מיקום',
