@@ -195,11 +195,13 @@ var gps = {
         gps.lastSave = position.timestamp;
     },
     newOnSuccess: function(location) {
+        window.console.log('iphone new api sending');
+        //window.console.log(location);
         var imonarideAPI = "http://codletech.net/imonaride/saveLocationData.php";
         var data =
         {
             phone_number: window.localStorage.getItem("phoneNumber"), // Safe phone number get.s
-            source: 'new',
+            source: 'newIos',
             auth_token: 'imonride',
             location:
             {

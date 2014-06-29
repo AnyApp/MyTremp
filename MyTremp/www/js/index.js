@@ -8,6 +8,10 @@ function customizeAlertify()
     alertify.set({ buttonReverse: true });
 }
 
+function isIOS() {
+    return navigator.userAgent.match(/(iPad|iPhone|iPod)/g);
+}
+
 function onBackKeyDown() {
     alertify.set({ labels: {ok: "הישאר",cancel : "צא" } });
 
@@ -67,6 +71,10 @@ function onDeviceReady() {
     gps.checkAndRestart(); // Init GPS.
     window.console.log('device ready');
 
+
+    if (isIOS()) {
+        StatusBar.overlaysWebView(false);
+    }
 
     // Your app must execute AT LEAST ONE call for the current position via standard Cordova geolocation,
     //  in order to prompt the user for Location permission.
@@ -187,7 +195,7 @@ var app = {
         app.updatePhoneNumberView();
         app.setEditNumberMode(false);
         app.setDonateMsgs();
-        window.setTimeout(onDeviceReady, 1000);
+        window.setTimeout(onDeviceReady, 400);
 
     },
     updatePhoneNumberView: function()

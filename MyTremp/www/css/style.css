@@ -1,3 +1,10 @@
+/**
+** Only add the margin for phonegap apps on ios 7
+**/
+body.phonegap-ios-7{
+    margin-top: 20px;
+}
+
 *:not(input):not(textarea) {
     -webkit-user-select: none; /* disable selection/Copy of UIWebView */
     -webkit-touch-callout: none; /* disable the IOS popup when long-press on a link */
