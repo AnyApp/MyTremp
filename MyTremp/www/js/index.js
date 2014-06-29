@@ -137,8 +137,9 @@ function setTouchEvent(elm,eventHandler,buttonClass)
 
 }
 function updateButtonClicks() {
-    setTouchEvent(document.getElementById('id_button_start_ride'),function(){gps.handleClick();});
-    setTouchEvent(document.getElementById('id_button_emergency'),function(){app.sendSMS();});
+    setTouchEvent(document.getElementById('id_button_start_ride'),function(){app.rideButtonClick();});
+    setTouchEvent(document.getElementById('id_button_emergency_msg'),function(){app.sendSMS();});
+    setTouchEvent(document.getElementById('id_button_emergency_image'),function(){imgs.takePicture();});
     setTouchEvent(document.getElementById('id_mynumber_editmode'),function(){app.setEditNumberMode(true);});
     setTouchEvent(document.getElementById('id_mynumber_button_save'),function(){app.saveNumber();});
     setTouchEvent(document.getElementById('id_mynumber_button_cancel'),function(){app.setEditNumberMode(false);});
@@ -146,6 +147,7 @@ function updateButtonClicks() {
     setTouchEvent(document.getElementById('id_button_donation1'),function(){navigator.app.loadUrl(app.donationUrl, { openExternal:true });},'donationTouch');
     setTouchEvent(document.getElementById('id_button_donation2'),function(){navigator.app.loadUrl(app.donationUrl, { openExternal:true });},'donationTouch');
     setTouchEvent(document.getElementById('id_button_donation3'),function(){navigator.app.loadUrl(app.donationUrl, { openExternal:true });},'donationTouch');
+    setTouchEvent(document.getElementById('id_button_facebook'),function(){navigator.app.loadUrl(app.facebookUrl, { openExternal:true });},'donationTouch');
 
 
     //Update contacts views.
@@ -164,6 +166,7 @@ function updateButtonClicks() {
 
 var app = {
     donationUrl:'https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=9CVH4ET84KWQA',
+    facebookUrl:'https://www.facebook.com/iamonride',
     lastClick:(new Date()).getTime(),
     position: null,
     container: document.getElementById("app_container"),
@@ -217,48 +220,18 @@ var app = {
         document.getElementById('id_button_donation2').innerHTML=pad+msgs[1];
         document.getElementById('id_button_donation3').innerHTML=pad+msgs[2];
     },
-    // Bind Event Listeners
-    //
-    // Bind any events that are required on startup. Common events are:
-    // 'load', 'deviceready', 'offline', and 'online'.
-    bindEvents: function()
-    {
-        document.addEventListener('deviceready', onDeviceReady, false);
-        document.addEventListener("backbutton", onBackKeyDown, false);
-    },
     setEditNumberMode: function(state)
     {
         if (state == true)
         {
-/*
-            document.getElementById('id_mynumber_button_save_ul').className='';
-            document.getElementById('id_mynumber_input_verify_ul').className='';
-            document.getElementById('id_mynumber_verify_title_ul').className='';
-            document.getElementById('id_mynumber_button_cancel_ul').className='';
-            document.getElementById('id_mynumber_input_ul').className='';
-            document.getElementById('id_mynumber_editmode_ul').className='hidden';
-            document.getElementById('id_mynumber_label_ul').className='hidden';
-*/
-
             document.getElementById('content_phone_form').className='page_content';
             document.getElementById('content_tremp').className='page_content hidden';
             window.scroll4.scrollTo(0, 0);
         }
         else
         {
-/*
-            document.getElementById('id_mynumber_button_save_ul').className='hidden';
-            document.getElementById('id_mynumber_input_verify_ul').className='hidden';
-            document.getElementById('id_mynumber_verify_title_ul').className='hidden';
-            document.getElementById('id_mynumber_button_cancel_ul').className='hidden';
-            document.getElementById('id_mynumber_input_ul').className='hidden';
-            document.getElementById('id_mynumber_editmode_ul').className='';
-            document.getElementById('id_mynumber_label_ul').className='mynumber_label';
-*/
-            //window.scroll1.scrollTo(0, 0);
             document.getElementById('content_phone_form').className='page_content hidden';
             document.getElementById('content_tremp').className='page_content';
-            //window.scroll1.scrollTo(0, 0);
         }
         refreshScrolling();
 
@@ -301,6 +274,10 @@ var app = {
     getPhoneNumber: function()
     {
         return window.localStorage.getItem("phoneNumber");
+    },
+    rideButtonClick: function()
+    {
+        gps.handleClick();
     },
     sendSMS: function()
     {

@@ -152,11 +152,11 @@ li{
     margin: 0 auto;
     font-weight: bold;
     font-size: 22px;
-    margin-top: 2px;
-    height: 196px;
-    line-height: 196px;
-    max-width: 196px;
-    width: 196px;
+    margin-top: 20px;
+    height: 198px;
+    line-height: 198px;
+    max-width: 198px;
+    width: 198px;
     text-align: center;
     cursor: pointer;
     -webkit-border-radius: 10000px;
@@ -198,16 +198,34 @@ li{
     text-decoration: none;
     padding: 0;
     display: block;
-    background-image: url(../img/Hand-Left-48.png);
-    background-repeat: no-repeat;
-    background-position: 7px 50%;
-    background-size: 24px;
+    background-image: url(../img/Hand-Left-48.png) !important;
+    background-repeat: no-repeat !important;
+    background-position: 7px 50% !important;
+    background-size: 24px !important;
 }
-
-.button_emergency{
+.button_facebook{
+    width: 90%;
+    margin: 8px auto;
+    text-align: right;
+    font-size: 18px;
+    font-weight: bold;
+    color: #ffffff;
+    height: 39px;
+    line-height: 39px;
+    background: #1F3192;
+    cursor: pointer;
+    text-decoration: none;
+    padding: 0;
+    display: block;
+    background-image: url(../img/Hand-Left-48.png) !important;
+    background-repeat: no-repeat !important;
+    background-position: 7px 50% !important;
+    background-size: 24px !important;
+}
+.button_emergency_msg{
     width: 80%;
     margin: 0 auto;
-    text-align: center;
+    text-align: right;
     margin-top: 40px;
     font-size: 20px;
     font-weight: bold;
@@ -216,8 +234,29 @@ li{
     line-height: 45px;
     background: #9E1E1E;
     cursor: pointer;
+    background-image: url(../img/Message-48.png) !important;
+    background-repeat: no-repeat !important;
+    background-position: 7px 50% !important;
+    background-size: 22px !important;
 }
 
+.button_emergency_image{
+    width: 80%;
+    margin: 0 auto;
+    text-align: right;
+    margin-top: 40px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #ffffff;
+    height: 45px;
+    line-height: 45px;
+    background: #711C79;
+    cursor: pointer;
+    background-image: url(../img/Camera-01-48.png) !important;
+    background-repeat: no-repeat !important;
+    background-position: 7px 50% !important;
+    background-size: 24px !important;
+}
 
 .button_save_number{
     width: 80%;

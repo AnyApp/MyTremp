@@ -39,6 +39,8 @@
     <preference name="android-minSdkVersion"      value="7" />              <!-- android: MIN SDK version supported on the target device. MAX version is blank by default. -->
     <preference name="android-installLocation"    value="auto" />           <!-- android: app install location. 'auto' will choose. 'internalOnly' is device memory. 'preferExternal' is SDCard. -->
     <preference name="KeepRunning"                value="true"/>
+    <preference name="AndroidLaunchMode" value="singleTask" />
+
 
     <feature name="http://api.phonegap.com/1.0/geolocation"/>
     <feature name="NetworkStatus">
@@ -71,6 +73,7 @@
     <gap:plugin name="hu.dpal.phonegap.plugins.contactnumberpicker" version="0.1.1" />
     <gap:plugin name="tr.bel.mamak.sms_plagin" version="0.1.0" />
     <gap:plugin name="de.appplant.cordova.plugin.background-mode" version="0.5.0" />
+    <gap:plugin name="org.devgeeks.canvas2imageplugin" version="0.6.0" />
     <!-- Third party plugins -->
     <!-- A list of available plugins are available at https://build.phonegap.com/plugins -->
     <!-- 
