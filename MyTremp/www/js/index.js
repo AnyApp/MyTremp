@@ -1,3 +1,8 @@
+function shuffle(o){ //v1.0
+    for(var j, x, i = o.length; i; j = Math.floor(Math.random() * i), x = o[--i], o[i] = o[j], o[j] = x);
+    return o;
+}
+
 function customizeAlertify()
 {
     alertify.set({ buttonReverse: true });
@@ -40,10 +45,14 @@ function refreshScrolling(forceCreate){
 
 function onResume()
 {
-    FastClick.attach(document.body);
+    document.addEventListener("backbutton", onBackKeyDown, false);
+    document.addEventListener("resume", onResume, false);
+    customizeAlertify();
     refreshScrolling();
+    FastClick.attach(document.body);
     updateButtonClicks();
-
+    gps.checkAndRestart(); // Init GPS.
+    window.console.log('resumed');
 }
 
 function onDeviceReady() {
@@ -54,7 +63,7 @@ function onDeviceReady() {
     refreshScrolling();
     FastClick.attach(document.body);
     updateButtonClicks();
-
+    gps.checkAndRestart(); // Init GPS.
     window.console.log('device ready');
 
 
@@ -173,7 +182,8 @@ var app = {
         app.initPages();
         app.updatePhoneNumberView();
         app.setEditNumberMode(false);
-        window.setTimeout(onDeviceReady, 2000);
+        app.setDonateMsgs();
+        window.setTimeout(onDeviceReady, 1000);
 
     },
     updatePhoneNumberView: function()
@@ -193,7 +203,19 @@ var app = {
         pager.addPage('info','menu_info','content_info');
         pager.moveToPage('tremp');
     },
-
+    setDonateMsgs:function()
+    {
+        var pad="&#160;&#160;";
+        var msgs = Array(
+            "תרמו לנו באמצעות PayPal",
+            "עזרו לנו להגן עליכם",
+            "תרמו לנו ונמשיך להתפתח"
+        );
+        msgs = shuffle(msgs);
+        document.getElementById('id_button_donation1').innerHTML=pad+msgs[0];
+        document.getElementById('id_button_donation2').innerHTML=pad+msgs[1];
+        document.getElementById('id_button_donation3').innerHTML=pad+msgs[2];
+    },
     // Bind Event Listeners
     //
     // Bind any events that are required on startup. Common events are:

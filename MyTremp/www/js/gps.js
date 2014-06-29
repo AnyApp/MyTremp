@@ -18,6 +18,20 @@ var gps = {
     lastLon:0,
     lastLat:0,
 
+    options: function()
+    {
+        return {
+            url: 'http://codletech.net/imonaride/saveLocationData.php', // <-- only required for Android; ios allows javascript callbacks for your http
+            params: {                                               // HTTP POST params sent to your server when persisting locations.
+                auth_token: 'imonride',
+                phone_number:app.getPhoneNumber()
+            },
+            desiredAccuracy: 100,
+            stationaryRadius: 20,
+            distanceFilter: 100,
+            debug: false // <-- enable this hear sounds for background-geolocation life-cycle.
+        };
+    },
     handleClick: function()
     {
         var button = document.getElementById('id_button_start_ride');
@@ -27,15 +41,32 @@ var gps = {
             if (result==true)
             {
                 button.innerHTML='ירדתי מטרמפ';
-                gps.setRunState(true);
             }
         }
         else
         {
             gps.stop();
-            gps.setRunState(false);
             button.innerHTML='עליתי על טרמפ';
         }
+    },
+    checkAndRestart: function()
+    {
+        var button = document.getElementById('id_button_start_ride');
+        if (gps.isRunning())
+        {
+            var success = gps.restart();
+            if (success)
+            {
+                button.innerHTML='ירדתי מטרמפ';
+                return;
+            }
+        }
+        button.innerHTML='עליתי על טרמפ';
+    },
+    restart: function()
+    {
+        gps.stop();
+        return gps.start();
     },
 	start : function() {
         this.phoneNumber=app.getPhoneNumber();
@@ -46,60 +77,60 @@ var gps = {
             return false;
         }
 
+        gps.setRunState(true);
         gps.log("started");
-		/*var gpsOptions = {
-			enableHighAccuracy : true,
-			timeout : 1000 * 60,
-			maximumAge : 1000 * 15,
-            frequency: 1000 * 15
-		};
-		gps.GPSWatchId = navigator.geolocation.watchPosition(gps.onSuccess,
-				gps.onError, gpsOptions);*/
+        if (gps.useNew())
+        {
+            var bgGeo = window.plugins.backgroundGeoLocation;
+            // BackgroundGeoLocation is highly configurable.
+            bgGeo.configure(gps.newOnSuccess, gps.newOnError, gps.options());
+            // Turn ON the background-geolocation system.  The user will be tracked whenever they suspend the app.
+            bgGeo.start();
+        }
 
-        var bgGeo = window.plugins.backgroundGeoLocation;
-        // BackgroundGeoLocation is highly configurable.
-        bgGeo.configure(gps.callbackFn, gps.failureFn, gps.options());
-        // Turn ON the background-geolocation system.  The user will be tracked whenever they suspend the app.
-        bgGeo.start();
+        // Execute old version either way.
+        var gpsOptions = {
+            enableHighAccuracy : true,
+            timeout : 1000 * 60,
+            maximumAge : 1000 * 15,
+            frequency: 1000 * 15
+        };
+        gps.GPSWatchId = navigator.geolocation.watchPosition(gps.oldOnSuccess,
+            gps.oldOnError, gpsOptions);
 
         return true;
 	},
-    pickOnce: function()
-    {
-        navigator.geolocation.getCurrentPosition(gps.onSuccess,gps.onError);
-    },
 	stop : function() {
+        gps.setRunState(false);
         gps.log("stopped");
-		//navigator.geolocation.clearWatch(gps.GPSWatchId);
-        //gps.GPSWatchId = null;
+        if (gps.GPSWatchId!= null && gps.GPSWatchId != undefined)
+        {
+            navigator.geolocation.clearWatch(gps.GPSWatchId);
+        }
+        gps.GPSWatchId = null;
         var bgGeo = window.plugins.backgroundGeoLocation;
         bgGeo.stop()
 	},
-	onSuccess : function(position) {
+	oldOnSuccess: function(position) {
 		// reset error counter
         gps.gpsErrorCount = 0;
 
 		app.position = position;
-		//app.submitToServer();
 
-		//this.successElement(elem);
-        gps.log ('Latitude: '          + position.coords.latitude          + '\n' +
+        /*gps.log ('Latitude: '          + position.coords.latitude          + '\n' +
             'Longitude: '         + position.coords.longitude         + '\n' +
             'Altitude: '          + position.coords.altitude          + '\n' +
             'Accuracy: '          + position.coords.accuracy          + '\n' +
             'Altitude Accuracy: ' + position.coords.altitudeAccuracy  + '\n' +
             'Heading: '           + position.coords.heading           + '\n' +
             'Speed: '             + position.coords.speed             + '\n' +
-            'Timestamp: '         + position.timestamp                + '\n');
+            'Timestamp: '         + position.timestamp                + '\n');*/
         gps.lastLon=position.coords.longitude;
         gps.lastLat=position.coords.latitude;
-        gps.submitToServer(position);
-        /*gps.log ('Latitude: ' + position.coords.latitude.toFixed(7)
-				+ '<br/>' + 'Longitude: '
-				+ position.coords.longitude.toFixed(7) + '<br/>'
-				+ 'Last Update: ' + app.getReadableTime(position.timestamp));*/
+        gps.oldSubmitToServer(position);
+
 	},
-	onError : function(error) {
+	oldOnError : function(error) {
 		gps.gpsErrorCount++;
 
         if (gps.gpsErrorCount > 100) {
@@ -122,13 +153,79 @@ var gps = {
 			gps.start();
 		}
 	},
+    oldSubmitToServer: function(position)
+    {
+        if (!gps.checkSaveNeed(position.timestamp))
+        {
+            return;
+        }
+
+        var imonarideAPI = "http://codletech.net/imonaride/saveLocationData.php";
+        var data =
+        {
+            phone_number:app.getPhoneNumber(),
+            source: 'old',
+            auth_token: 'imonride',
+            location:
+            {
+                latitude:position.coords.latitude,
+                longitude:position.coords.longitude,
+                recorded_at:gps.timestampToDateTime(position.timestamp),
+                altitude:position.coords.altitude,
+                accuracy:position.coords.accuracy,
+                altitudeAccuracy:position.coords.altitudeAccuracy,
+                heading:position.coords.heading,
+                speed:position.coords.speed
+            }
+        };
+
+        var xmlhttp = new XMLHttpRequest();
+        xmlhttp.open("POST", imonarideAPI);
+        xmlhttp.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+        xmlhttp.send(JSON.stringify(data));
+
+        // Update last saved data timestamp.
+        gps.lastSave = position.timestamp;
+    },
+    newOnSuccess: function(location) {
+        var imonarideAPI = "http://codletech.net/imonaride/saveLocationData.php";
+        var data =
+        {
+            phone_number: window.localStorage.getItem("phoneNumber"), // Safe phone number get.s
+            source: 'new',
+            auth_token: 'imonride',
+            location:
+            {
+                latitude:location.latitude,
+                longitude:location.longitude,
+                recorded_at:location.recorded_at,
+                accuracy:location.accuracy,
+                speed:location.speed
+            }
+        };
+
+        var xmlhttp = new XMLHttpRequest();
+        xmlhttp.open("POST", imonarideAPI);
+        xmlhttp.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+        xmlhttp.send(JSON.stringify(data));
+
+        gps.iosAjaxCallback.call(this);
+    },
+    iosAjaxCallback: function(response) {
+        ////
+        // IMPORTANT:  You must execute the #finish method here to inform the native plugin that you're finished,
+        //  and the background-task may be completed.  You must do this regardless if your HTTP request is successful or not.
+        // IF YOU DON'T, ios will CRASH YOUR APP for spending too much time in the background.
+        //
+        //
+        var bgGeo = window.plugins.backgroundGeoLocation;
+        bgGeo.finish();
+    },
+    newOnError: function(error) {
+        console.log('BackgroundGeoLocation error');
+    },
     log: function(msg)
     {
-        //var elem = document.getElementById('app_container');
-        //if (elem.innerHTML.length>1000){
-         //   elem.innerHTML ="";
-        //}
-        //elem.innerHTML = elem.innerHTML+msg+'<br/>';
         window.console.log(msg);
     },
     twoDigits: function(d) {
@@ -141,74 +238,9 @@ var gps = {
         var date = new Date(timestamp);
         return date.getFullYear() + "-" + gps.twoDigits(1 + date.getMonth()) + "-" + gps.twoDigits(date.getDate()) + " " + gps.twoDigits(date.getHours()) + ":" + gps.twoDigits(date.getMinutes()) + ":" + gps.twoDigits(date.getSeconds());
     },
-    submitToServer: function(position)
-    {
-        if (!gps.checkSaveNeed(position.timestamp))
-        {
-            return;
-        }
-
-        var imonarideAPI = "http://codletech.net/imonaride/saveData.php?";
-        imonarideAPI +=
-            'phone='+app.getPhoneNumber() +
-            '&datetime='+gps.timestampToDateTime(position.timestamp)+
-            '&longitude='+position.coords.longitude +
-            '&latitude='+position.coords.latitude +
-            '&altitude='+position.coords.altitude +
-            '&accuracy='+position.coords.accuracy +
-            '&altitudeAccuracy='+position.coords.altitudeAccuracy +
-            '&heading='+position.coords.heading +
-            '&speed='+position.coords.speed;
-
-        //gps.log(imonarideAPI);
-
-        var xmlhttp = new XMLHttpRequest();
-        // open the connection using get method and send it
-        xmlhttp.open("GET",imonarideAPI,true);
-        xmlhttp.send();
-
-        // Update last saved data timestamp.
-        gps.lastSave = position.timestamp;
-    },
-    ajaxCallback: function(response) {
-        ////
-        // IMPORTANT:  You must execute the #finish method here to inform the native plugin that you're finished,
-        //  and the background-task may be completed.  You must do this regardless if your HTTP request is successful or not.
-        // IF YOU DON'T, ios will CRASH YOUR APP for spending too much time in the background.
-        //
-        //
-        var bgGeo = window.plugins.backgroundGeoLocation;
-        bgGeo.finish();
-    },
-    options: function()
-    {
-        // BackgroundGeoLocation is highly configurable.
-        return {
-            url: 'http://codletech.net/imonaride/saveDataAndroid.php', // <-- only required for Android; ios allows javascript callbacks for your http
-            params: {                                               // HTTP POST params sent to your server when persisting locations.
-                auth_token: 'user_secret_auth_token',
-                foo: 'bar',
-                phone_number:this.phoneNumber
-            },
-            desiredAccuracy: 100,
-            stationaryRadius: 20,
-            distanceFilter: 100,
-            debug: false // <-- enable this hear sounds for background-geolocation life-cycle.
-        };
-    },
-    callbackFn: function(location) {
-        console.log('[js] BackgroundGeoLocation callback:  ' + location.latitudue + ',' + location.longitude);
-        // Do your HTTP request here to POST location to your server.
-        //
-        //
-        ajaxCallback.call(this);
-    },
-    failureFn: function(error) {
-        console.log('BackgroundGeoLocation error');
-    },
     checkSaveNeed: function(timestamp)
     {
-        return (timestamp-gps.lastSave)>1000*60*2;
+        return (timestamp-gps.lastSave)>1000*60*3;
     },
     setRunState: function(running)
     {
@@ -229,5 +261,22 @@ var gps = {
             state = 'stopped';
         }
         return (state=='running');
+    },
+    useNew: function()
+    {
+        var deviceOS  = device.platform;  //fetch the device operating system
+        if (deviceOS == 'Android')
+        {
+            var deviceOSVersion = device.version;  //fetch the device OS version
+            var androidVersion = Number(deviceOSVersion.substring(0,deviceOSVersion.indexOf(".")));
+
+            if (androidVersion < 4)
+            {
+                return false;
+            }
+        }
+
+        return true;
     }
+
 };

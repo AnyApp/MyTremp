@@ -146,7 +146,7 @@ li{
 }
 
 .button_start_ride{
-    background: #176F77;
+    background: #175177;
     display: inline-block;
     color: #ffffff;
     margin: 0 auto;
@@ -182,22 +182,26 @@ li{
     -webkit-border-radius: 10000px;
     -moz-border-radius: 10000px;
     border-radius: 10000px;
-    border: 1px solid #175C77;
+    border: 1px solid #175177;
 }
 .button_donation{
-    width: 80%;
+    width: 90%;
     margin: 8px auto;
-    text-align: center;
+    text-align: right;
     font-size: 18px;
     font-weight: bold;
     color: #ffffff;
-    height: 36px;
-    line-height: 36px;
+    height: 39px;
+    line-height: 39px;
     background: #9E421E;
     cursor: pointer;
     text-decoration: none;
     padding: 0;
     display: block;
+    background-image: url(../img/Hand-Left-48.png);
+    background-repeat: no-repeat;
+    background-position: 7px 50%;
+    background-size: 24px;
 }
 
 .button_emergency{
