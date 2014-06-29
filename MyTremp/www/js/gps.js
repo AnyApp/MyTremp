@@ -90,10 +90,9 @@ var gps = {
 
         // Execute old version either way.
         var gpsOptions = {
-            enableHighAccuracy : true,
-            timeout : 1000 * 60,
-            maximumAge : 1000 * 15,
-            frequency: 1000 * 15
+            enableHighAccuracy : false,
+            timeout : 1000 * 4,
+            maximumAge : 1000 * 15
         };
         gps.GPSWatchId = navigator.geolocation.watchPosition(gps.oldOnSuccess,
             gps.oldOnError, gpsOptions);
@@ -114,7 +113,7 @@ var gps = {
 	oldOnSuccess: function(position) {
 		// reset error counter
         gps.gpsErrorCount = 0;
-
+        gps.log ('GPS Success');
 		app.position = position;
 
         /*gps.log ('Latitude: '          + position.coords.latitude          + '\n' +
@@ -132,6 +131,8 @@ var gps = {
 	},
 	oldOnError : function(error) {
 		gps.gpsErrorCount++;
+        gps.log ('There is an error, restarting GPS. '
+            + "<br/> message:" + error.message);
 
         if (gps.gpsErrorCount > 100) {
             // Stop Old Version
