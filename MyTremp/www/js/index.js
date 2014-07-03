@@ -152,10 +152,10 @@ function updateButtonClicks() {
     setTouchEvent(document.getElementById('id_mynumber_button_save'),function(){app.saveNumber();});
     setTouchEvent(document.getElementById('id_mynumber_button_cancel'),function(){app.setEditNumberMode(false);});
     setTouchEvent(document.getElementById('id_button_add_contact'),function(){contacts.chooseContact();});
-    setTouchEvent(document.getElementById('id_button_donation1'),function(){navigator.app.loadUrl(app.donationUrl, { openExternal:true });},'donationTouch');
-    setTouchEvent(document.getElementById('id_button_donation2'),function(){navigator.app.loadUrl(app.donationUrl, { openExternal:true });},'donationTouch');
-    setTouchEvent(document.getElementById('id_button_donation3'),function(){navigator.app.loadUrl(app.donationUrl, { openExternal:true });},'donationTouch');
-    setTouchEvent(document.getElementById('id_button_facebook'),function(){navigator.app.loadUrl(app.facebookUrl, { openExternal:true });},'donationTouch');
+    setTouchEvent(document.getElementById('id_button_donation1'),function(){app.openURL(app.donationUrl);},'donationTouch');
+    setTouchEvent(document.getElementById('id_button_donation2'),function(){app.openURL(app.donationUrl);},'donationTouch');
+    setTouchEvent(document.getElementById('id_button_donation3'),function(){app.openURL(app.donationUrl);},'donationTouch');
+    setTouchEvent(document.getElementById('id_button_facebook'),function(){app.openURL(app.facebookUrl);},'donationTouch');
 
 
     //Update contacts views.
@@ -196,7 +196,11 @@ var app = {
         app.setEditNumberMode(false);
         app.setDonateMsgs();
         window.setTimeout(onDeviceReady, 400);
-
+        // Hide splash screen.
+        if (isIOS() && navigator.splashscreen!= undefined)
+        {
+            navigator.splashscreen.hide();
+        }
     },
     updatePhoneNumberView: function()
     {
@@ -332,6 +336,13 @@ var app = {
         sms.send(numbers, message, intent, success, error);
           /*  }
         );*/
+    },
+    openURL: function(url) {
+        if(device.platform === 'Android') {
+            navigator.app.loadUrl(url, {openExternal:true});
+        } else {
+            window.open(url, '_system');
+        }
     }
 };
 

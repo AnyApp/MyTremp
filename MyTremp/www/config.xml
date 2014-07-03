@@ -61,6 +61,11 @@
     <feature name="Notification">
         <param name="ios-package" value="CDVNotification" />
     </feature>
+    <feature name="SplashScreen">
+        <param name="ios-package" value="CDVSplashScreen"/>
+        <param name="onload" value="true" />
+    </feature>
+
     <!-- Plugins -->
     <gap:plugin name="org.apache.cordova.geolocation" version="0.3.6"/>
     <gap:plugin name="de.appplant.cordova.plugin.local-notification" version="0.7.4" />
@@ -75,6 +80,7 @@
     <gap:plugin name="org.devgeeks.canvas2imageplugin" version="0.6.0" />
     <gap:plugin name="org.apache.cordova.camera" version="0.2.9" />
     <gap:plugin name="com.phonegap.plugin.statusbar" version="1.1.0" />
+    <gap:plugin name="org.apache.cordova.splashscreen" version="0.2.7" />
 
     <!-- Third party plugins -->
     <!-- A list of available plugins are available at https://build.phonegap.com/plugins -->
