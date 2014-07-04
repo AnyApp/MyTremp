@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="136e5f2a-33d8-45d4-a7db-3e64b2176aa7" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MyTremp/www/config.xml" afterPath="$PROJECT_DIR$/MyTremp/www/config.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MyTremp/www/js/index.js" afterPath="$PROJECT_DIR$/MyTremp/www/js/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="MyTremp.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -44,7 +42,7 @@
       <file leaf-file-name="index.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/MyTremp/www/js/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="203" column="8" selection-start="6722" selection-end="6775" vertical-scroll-proportion="0.6970297" vertical-offset="2750" max-vertical-offset="3806">
+            <state line="344" column="54" selection-start="11920" selection-end="11920" vertical-scroll-proportion="0.52079207" vertical-offset="3301" max-vertical-offset="3806">
               <folding>
                 <element signature="n#!!block;n#isIOS#0" expanded="true" />
                 <element signature="n#!!block;n#onDeviceReady#0" expanded="true" />
@@ -56,7 +54,7 @@
                 <element signature="e#3937#4102#0" expanded="true" />
                 <element signature="n#!!block;n#updateButtonClicks#0" expanded="true" />
                 <element signature="e#6145#6353#0" expanded="true" />
-                <element signature="e#11742#11922#0" expanded="true" />
+                <element signature="e#6382#6781#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -101,7 +99,7 @@
       <file leaf-file-name="config.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/MyTremp/www/config.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="66" column="14" selection-start="3878" selection-end="3878" vertical-scroll-proportion="-5.293103" vertical-offset="1145" max-vertical-offset="2948">
+            <state line="100" column="52" selection-start="5925" selection-end="5925" vertical-scroll-proportion="-6.8103447" vertical-offset="1805" max-vertical-offset="2948">
               <folding />
             </state>
           </provider>
@@ -471,14 +469,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/MyTremp/www/config.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="66" column="14" selection-start="3878" selection-end="3878" vertical-scroll-proportion="-5.293103" vertical-offset="1145" max-vertical-offset="2948">
+        <state line="100" column="52" selection-start="5925" selection-end="5925" vertical-scroll-proportion="-6.8103447" vertical-offset="1805" max-vertical-offset="2948">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/MyTremp/www/js/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="203" column="8" selection-start="6722" selection-end="6775" vertical-scroll-proportion="0.6970297" vertical-offset="2750" max-vertical-offset="3806">
+        <state line="344" column="54" selection-start="11920" selection-end="11920" vertical-scroll-proportion="0.52079207" vertical-offset="3301" max-vertical-offset="3806">
           <folding>
             <element signature="n#!!block;n#isIOS#0" expanded="true" />
             <element signature="n#!!block;n#onDeviceReady#0" expanded="true" />
@@ -490,7 +488,7 @@
             <element signature="e#3937#4102#0" expanded="true" />
             <element signature="n#!!block;n#updateButtonClicks#0" expanded="true" />
             <element signature="e#6145#6353#0" expanded="true" />
-            <element signature="e#11742#11922#0" expanded="true" />
+            <element signature="e#6382#6781#0" expanded="true" />
           </folding>
         </state>
       </provider>
