@@ -171,6 +171,10 @@ function updateButtonClicks() {
 
 
 }
+function onDeviceReadyReal() {
+    navigator.splashscreen.hide();
+}
+
 
 var app = {
     donationUrl:'https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=9CVH4ET84KWQA',
@@ -197,6 +201,12 @@ var app = {
         app.setDonateMsgs();
         window.setTimeout(onDeviceReady, 400);
         // Hide splash screen.
+        document.addEventListener("deviceready", onDeviceReadyReal, false);
+        if (isIOS() && navigator.splashscreen!= undefined)
+        {
+            navigator.splashscreen.hide();
+        }
+        cordova.exec(null, null, "SplashScreen", "hide", []);
     },
     updatePhoneNumberView: function()
     {
