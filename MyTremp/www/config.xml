@@ -39,8 +39,7 @@
     <preference name="android-installLocation"    value="auto" />           <!-- android: app install location. 'auto' will choose. 'internalOnly' is device memory. 'preferExternal' is SDCard. -->
     <preference name="KeepRunning"                value="true"/>
     <preference name="AndroidLaunchMode"          value="singleTask" />
-    <preference name="AutoHideSplashScreen"       value="false" />
-    <preference name="android-windowSoftInputMode" value="stateVisible|adjustResize" />
+    <preference name="auto-hide-splash-screen"    value="true" />           <!-- ios: if set to false, the splash screen must be hidden using a JavaScript API -->
 
     <feature name="http://api.phonegap.com/1.0/geolocation"/>
     <feature name="NetworkStatus">
