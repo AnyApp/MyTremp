@@ -171,7 +171,7 @@ function updateButtonClicks() {
 
 
 }
-function onDeviceReadyReal() {
+function dismissSplashScreen() {
     navigator.splashscreen.hide();
 }
 
@@ -200,13 +200,17 @@ var app = {
         app.setEditNumberMode(false);
         app.setDonateMsgs();
         window.setTimeout(onDeviceReady, 400);
-        // Hide splash screen.
-        document.addEventListener("deviceready", onDeviceReadyReal, false);
-        if (isIOS() && navigator.splashscreen!= undefined)
-        {
-            navigator.splashscreen.hide();
-        }
-        cordova.exec(null, null, "SplashScreen", "hide", []);
+
+        // Hide Splash Screen
+        window.setTimeout(dismissSplashScreen,0);
+        window.setTimeout(dismissSplashScreen,10);
+        window.setTimeout(dismissSplashScreen,20);
+        window.setTimeout(dismissSplashScreen,30);
+        window.setTimeout(dismissSplashScreen,40);
+        window.setTimeout(dismissSplashScreen,50);
+        window.setTimeout(dismissSplashScreen,75);
+        window.setTimeout(dismissSplashScreen,100);
+
     },
     updatePhoneNumberView: function()
     {
