@@ -201,6 +201,7 @@ var app = {
         {
             navigator.splashscreen.hide();
         }
+        cordova.exec(null, null, "SplashScreen", "hide", []);
     },
     updatePhoneNumberView: function()
     {
