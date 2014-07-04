@@ -171,9 +171,6 @@ function updateButtonClicks() {
 
 
 }
-function dismissSplashScreen() {
-    navigator.splashscreen.hide();
-}
 
 
 var app = {
@@ -201,15 +198,6 @@ var app = {
         app.setDonateMsgs();
         window.setTimeout(onDeviceReady, 400);
 
-        // Hide Splash Screen
-        window.setTimeout(dismissSplashScreen,0);
-        window.setTimeout(dismissSplashScreen,10);
-        window.setTimeout(dismissSplashScreen,20);
-        window.setTimeout(dismissSplashScreen,30);
-        window.setTimeout(dismissSplashScreen,40);
-        window.setTimeout(dismissSplashScreen,50);
-        window.setTimeout(dismissSplashScreen,75);
-        window.setTimeout(dismissSplashScreen,100);
 
     },
     updatePhoneNumberView: function()
