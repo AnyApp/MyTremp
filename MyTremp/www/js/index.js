@@ -197,11 +197,6 @@ var app = {
         app.setDonateMsgs();
         window.setTimeout(onDeviceReady, 400);
         // Hide splash screen.
-        if (isIOS() && navigator.splashscreen!= undefined)
-        {
-            navigator.splashscreen.hide();
-        }
-        cordova.exec(null, null, "SplashScreen", "hide", []);
     },
     updatePhoneNumberView: function()
     {
